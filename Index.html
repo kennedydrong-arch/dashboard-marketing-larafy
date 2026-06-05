@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a2638">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Marketing Intelligence · LaraTAX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+:root {
+  --bg: #061a26;
+  --panel: #0a2638;
+  --panel-2: #0f3147;
+  --panel-3: #154159;
+  --line: rgba(53, 185, 215, 0.15);
+  --line-strong: rgba(53, 185, 215, 0.32);
+  --cyan: #35b9d7;
+  --cyan-soft: #8fd6e6;
+  --cyan-deep: #1a8fab;
+  --text: #e8f4f8;
+  --text-dim: #8ba6b3;
+  --text-muted: #5a7785;
+  --positive: #4ade80;
+  --negative: #f87171;
+  --warn: #fbbf24;
+  --accent-orange: #fb923c;
+  --accent-purple: #a78bfa;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { background: var(--bg); }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* === TOPBAR === */
+.topbar {
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit; }
+.brand-wordmark {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+}
+.brand-wordmark .lara { color: var(--text); }
+.brand-wordmark .tax {
+  color: var(--cyan);
+  position: relative;
+}
+.brand-wordmark .tax::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--cyan);
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
+  transform: translateY(-3px);
+}
+.brand-sub {
+  font-size: 9px;
+  color: var(--cyan-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  display: block;
+  border-left: 1px solid var(--line-strong);
+  padding-left: 12px;
+}
+
+.topbar-center { display: flex; gap: 10px; align-items: center; }
+.period-selector, .platform-selector {
+  display: flex; gap: 4px;
+  background: var(--bg);
+  padding: 4px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
+.period-btn, .platform-btn {
+  background: transparent; border: none;
+  color: var(--text-dim);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 7px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  letter-spacing: 0.06em;
+  transition: all 0.15s;
+}
+.period-btn:hover, .platform-btn:hover { color: var(--text); }
+.period-btn.active { background: var(--cyan); color: var(--panel); }
+.platform-btn.active[data-platform="all"] { background: var(--cyan); color: var(--panel); }
+.platform-btn.active[data-platform="meta"] { background: var(--cyan); color: var(--panel); }
+.platform-btn.active[data-platform="google"] { background: var(--accent-orange); color: var(--panel); }
+
+.topbar-right { display: flex; align-items: center; gap: 16px; }
+.timestamp { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim); }
+.timestamp strong { color: var(--text); font-weight: 500; }
+.icon-btn {
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  color: var(--text-dim);
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+  transition: all 0.15s;
+}
+.icon-btn:hover { background: var(--panel-3); color: var(--cyan); }
+
+/* === LAYOUT === */
+.dashboard { padding: 20px; display: grid; gap: 16px; }
+
+/* === KPI STRIP === */
+.kpi-strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
+.kpi {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex; flex-direction: column; gap: 4px;
+  position: relative; overflow: hidden;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.kpi:hover { border-color: var(--line-strong); transform: translateY(-1px); }
+.kpi::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(53, 185, 215, 0.04) 100%);
+  pointer-events: none;
+}
+.kpi-head { display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
+.kpi-icon {
+  width: 28px; height: 28px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+}
+.kpi-icon.spend { background: rgba(53, 185, 215, 0.12); color: var(--cyan); }
+.kpi-icon.leads { background: rgba(74, 222, 128, 0.12); color: var(--positive); }
+.kpi-icon.cpa { background: rgba(251, 191, 36, 0.12); color: var(--warn); }
+.kpi-icon.ctr { background: rgba(167, 139, 250, 0.12); color: var(--accent-purple); }
+.kpi-icon.impr { background: rgba(251, 146, 60, 0.12); color: var(--accent-orange); }
+.kpi-icon.click { background: rgba(248, 113, 113, 0.12); color: var(--negative); }
+.kpi-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--text-muted); font-weight: 600; }
+.kpi-value {
+  font-size: 30px; font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text); line-height: 1;
+  margin-top: 4px; position: relative; z-index: 1;
+}
+.kpi-value .unit { font-size: 14px; font-weight: 500; color: var(--text-dim); margin-right: 4px; }
+.kpi-value .small { font-size: 16px; color: var(--text-dim); font-weight: 500; }
+.kpi-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; position: relative; z-index: 1; }
+.kpi-delta { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; }
+.kpi-delta.up { color: var(--positive); }
+.kpi-delta.down { color: var(--negative); }
+.kpi-spark { width: 70px; height: 24px; }
+
+/* === PANELS === */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px;
+  position: relative; overflow: hidden;
+}
+.panel-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.panel-title { font-size: 12px; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; color: var(--text); }
+.panel-meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); letter-spacing: 0.04em; }
+
+.main-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 16px; }
+.sec-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+/* === MAP === */
+#brazil-map { height: 380px; background: var(--bg); border-radius: 8px; }
+.map-legend { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-dim); gap: 12px; }
+.gradient-bar { flex: 1; height: 6px; background: linear-gradient(90deg, rgba(53, 185, 215, 0.15), var(--cyan), var(--cyan-deep)); border-radius: 3px; }
+.metric-pills { display: flex; gap: 4px; background: var(--bg); padding: 3px; border-radius: 6px; }
+.metric-pill {
+  background: transparent; border: none;
+  color: var(--text-muted);
+  font-family: inherit; font-size: 10px;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  padding: 5px 10px; border-radius: 4px;
+  cursor: pointer; font-weight: 600;
+  transition: all 0.15s;
+}
+.metric-pill.active { background: var(--cyan); color: var(--panel); }
+.metric-pill:hover:not(.active) { color: var(--text); }
+
+/* === FUNNEL === */
+.funnel-stages { display: flex; flex-direction: column; gap: 10px; margin-top: 6px; }
+.funnel-stage { display: grid; grid-template-columns: 90px 1fr 90px; gap: 12px; align-items: center; }
+.funnel-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); font-weight: 600; }
+.funnel-track { background: var(--bg); height: 36px; border-radius: 8px; position: relative; overflow: hidden; }
+.funnel-fill {
+  height: 100%; display: flex; align-items: center; padding-left: 14px;
+  color: var(--panel); font-weight: 700; font-size: 18px;
+  letter-spacing: -0.02em; border-radius: 8px;
+  transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.funnel-fill.s1 { background: var(--cyan); width: 100%; }
+.funnel-fill.s2 { background: var(--cyan); width: 72%; opacity: 0.85; }
+.funnel-fill.s3 { background: var(--cyan); width: 22%; opacity: 0.7; }
+.funnel-fill.s4 { background: var(--positive); width: 6%; color: var(--panel); }
+.funnel-conv { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim); text-align: right; }
+.funnel-conv strong { color: var(--cyan); font-weight: 600; }
+
+.stats-mini { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
+.stat-mini { text-align: center; }
+.stat-mini-value { font-size: 18px; font-weight: 700; color: var(--text); letter-spacing: -0.02em; }
+.stat-mini-label { font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; margin-top: 2px; }
+
+/* === CAMPAIGNS LIST === */
+.campaign-row { display: grid; grid-template-columns: 1fr 100px; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); align-items: center; }
+.campaign-row:last-child { border-bottom: none; }
+.campaign-info { min-width: 0; }
+.campaign-bar { position: relative; height: 4px; background: var(--bg); border-radius: 2px; margin-top: 6px; overflow: hidden; }
+.campaign-bar-fill { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 2px; }
+.campaign-bar-fill.meta { background: var(--cyan); }
+.campaign-bar-fill.google { background: var(--accent-orange); }
+.campaign-name-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.campaign-name { font-size: 12px; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.platform-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; font-weight: 600;
+  padding: 2px 6px; border-radius: 3px;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+.platform-tag.meta { background: rgba(53, 185, 215, 0.15); color: var(--cyan); }
+.platform-tag.google { background: rgba(251, 146, 60, 0.15); color: var(--accent-orange); }
+.campaign-spend { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: var(--text); text-align: right; }
+.campaign-spend small { display: block; font-size: 10px; font-weight: 400; color: var(--text-dim); }
+
+/* === DEMO HEATMAP === */
+.demo-grid { display: grid; grid-template-columns: 60px repeat(3, 1fr); gap: 3px; font-family: 'JetBrains Mono', monospace; }
+.demo-grid .col-h, .demo-grid .row-h { font-size: 9px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; padding: 6px; display: flex; align-items: center; justify-content: center; }
+.demo-grid .row-h { justify-content: flex-end; padding-right: 8px; }
+.demo-cell { background: var(--cyan); color: var(--panel); padding: 10px; text-align: center; font-weight: 700; font-size: 13px; border-radius: 4px; font-family: 'Inter Tight', sans-serif; }
+
+/* === STATES === */
+.state-row { display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; padding: 8px 0; align-items: center; border-bottom: 1px solid var(--line); }
+.state-row:last-child { border-bottom: none; }
+.state-rank { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); font-weight: 600; }
+.state-name { font-size: 12px; color: var(--text); font-weight: 500; }
+.state-bar { height: 4px; background: var(--bg); border-radius: 2px; margin-top: 4px; position: relative; overflow: hidden; }
+.state-bar-fill { position: absolute; inset: 0 auto 0 0; background: var(--cyan); border-radius: 2px; }
+.state-value { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text); font-weight: 600; white-space: nowrap; }
+
+/* === FORECAST === */
+.forecast-card { background: linear-gradient(135deg, var(--panel-2) 0%, var(--panel) 100%); }
+.forecast-numbers { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 12px; }
+.forecast-num { text-align: left; }
+.forecast-num-value { font-size: 32px; font-weight: 800; color: var(--cyan); letter-spacing: -0.03em; line-height: 1; }
+.forecast-num-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; margin-top: 4px; }
+
+/* === TERMS === */
+.term-row { display: grid; grid-template-columns: 1fr auto; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--line); align-items: center; }
+.term-row:last-child { border-bottom: none; }
+.term-text { font-size: 12px; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.term-bar { width: 60px; height: 4px; background: var(--bg); border-radius: 2px; position: relative; overflow: hidden; }
+.term-bar::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; background: var(--cyan); width: var(--w, 50%); }
+
+:fullscreen { background: var(--bg); overflow: auto; }
+
+.fade-in { opacity: 0; animation: slideIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+@keyframes slideIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.fade-in:nth-child(2) { animation-delay: 0.05s; }
+.fade-in:nth-child(3) { animation-delay: 0.10s; }
+.fade-in:nth-child(4) { animation-delay: 0.15s; }
+.fade-in:nth-child(5) { animation-delay: 0.20s; }
+.fade-in:nth-child(6) { animation-delay: 0.25s; }
+
+.leaflet-container { background: var(--bg) !important; font-family: 'Inter Tight', sans-serif !important; }
+.leaflet-tooltip {
+  background: var(--panel-3) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--line-strong) !important;
+  border-radius: 6px !important;
+  padding: 8px 12px !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 11px !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4) !important;
+}
+.leaflet-tooltip::before { display: none !important; }
+
+@media (max-width: 1200px) {
+  .kpi-strip { grid-template-columns: repeat(3, 1fr); }
+  .main-grid { grid-template-columns: 1fr; }
+  .sec-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 700px) {
+  .kpi-strip { grid-template-columns: 1fr 1fr; }
+  .sec-grid { grid-template-columns: 1fr; }
+  .topbar-center { display: none; }
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--panel-3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--cyan-deep); }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <a href="https://laratax.com.br" target="_blank" class="brand">
+    <div class="brand-wordmark">
+      <span class="lara">Lara</span><span class="tax">TAX</span>
+    </div>
+    <span class="brand-sub">Marketing<br>Intelligence</span>
+  </a>
+  <div class="topbar-center">
+    <div class="period-selector">
+      <button class="period-btn">7D</button>
+      <button class="period-btn">30D</button>
+      <button class="period-btn active">90D</button>
+      <button class="period-btn">YTD</button>
+      <button class="period-btn">TUDO</button>
+    </div>
+    <div class="platform-selector">
+      <button class="platform-btn active" data-platform="all">TODAS</button>
+      <button class="platform-btn" data-platform="meta">META</button>
+      <button class="platform-btn" data-platform="google">GOOGLE</button>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <div class="timestamp">Atualizado <strong>05/06 · 07:30</strong></div>
+    <button class="icon-btn" onclick="document.documentElement.requestFullscreen()" title="Tela cheia">⛶</button>
+    <button class="icon-btn" onclick="location.reload()" title="Atualizar">↻</button>
+  </div>
+</header>
+
+<main class="dashboard">
+
+  <div class="kpi-strip">
+    <div class="kpi fade-in">
+      <div class="kpi-head"><span class="kpi-label">Investimento</span><span class="kpi-icon spend">💰</span></div>
+      <div class="kpi-value"><span class="unit">R$</span>14.832</div>
+      <div class="kpi-foot"><span class="kpi-delta up">↑ 12,4%</span><div class="kpi-spark" id="spark-spend"></div></div>
+    </div>
+    <div class="kpi fade-in">
+      <div class="kpi-head"><span class="kpi-label">Leads</span><span class="kpi-icon leads">🎯</span></div>
+      <div class="kpi-value">187</div>
+      <div class="kpi-foot"><span class="kpi-delta up">↑ 8,1%</span><div class="kpi-spark" id="spark-leads"></div></div>
+    </div>
+    <div class="kpi fade-in">
+      <div class="kpi-head"><span class="kpi-label">CPA</span><span class="kpi-icon cpa">📉</span></div>
+      <div class="kpi-value"><span class="unit">R$</span>79<span class="small">,32</span></div>
+      <div class="kpi-foot"><span class="kpi-delta down">↓ 4,2%</span><div class="kpi-spark" id="spark-cpa"></div></div>
+    </div>
+    <div class="kpi fade-in">
+      <div class="kpi-head"><span class="kpi-label">CTR</span><span class="kpi-icon ctr">⚡</span></div>
+      <div class="kpi-value">1,84<span class="small">%</span></div>
+      <div class="kpi-foot"><span class="kpi-delta up">↑ 0,3pp</span><div class="kpi-spark" id="spark-ctr"></div></div>
+    </div>
+    <div class="kpi fade-in">
+      <div class="kpi-head"><span class="kpi-label">Impressões</span><span class="kpi-icon impr">👁</span></div>
+      <div class="kpi-value">847<span class="small">K</span></div>
+      <div class="kpi-foot"><span class="kpi-delta up">↑ 18,7%</span><div class="kpi-spark" id="spark-impr"></div></div>
+    </div>
+    <div class="kpi fade-in">
+      <div class="kpi-head"><span class="kpi-label">Cliques</span><span class="kpi-icon click">🖱</span></div>
+      <div class="kpi-value">15<span class="small">,5K</span></div>
+      <div class="kpi-foot"><span class="kpi-delta up">↑ 23,2%</span><div class="kpi-spark" id="spark-click"></div></div>
+    </div>
+  </div>
+
+  <div class="main-grid">
+    <div class="panel fade-in">
+      <div class="panel-head">
+        <span class="panel-title">📈 Performance Diária · Investimento vs Leads</span>
+        <span class="panel-meta">96 dias · 62 ativos</span>
+      </div>
+      <div id="time-chart" style="height: 340px;"></div>
+      <div class="stats-mini">
+        <div class="stat-mini"><div class="stat-mini-value">R$ 412</div><div class="stat-mini-label">Pico Diário</div></div>
+        <div class="stat-mini"><div class="stat-mini-value">R$ 165</div><div class="stat-mini-label">Média/Dia</div></div>
+        <div class="stat-mini"><div class="stat-mini-value">62/96</div><div class="stat-mini-label">Dias Ativos</div></div>
+      </div>
+    </div>
+
+    <div class="panel fade-in">
+      <div class="panel-head">
+        <span class="panel-title">🗺️ Distribuição Geográfica · Brasil</span>
+        <div class="metric-pills">
+          <button class="metric-pill active" data-metric="spend">Spend</button>
+          <button class="metric-pill" data-metric="impressions">Impr</button>
+          <button class="metric-pill" data-metric="leads">Leads</button>
+          <button class="metric-pill" data-metric="cpa">CPA</button>
+        </div>
+      </div>
+      <div id="brazil-map"></div>
+      <div class="map-legend">
+        <span id="legend-min">R$ 0</span>
+        <div class="gradient-bar"></div>
+        <span id="legend-max">R$ 4.832</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-grid">
+    <div class="panel fade-in">
+      <div class="panel-head"><span class="panel-title">🎯 Funil de Conversão</span><span class="panel-meta">90D</span></div>
+      <div class="funnel-stages">
+        <div class="funnel-stage">
+          <span class="funnel-label">Impressões</span>
+          <div class="funnel-track"><div class="funnel-fill s1">847.293</div></div>
+          <span class="funnel-conv">100%</span>
+        </div>
+        <div class="funnel-stage">
+          <span class="funnel-label">Alcance</span>
+          <div class="funnel-track"><div class="funnel-fill s2">612.187</div></div>
+          <span class="funnel-conv">72,2%</span>
+        </div>
+        <div class="funnel-stage">
+          <span class="funnel-label">Cliques</span>
+          <div class="funnel-track"><div class="funnel-fill s3">15.589</div></div>
+          <span class="funnel-conv">CTR <strong>1,84%</strong></span>
+        </div>
+        <div class="funnel-stage">
+          <span class="funnel-label">Leads</span>
+          <div class="funnel-track"><div class="funnel-fill s4">187</div></div>
+          <span class="funnel-conv">CR <strong>1,20%</strong></span>
+        </div>
+      </div>
+      <div class="stats-mini">
+        <div class="stat-mini"><div class="stat-mini-value">5,4K</div><div class="stat-mini-label">Impr / Lead</div></div>
+        <div class="stat-mini"><div class="stat-mini-value">83</div><div class="stat-mini-label">Cliques / Lead</div></div>
+        <div class="stat-mini"><div class="stat-mini-value">R$ 79</div><div class="stat-mini-label">Custo / Lead</div></div>
+      </div>
+    </div>
+
+    <div class="panel fade-in">
+      <div class="panel-head"><span class="panel-title">🏆 Top Campanhas por Spend</span><span class="panel-meta">8/24 ativas</span></div>
+      <div id="campaigns-list"></div>
+    </div>
+
+    <div class="panel fade-in">
+      <div class="panel-head"><span class="panel-title">📍 Top Estados · Leads</span><span class="panel-meta">12 UFs cobertas</span></div>
+      <div id="states-list"></div>
+    </div>
+  </div>
+
+  <div class="sec-grid">
+    <div class="panel fade-in">
+      <div class="panel-head"><span class="panel-title">👥 Demografia · CTR%</span><span class="panel-meta">META · IDADE × GÊNERO</span></div>
+      <div class="demo-grid" id="demo-grid"></div>
+      <div class="stats-mini">
+        <div class="stat-mini"><div class="stat-mini-value" style="color: var(--cyan);">25-34 M</div><div class="stat-mini-label">Maior CTR</div></div>
+        <div class="stat-mini"><div class="stat-mini-value">3,2%</div><div class="stat-mini-label">Pico CTR</div></div>
+        <div class="stat-mini"><div class="stat-mini-value">63%</div><div class="stat-mini-label">Audiência M</div></div>
+      </div>
+    </div>
+
+    <div class="panel fade-in">
+      <div class="panel-head"><span class="panel-title">🔍 Top Termos de Busca</span><span class="panel-meta">GOOGLE · 90D</span></div>
+      <div id="terms-list"></div>
+    </div>
+
+    <div class="panel fade-in forecast-card">
+      <div class="panel-head"><span class="panel-title">📊 Split de Investimento</span><span class="panel-meta">90D</span></div>
+      <div id="platform-chart" style="height: 180px;"></div>
+      <div class="forecast-numbers">
+        <div class="forecast-num"><div class="forecast-num-value">62%</div><div class="forecast-num-label">Meta Ads</div></div>
+        <div class="forecast-num"><div class="forecast-num-value">38%</div><div class="forecast-num-label">Google Ads</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-grid">
+    <div class="panel fade-in" style="grid-column: span 2;">
+      <div class="panel-head"><span class="panel-title">⏰ Heatmap · Cliques por Dia da Semana × Hora</span><span class="panel-meta">GOOGLE · MAR-JUN</span></div>
+      <div id="hourly-heatmap" style="height: 220px;"></div>
+    </div>
+
+    <div class="panel fade-in">
+      <div class="panel-head"><span class="panel-title">📱 Device Split</span><span class="panel-meta">90D</span></div>
+      <div id="device-chart" style="height: 180px;"></div>
+      <div class="stats-mini">
+        <div class="stat-mini"><div class="stat-mini-value">72%</div><div class="stat-mini-label">Mobile</div></div>
+        <div class="stat-mini"><div class="stat-mini-value">24%</div><div class="stat-mini-label">Desktop</div></div>
+        <div class="stat-mini"><div class="stat-mini-value">4%</div><div class="stat-mini-label">Tablet</div></div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+const CYAN = '#35b9d7';
+const CYAN_SOFT = '#8fd6e6';
+const CYAN_DEEP = '#1a8fab';
+const POSITIVE = '#4ade80';
+const NEGATIVE = '#f87171';
+const WARN = '#fbbf24';
+const ORANGE = '#fb923c';
+const PURPLE = '#a78bfa';
+const TEXT_DIM = '#8ba6b3';
+
+const COMMON = {
+  chart: { fontFamily: 'Inter Tight, sans-serif', background: 'transparent', toolbar: { show: false }, animations: { speed: 600 } },
+  grid: { borderColor: 'rgba(53, 185, 215, 0.08)', strokeDashArray: 3 },
+  tooltip: { theme: 'dark', style: { fontFamily: 'JetBrains Mono, monospace', fontSize: '11px' } }
+};
+
+function spark(id, data, color) {
+  new ApexCharts(document.querySelector(id), {
+    chart: { type: 'line', height: 24, sparkline: { enabled: true }, animations: { enabled: false } },
+    series: [{ data }], stroke: { curve: 'smooth', width: 1.5 },
+    colors: [color], tooltip: { enabled: false }
+  }).render();
+}
+spark('#spark-spend', [42,38,51,47,55,49,62,58,67,73,68,82,76,84,92], CYAN);
+spark('#spark-leads', [3,4,2,5,3,4,5,6,4,7,5,8,6,7,9], POSITIVE);
+spark('#spark-cpa', [95,89,82,85,80,78,75,82,73,71,79,72,68,75,79], WARN);
+spark('#spark-ctr', [1.4,1.5,1.6,1.5,1.7,1.6,1.8,1.7,1.9,1.8,2.0,1.9,1.8,1.9,1.84], PURPLE);
+spark('#spark-impr', [38,42,47,51,55,58,62,67,71,74,78,82,87,91,95], ORANGE);
+spark('#spark-click', [12,15,18,17,21,23,27,29,32,35,38,42,45,48,51], NEGATIVE);
+
+const days = []; const spend = []; const leads = [];
+const start = new Date('2026-03-01');
+for (let i = 0; i < 96; i++) {
+  const d = new Date(start); d.setDate(d.getDate() + i);
+  days.push(d.toISOString().split('T')[0]);
+  const isActive = Math.random() > 0.35;
+  spend.push(isActive ? Math.round((80 + Math.random() * 350) * 100) / 100 : 0);
+  leads.push(isActive && Math.random() > 0.4 ? Math.floor(Math.random() * 6 + 1) : 0);
+}
+
+new ApexCharts(document.querySelector('#time-chart'), {
+  ...COMMON,
+  chart: { ...COMMON.chart, type: 'line', height: 340 },
+  series: [
+    { name: 'Investimento (R$)', type: 'area', data: days.map((d,i)=>({ x: d, y: spend[i] })) },
+    { name: 'Leads', type: 'line', data: days.map((d,i)=>({ x: d, y: leads[i] })) }
+  ],
+  colors: [CYAN, POSITIVE],
+  stroke: { width: [0, 2.5], curve: 'smooth' },
+  fill: { type: ['gradient', 'solid'], gradient: { shadeIntensity: 1, opacityFrom: 0.4, opacityTo: 0.05, stops: [0, 100] } },
+  markers: { size: 0, hover: { size: 5 } },
+  dataLabels: { enabled: false },
+  xaxis: { type: 'datetime', labels: { style: { colors: TEXT_DIM, fontFamily: 'JetBrains Mono, monospace', fontSize: '10px' } }, axisBorder: { color: 'rgba(53,185,215,0.15)' }, axisTicks: { color: 'rgba(53,185,215,0.15)' } },
+  yaxis: [
+    { labels: { style: { colors: TEXT_DIM, fontFamily: 'JetBrains Mono, monospace', fontSize: '10px' }, formatter: (v) => 'R$ ' + Math.round(v) } },
+    { opposite: true, labels: { style: { colors: TEXT_DIM, fontFamily: 'JetBrains Mono, monospace', fontSize: '10px' } } }
+  ],
+  legend: { show: true, position: 'top', horizontalAlign: 'left', labels: { colors: TEXT_DIM }, fontSize: '11px', markers: { width: 8, height: 8, radius: 4 } }
+}).render();
+
+new ApexCharts(document.querySelector('#platform-chart'), {
+  ...COMMON,
+  chart: { ...COMMON.chart, type: 'donut', height: 180 },
+  series: [62, 38],
+  labels: ['Meta Ads', 'Google Ads'],
+  colors: [CYAN, ORANGE],
+  legend: { show: false }, dataLabels: { enabled: false }, stroke: { width: 0 },
+  plotOptions: { pie: { donut: { size: '78%', labels: {
+    show: true,
+    name: { show: true, color: TEXT_DIM, fontSize: '11px', offsetY: 8 },
+    value: { show: true, color: '#e8f4f8', fontSize: '24px', fontWeight: 800, offsetY: -8, formatter: v => v + '%' },
+    total: { show: true, label: 'TOTAL R$', color: TEXT_DIM, fontSize: '10px', formatter: () => '14.832' }
+  } } } }
+}).render();
+
+new ApexCharts(document.querySelector('#device-chart'), {
+  ...COMMON,
+  chart: { ...COMMON.chart, type: 'donut', height: 180 },
+  series: [72, 24, 4],
+  labels: ['Mobile', 'Desktop', 'Tablet'],
+  colors: [CYAN, PURPLE, ORANGE],
+  legend: { show: false }, dataLabels: { enabled: false }, stroke: { width: 0 },
+  plotOptions: { pie: { donut: { size: '78%', labels: {
+    show: true,
+    name: { show: true, color: TEXT_DIM, fontSize: '10px', offsetY: 8 },
+    value: { show: true, color: '#e8f4f8', fontSize: '24px', fontWeight: 800, formatter: v => v + '%', offsetY: -8 },
+    total: { show: true, label: 'MOBILE', color: TEXT_DIM, fontSize: '9px', formatter: () => '72%' }
+  } } } }
+}).render();
+
+const hours = ['00','03','06','09','12','15','18','21'];
+const dows = ['DOM','SEG','TER','QUA','QUI','SEX','SÁB'];
+const heatData = dows.map(dow => ({
+  name: dow,
+  data: hours.map(h => ({ x: h + 'h', y: Math.floor(Math.random() * 50 + (h === '12' || h === '18' ? 80 : 10)) }))
+}));
+
+new ApexCharts(document.querySelector('#hourly-heatmap'), {
+  ...COMMON,
+  chart: { ...COMMON.chart, type: 'heatmap', height: 220 },
+  series: heatData,
+  colors: [CYAN],
+  dataLabels: { enabled: false },
+  xaxis: { labels: { style: { colors: TEXT_DIM, fontSize: '10px', fontFamily: 'JetBrains Mono, monospace' } }, axisBorder: { show: false }, axisTicks: { show: false } },
+  yaxis: { labels: { style: { colors: TEXT_DIM, fontSize: '10px', fontFamily: 'JetBrains Mono, monospace' } } },
+  plotOptions: { heatmap: {
+    radius: 3, enableShades: true, shadeIntensity: 0.8,
+    colorScale: { ranges: [
+      { from: 0, to: 20, color: '#0f3147', name: 'baixo' },
+      { from: 21, to: 50, color: '#1a8fab', name: 'médio' },
+      { from: 51, to: 100, color: '#35b9d7', name: 'alto' },
+      { from: 101, to: 200, color: '#8fd6e6', name: 'pico' }
+    ] }
+  } }
+}).render();
+
+const campaigns = [
+  { name: '15/04 - CONSCIENTIZAÇÃO', platform: 'meta', spend: 2418, ctr: '0,11%' },
+  { name: 'LEADS - 02/03/26 - FORMULÁRIO', platform: 'meta', spend: 2184, ctr: '1,51%' },
+  { name: 'Diagnóstico Tributário · Search', platform: 'google', spend: 1847, ctr: '3,21%' },
+  { name: '13/05 - ENGAJAMENTO · CASES V2', platform: 'meta', spend: 1523, ctr: '1,37%' },
+  { name: 'Recuperação Tributária · Brand', platform: 'google', spend: 1412, ctr: '4,12%' },
+  { name: 'LEADS · EXTRAÍDO CONCORRENTES', platform: 'meta', spend: 1198, ctr: '1,24%' },
+  { name: 'Reforma Tributária · Edu', platform: 'google', spend: 982, ctr: '2,76%' },
+  { name: 'TRÁFEGO · MÓDULO REFORMA', platform: 'meta', spend: 814, ctr: '1,68%' }
+];
+const maxSpend = Math.max(...campaigns.map(c => c.spend));
+document.getElementById('campaigns-list').innerHTML = campaigns.map(c => `
+  <div class="campaign-row">
+    <div class="campaign-info">
+      <div class="campaign-name-row">
+        <span class="campaign-name">${c.name}</span>
+        <span class="platform-tag ${c.platform}">${c.platform}</span>
+      </div>
+      <div class="campaign-bar"><div class="campaign-bar-fill ${c.platform}" style="width: ${(c.spend/maxSpend)*100}%"></div></div>
+    </div>
+    <div class="campaign-spend">R$ ${c.spend.toLocaleString('pt-BR')}<small>CTR ${c.ctr}</small></div>
+  </div>
+`).join('');
+
+const states = [
+  { name: 'São Paulo', leads: 47 }, { name: 'Rio de Janeiro', leads: 28 },
+  { name: 'Paraná', leads: 22 }, { name: 'Minas Gerais', leads: 19 },
+  { name: 'Rio Grande do Sul', leads: 14 }, { name: 'Santa Catarina', leads: 12 },
+  { name: 'Distrito Federal', leads: 11 }, { name: 'Pernambuco', leads: 7 },
+  { name: 'Goiás', leads: 5 }, { name: 'Ceará', leads: 4 }
+];
+const maxLeads = Math.max(...states.map(s => s.leads));
+document.getElementById('states-list').innerHTML = states.map((s, i) => `
+  <div class="state-row">
+    <span class="state-rank">${String(i+1).padStart(2,'0')}</span>
+    <div>
+      <span class="state-name">${s.name}</span>
+      <div class="state-bar"><div class="state-bar-fill" style="width: ${(s.leads/maxLeads)*100}%"></div></div>
+    </div>
+    <span class="state-value">${s.leads} leads</span>
+  </div>
+`).join('');
+
+const demoData = [
+  { age: '18-24', f: 0.8, m: 2.9, u: 0.9 },
+  { age: '25-34', f: 1.7, m: 3.2, u: 1.1 },
+  { age: '35-44', f: 2.0, m: 2.5, u: 1.3 },
+  { age: '45-54', f: 1.5, m: 2.0, u: 1.1 },
+  { age: '55-64', f: 1.0, m: 1.3, u: 0.7 },
+  { age: '65+', f: 0.7, m: 0.9, u: 0.5 }
+];
+const maxCtr = 3.2;
+const demoHTML = ['<span></span>', '<span class="col-h">F</span>', '<span class="col-h">M</span>', '<span class="col-h">U</span>'];
+demoData.forEach(d => {
+  demoHTML.push(`<span class="row-h">${d.age}</span>`);
+  ['f','m','u'].forEach(g => {
+    const v = d[g];
+    const op = Math.max(0.15, v / maxCtr);
+    demoHTML.push(`<div class="demo-cell" style="background: rgba(53, 185, 215, ${op}); color: ${op > 0.5 ? '#0a2638' : '#e8f4f8'}">${v}%</div>`);
+  });
+});
+document.getElementById('demo-grid').innerHTML = demoHTML.join('');
+
+const terms = [
+  { t: 'recuperação tributária empresa', v: 8421 },
+  { t: 'reforma tributária 2026', v: 6218 },
+  { t: 'consultoria tributária curitiba', v: 4937 },
+  { t: 'diagnostico tributario online', v: 4512 },
+  { t: 'planejamento tributário lucro real', v: 3871 },
+  { t: 'recuperar pis cofins', v: 3124 },
+  { t: 'cbs ibs como funciona', v: 2789 },
+  { t: 'credito tributario judicial', v: 2341 },
+  { t: 'holding patrimonial empresa', v: 1987 },
+  { t: 'larafy consultoria', v: 1652 }
+];
+const maxV = Math.max(...terms.map(t => t.v));
+document.getElementById('terms-list').innerHTML = terms.map(t => `
+  <div class="term-row">
+    <span class="term-text">${t.t}</span>
+    <span class="term-bar" style="--w: ${(t.v/maxV)*100}%"></span>
+  </div>
+`).join('');
+
+const stateData = {
+  'São Paulo': { spend: 4832, impressions: 248391, leads: 47, cpa: 102.81 },
+  'Rio de Janeiro': { spend: 2418, impressions: 138247, leads: 28, cpa: 86.36 },
+  'Paraná': { spend: 1832, impressions: 104821, leads: 22, cpa: 83.27 },
+  'Minas Gerais': { spend: 1612, impressions: 98214, leads: 19, cpa: 84.84 },
+  'Rio Grande do Sul': { spend: 1284, impressions: 78421, leads: 14, cpa: 91.71 },
+  'Santa Catarina': { spend: 982, impressions: 62418, leads: 12, cpa: 81.83 },
+  'Distrito Federal': { spend: 814, impressions: 48217, leads: 11, cpa: 74.00 },
+  'Pernambuco': { spend: 421, impressions: 28491, leads: 7, cpa: 60.14 },
+  'Goiás': { spend: 318, impressions: 21847, leads: 5, cpa: 63.60 },
+  'Ceará': { spend: 287, impressions: 19248, leads: 4, cpa: 71.75 },
+  'Bahia': { spend: 264, impressions: 18421, leads: 6, cpa: 44.00 },
+  'Espírito Santo': { spend: 218, impressions: 15847, leads: 3, cpa: 72.67 }
+};
+const nameMap = {
+  'São Paulo':'São Paulo','SP':'São Paulo','Rio de Janeiro':'Rio de Janeiro','RJ':'Rio de Janeiro',
+  'Paraná':'Paraná','PR':'Paraná','Minas Gerais':'Minas Gerais','MG':'Minas Gerais',
+  'Rio Grande do Sul':'Rio Grande do Sul','RS':'Rio Grande do Sul','Santa Catarina':'Santa Catarina','SC':'Santa Catarina',
+  'Distrito Federal':'Distrito Federal','DF':'Distrito Federal','Pernambuco':'Pernambuco','PE':'Pernambuco',
+  'Goiás':'Goiás','GO':'Goiás','Ceará':'Ceará','CE':'Ceará','Bahia':'Bahia','BA':'Bahia',
+  'Espírito Santo':'Espírito Santo','ES':'Espírito Santo'
+};
+
+const map = L.map('brazil-map', {
+  attributionControl: false, zoomControl: false, dragging: false,
+  scrollWheelZoom: false, doubleClickZoom: false, touchZoom: false,
+  boxZoom: false, keyboard: false
+}).setView([-14.5, -52], 4);
+
+let currentMetric = 'spend';
+let geoLayer = null;
+
+function getColor(value, max) {
+  if (!value || value === 0) return '#0f3147';
+  const r = value / max;
+  if (r > 0.7) return CYAN;
+  if (r > 0.4) return CYAN_DEEP;
+  if (r > 0.2) return '#1a6478';
+  if (r > 0.05) return '#155366';
+  return '#114658';
+}
+
+function fmtMetric(metric, value) {
+  if (value === undefined || value === null) return '—';
+  switch(metric) {
+    case 'spend': return 'R$ ' + value.toLocaleString('pt-BR');
+    case 'impressions': return value.toLocaleString('pt-BR');
+    case 'leads': return value;
+    case 'cpa': return 'R$ ' + value.toFixed(2);
+  }
+}
+
+function metricLabel(metric) {
+  return {spend:'Investimento', impressions:'Impressões', leads:'Leads', cpa:'CPA'}[metric];
+}
+
+function renderMap(metric) {
+  currentMetric = metric;
+  const values = Object.values(stateData).map(d => d[metric]).filter(v => v > 0);
+  const max = Math.max(...values);
+  const min = Math.min(...values);
+  document.getElementById('legend-min').textContent = fmtMetric(metric, min);
+  document.getElementById('legend-max').textContent = fmtMetric(metric, max);
+  if (geoLayer) map.removeLayer(geoLayer);
+  if (!brazilGeo) return;
+  geoLayer = L.geoJSON(brazilGeo, {
+    style: (feature) => {
+      const sn = feature.properties.name || feature.properties.NAME_1 || feature.properties.sigla;
+      const normalized = nameMap[sn] || sn;
+      const data = stateData[normalized];
+      const value = data ? data[metric] : 0;
+      return { fillColor: getColor(value, max), weight: 0.6, opacity: 1, color: '#061a26', fillOpacity: 0.95 };
+    },
+    onEachFeature: (feature, layer) => {
+      const sn = feature.properties.name || feature.properties.NAME_1 || feature.properties.sigla;
+      const normalized = nameMap[sn] || sn;
+      const data = stateData[normalized];
+      const tip = data
+        ? `<strong>${normalized.toUpperCase()}</strong><br>${metricLabel(metric)}: ${fmtMetric(metric, data[metric])}`
+        : `<strong>${(sn||'').toUpperCase()}</strong><br>Sem dados`;
+      layer.bindTooltip(tip, { sticky: true });
+      layer.on({
+        mouseover: (e) => e.target.setStyle({ weight: 2, color: CYAN_SOFT, fillOpacity: 1 }),
+        mouseout: (e) => geoLayer.resetStyle(e.target)
+      });
+    }
+  }).addTo(map);
+}
+
+document.querySelectorAll('.metric-pill').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.metric-pill').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderMap(btn.dataset.metric);
+  });
+});
+
+let brazilGeo;
+fetch('https://raw.githubusercontent.com/codeforgermany/click_that_hood/main/public/data/brazil-states.geojson')
+  .then(r => r.json())
+  .then(data => { brazilGeo = data; renderMap('spend'); })
+  .catch(e => {
+    console.error('GeoJSON load failed', e);
+    document.getElementById('brazil-map').innerHTML =
+      '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#8ba6b3;font-family:JetBrains Mono,monospace;font-size:11px;">Mapa indisponível</div>';
+  });
+
+setInterval(() => {
+  document.querySelectorAll('.timestamp strong').forEach(el => {
+    const now = new Date();
+    const time = now.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+    const date = now.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' });
+    el.textContent = `${date} · ${time}`;
+  });
+}, 60000);
+
+// === PLATFORM FILTER ===
+document.querySelectorAll('.platform-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.platform-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    applyPlatformFilter(btn.dataset.platform);
+  });
+});
+
+function applyPlatformFilter(platform) {
+  // Filtra a lista de campanhas visivelmente
+  document.querySelectorAll('#campaigns-list .campaign-row').forEach(row => {
+    const tag = row.querySelector('.platform-tag');
+    if (platform === 'all') {
+      row.style.display = '';
+    } else if (tag && tag.classList.contains(platform)) {
+      row.style.display = '';
+    } else {
+      row.style.display = 'none';
+    }
+  });
+
+  // Filtra termos de busca (Google only) e demografia (Meta only)
+  const termsPanel = document.getElementById('terms-list').closest('.panel');
+  const demoPanel = document.getElementById('demo-grid').closest('.panel');
+
+  termsPanel.style.opacity = (platform === 'meta') ? '0.3' : '1';
+  termsPanel.style.pointerEvents = (platform === 'meta') ? 'none' : 'auto';
+
+  demoPanel.style.opacity = (platform === 'google') ? '0.3' : '1';
+  demoPanel.style.pointerEvents = (platform === 'google') ? 'none' : 'auto';
+
+  // Highlight visual no donut de plataforma
+  const platformPanel = document.querySelector('.forecast-card');
+  platformPanel.style.borderColor = platform === 'meta' ? 'var(--cyan)' :
+                                     platform === 'google' ? 'var(--accent-orange)' :
+                                     'var(--line)';
+}
+</script>
+</body>
+</html>
