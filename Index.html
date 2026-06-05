@@ -60,6 +60,10 @@ body {
   top: 0;
   z-index: 100;
 }
+
+.brand-logo { height: 32px; width: auto; display: block; }
+@media (max-width: 768px) { .brand-logo { height: 24px; } }
+
 .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit; }
 .brand-wordmark {
   font-size: 28px;
@@ -95,6 +99,16 @@ body {
   border-left: 1px solid var(--line-strong);
   padding-left: 12px;
 }
+
+
+.custom-date { display: flex; gap: 6px; align-items: center; padding: 4px 8px; background: var(--panel-2); border-radius: 6px; }
+.date-input {
+  background: var(--panel); border: 1px solid var(--line); border-radius: 4px;
+  color: var(--text); padding: 4px 8px; font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; outline: none;
+}
+.date-input:focus { border-color: var(--cyan); }
+.date-input::-webkit-calendar-picker-indicator { filter: invert(0.8); cursor: pointer; }
 
 .topbar-center { display: flex; gap: 10px; align-items: center; }
 .period-selector, .platform-selector {
@@ -335,18 +349,23 @@ body {
 
 <header class="topbar">
   <a href="https://laratax.com.br" target="_blank" class="brand">
-    <div class="brand-wordmark">
-      <span class="lara">Lara</span><span class="tax">TAX</span>
-    </div>
+    <svg class="brand-logo" viewBox="0 0 380 48" xmlns="http://www.w3.org/2000/svg"><path d="M 264.413 0 C 265.448 0 266 0.483 266 1.518 L 266 8.482 C 266 9.517 265.448 10 264.413 10 L 243.241 10.018 L 243.241 20.548 L 232.753 20.548 L 232.753 10.018 L 211.518 10.018 C 210.552 10.018 210 9.535 210 8.5 L 210 1.536 C 210 0.501 210.552 0.018 211.518 0.018 Z M 159.247 10 L 189.58 10 C 201.793 10 206.002 13.794 206.002 23.936 L 206.002 42.481 C 206.002 46.896 204.967 48 200.896 48 L 168.628 48 C 160.693 48 158.002 45.31 158.002 38.203 L 158.002 34.892 C 158.002 28.476 161.176 25.372 168.628 25.372 L 196.204 25.372 L 196.204 24.557 C 196.204 20.142 194.548 18.555 188.614 18.555 L 159.247 18.555 C 158.419 18.555 158.005 18.141 158.005 17.313 L 158.005 11.242 C 158.005 10.414 158.419 10 159.247 10 Z M 194.065 39.79 C 195.583 39.79 196.204 39.17 196.204 37.514 L 196.204 32.477 L 171.526 32.477 C 168.559 32.477 167.731 33.305 167.731 35.375 L 167.731 36.824 C 167.731 39.169 168.559 39.79 171.526 39.79 Z M 128.353 10 L 148.762 10 C 149.59 10 150.004 10.414 150.004 11.242 L 150.004 17.314 C 150.004 18.142 149.59 18.556 148.762 18.556 L 129.319 18.556 C 123.316 18.556 121.798 20.074 121.798 25.87 L 121.798 46.48 C 121.798 47.516 121.315 47.999 120.28 47.999 L 113.518 47.999 C 112.483 47.999 112 47.516 112 46.48 L 112 23.938 C 112 13.795 116.209 10 128.353 10 Z M 57.245 9.996 L 87.578 9.996 C 99.791 9.996 104 13.79 104 23.932 L 104 42.477 C 104 46.892 102.965 47.996 98.894 47.996 L 66.626 47.996 C 58.691 47.996 56 45.306 56 38.199 L 56 34.888 C 56 28.472 59.174 25.367 66.626 25.367 L 94.202 25.367 L 94.202 24.553 C 94.202 20.137 92.546 18.55 86.612 18.55 L 57.245 18.55 C 56.417 18.55 56.003 18.137 56.003 17.309 L 56.003 11.237 C 56.003 10.41 56.417 9.996 57.245 9.996 Z M 92.063 39.786 C 93.581 39.786 94.202 39.165 94.202 37.509 L 94.202 32.473 L 69.524 32.473 C 66.557 32.473 65.729 33.301 65.729 35.371 L 65.729 36.819 C 65.729 39.165 66.557 39.786 69.524 39.786 Z M 1.518 0 L 8.97 0 C 10.005 0 10.488 0.483 10.488 1.517 L 10.488 28.738 C 10.488 36.05 12.558 38.188 19.665 38.188 L 46.482 38.206 C 47.448 38.206 48 38.688 48 39.723 L 48 46.483 C 48 47.517 47.448 48 46.482 48 L 19.32 47.982 C 5.313 47.982 0 43.016 0 29.772 L 0 1.518 C 0 0.483 0.483 0 1.518 0 Z" fill="#e8f4f8"/><path d="M 145.317 0 C 146.492 0 146.558 1.166 145.97 1.783 L 129.458 19.425 L 123.364 12.751 L 134.15 0.96 C 134.672 0.343 135.195 0 136.239 0 Z M 103.911 0 C 104.956 0 105.479 0.343 106.001 0.96 L 146.884 46.217 C 147.472 46.834 147.407 48 146.232 48 L 136.762 48 C 135.717 48 135.194 47.657 134.607 47.04 L 119.063 29.76 L 103.454 47.04 C 102.867 47.657 102.409 48 101.364 48 L 92.221 48 C 91.045 48 91.045 46.834 91.633 46.217 L 112.924 22.972 L 93.723 1.783 C 93.135 1.166 93.201 0 94.376 0 Z M 56.805 0 C 60.326 0 62.357 1.03 64.592 5.212 L 87.007 46.422 C 87.481 47.382 87.277 48 86.193 48 L 77.594 48 C 76.713 48 76.307 47.794 76.036 47.177 L 71.567 38.812 L 44.811 38.812 L 49.544 29.898 L 66.759 29.898 L 56.263 10.217 C 56.059 9.874 55.789 9.737 55.45 9.737 L 55.044 9.737 C 54.705 9.737 54.502 9.874 54.299 10.217 L 35.722 45.273 L 35.728 45.275 L 34.728 47.177 C 34.39 47.794 34.052 48 33.172 48 L 24.301 48 C 23.217 48 23.014 47.383 23.488 46.423 L 45.699 5.212 C 47.866 1.029 49.965 0 52.809 0 Z M 10.488 46.48 C 10.488 47.515 10.074 47.998 9.039 47.998 L 1.518 47.998 C 0.552 47.998 0 47.515 0 46.481 L 0 25.549 L 10.488 25.549 Z" fill="#35b9d7" transform="translate(232.753 0)"/></svg>
     <span class="brand-sub">Marketing<br>Intelligence</span>
   </a>
   <div class="topbar-center">
-    <div class="period-selector">
-      <button class="period-btn">7D</button>
-      <button class="period-btn">30D</button>
-      <button class="period-btn active">90D</button>
-      <button class="period-btn">YTD</button>
-      <button class="period-btn">TUDO</button>
+    <div class="period-selector" id="period-selector">
+      <button class="period-btn" data-range="7">7D</button>
+      <button class="period-btn" data-range="30">30D</button>
+      <button class="period-btn" data-range="90">90D</button>
+      <button class="period-btn" data-range="ytd">YTD</button>
+      <button class="period-btn active" data-range="all">TUDO</button>
+      <button class="period-btn" data-range="custom" id="btn-custom">📅</button>
+    </div>
+    <div class="custom-date" id="custom-date" style="display:none;">
+      <input type="date" id="date-from" class="date-input">
+      <span style="color:var(--text-dim);">→</span>
+      <input type="date" id="date-to" class="date-input">
+      <button class="period-btn" id="apply-custom">OK</button>
     </div>
     <div class="platform-selector">
       <button class="platform-btn active" data-platform="all">TODAS</button>
@@ -366,33 +385,33 @@ body {
   <div class="kpi-strip">
     <div class="kpi fade-in">
       <div class="kpi-head"><span class="kpi-label">Investimento</span><span class="kpi-icon spend">💰</span></div>
-      <div class="kpi-value"><span class="unit">R$</span>14.832</div>
-      <div class="kpi-foot"><span class="kpi-delta up">↑ 12,4%</span><div class="kpi-spark" id="spark-spend"></div></div>
+      <div class="kpi-value" id="kpi-spend"><span class="unit">R$</span>—</div>
+      <div class="kpi-foot"><span class="kpi-delta" id="delta-spend"></span><div class="kpi-spark" id="spark-spend"></div></div>
     </div>
     <div class="kpi fade-in">
       <div class="kpi-head"><span class="kpi-label">Leads</span><span class="kpi-icon leads">🎯</span></div>
-      <div class="kpi-value">187</div>
-      <div class="kpi-foot"><span class="kpi-delta up">↑ 8,1%</span><div class="kpi-spark" id="spark-leads"></div></div>
+      <div class="kpi-value" id="kpi-leads">—</div>
+      <div class="kpi-foot"><span class="kpi-delta" id="delta-leads"></span><div class="kpi-spark" id="spark-leads"></div></div>
     </div>
     <div class="kpi fade-in">
       <div class="kpi-head"><span class="kpi-label">CPA</span><span class="kpi-icon cpa">📉</span></div>
-      <div class="kpi-value"><span class="unit">R$</span>79<span class="small">,32</span></div>
-      <div class="kpi-foot"><span class="kpi-delta down">↓ 4,2%</span><div class="kpi-spark" id="spark-cpa"></div></div>
+      <div class="kpi-value" id="kpi-cpa"><span class="unit">R$</span>—</div>
+      <div class="kpi-foot"><span class="kpi-delta" id="delta-cpa"></span><div class="kpi-spark" id="spark-cpa"></div></div>
     </div>
     <div class="kpi fade-in">
       <div class="kpi-head"><span class="kpi-label">CTR</span><span class="kpi-icon ctr">⚡</span></div>
-      <div class="kpi-value">1,84<span class="small">%</span></div>
-      <div class="kpi-foot"><span class="kpi-delta up">↑ 0,3pp</span><div class="kpi-spark" id="spark-ctr"></div></div>
+      <div class="kpi-value" id="kpi-ctr">—<span class="small">%</span></div>
+      <div class="kpi-foot"><span class="kpi-delta" id="delta-ctr"></span><div class="kpi-spark" id="spark-ctr"></div></div>
     </div>
     <div class="kpi fade-in">
       <div class="kpi-head"><span class="kpi-label">Impressões</span><span class="kpi-icon impr">👁</span></div>
-      <div class="kpi-value">847<span class="small">K</span></div>
-      <div class="kpi-foot"><span class="kpi-delta up">↑ 18,7%</span><div class="kpi-spark" id="spark-impr"></div></div>
+      <div class="kpi-value" id="kpi-impr">—</div>
+      <div class="kpi-foot"><span class="kpi-delta" id="delta-impr"></span><div class="kpi-spark" id="spark-impr"></div></div>
     </div>
     <div class="kpi fade-in">
       <div class="kpi-head"><span class="kpi-label">Cliques</span><span class="kpi-icon click">🖱</span></div>
-      <div class="kpi-value">15<span class="small">,5K</span></div>
-      <div class="kpi-foot"><span class="kpi-delta up">↑ 23,2%</span><div class="kpi-spark" id="spark-click"></div></div>
+      <div class="kpi-value" id="kpi-clicks">—</div>
+      <div class="kpi-foot"><span class="kpi-delta" id="delta-clicks"></span><div class="kpi-spark" id="spark-click"></div></div>
     </div>
   </div>
 
@@ -400,13 +419,13 @@ body {
     <div class="panel fade-in">
       <div class="panel-head">
         <span class="panel-title">📈 Performance Diária · Investimento vs Leads</span>
-        <span class="panel-meta">96 dias · 62 ativos</span>
+        <span class="panel-meta" id="meta-temporal">—</span>
       </div>
       <div id="time-chart" style="height: 340px;"></div>
       <div class="stats-mini">
-        <div class="stat-mini"><div class="stat-mini-value">R$ 412</div><div class="stat-mini-label">Pico Diário</div></div>
-        <div class="stat-mini"><div class="stat-mini-value">R$ 165</div><div class="stat-mini-label">Média/Dia</div></div>
-        <div class="stat-mini"><div class="stat-mini-value">62/96</div><div class="stat-mini-label">Dias Ativos</div></div>
+        <div class="stat-mini"><div class="stat-mini-value" id="time-peak">—</div><div class="stat-mini-label">Pico Diário</div></div>
+        <div class="stat-mini"><div class="stat-mini-value" id="time-avg">—</div><div class="stat-mini-label">Média/Dia</div></div>
+        <div class="stat-mini"><div class="stat-mini-value" id="time-active">—</div><div class="stat-mini-label">Dias Ativos</div></div>
       </div>
     </div>
 
@@ -424,7 +443,7 @@ body {
       <div class="map-legend">
         <span id="legend-min">R$ 0</span>
         <div class="gradient-bar"></div>
-        <span id="legend-max">R$ 4.832</span>
+        <span id="legend-max">—</span>
       </div>
     </div>
   </div>
@@ -435,39 +454,39 @@ body {
       <div class="funnel-stages">
         <div class="funnel-stage">
           <span class="funnel-label">Impressões</span>
-          <div class="funnel-track"><div class="funnel-fill s1">847.293</div></div>
+          <div class="funnel-track"><div class="funnel-fill s1" id="funnel-impr">—</div></div>
           <span class="funnel-conv">100%</span>
         </div>
         <div class="funnel-stage">
-          <span class="funnel-label">Alcance</span>
-          <div class="funnel-track"><div class="funnel-fill s2">612.187</div></div>
-          <span class="funnel-conv">72,2%</span>
+          <span class="funnel-label">Cliques</span>
+          <div class="funnel-track"><div class="funnel-fill s2" id="funnel-clicks">—</div></div>
+          <span class="funnel-conv" id="funnel-ctr">CTR <strong>—</strong></span>
         </div>
         <div class="funnel-stage">
           <span class="funnel-label">Cliques</span>
-          <div class="funnel-track"><div class="funnel-fill s3">15.589</div></div>
-          <span class="funnel-conv">CTR <strong>1,84%</strong></span>
+          <div class="funnel-track"><div class="funnel-fill s3" id="funnel-leads-stage">—</div></div>
+          <span class="funnel-conv" id="funnel-cr">CR <strong>—</strong></span>
         </div>
         <div class="funnel-stage">
           <span class="funnel-label">Leads</span>
-          <div class="funnel-track"><div class="funnel-fill s4">187</div></div>
-          <span class="funnel-conv">CR <strong>1,20%</strong></span>
+          <div class="funnel-track"><div class="funnel-fill s4" id="funnel-cpl">CPA: —</div></div>
+          <span class="funnel-conv">Custo <strong id="funnel-cpa-label">—</strong></span>
         </div>
       </div>
       <div class="stats-mini">
-        <div class="stat-mini"><div class="stat-mini-value">5,4K</div><div class="stat-mini-label">Impr / Lead</div></div>
-        <div class="stat-mini"><div class="stat-mini-value">83</div><div class="stat-mini-label">Cliques / Lead</div></div>
-        <div class="stat-mini"><div class="stat-mini-value">R$ 79</div><div class="stat-mini-label">Custo / Lead</div></div>
+        <div class="stat-mini"><div class="stat-mini-value" id="fnl-impl">—</div><div class="stat-mini-label">Impr / Lead</div></div>
+        <div class="stat-mini"><div class="stat-mini-value" id="fnl-clpl">—</div><div class="stat-mini-label">Cliques / Lead</div></div>
+        <div class="stat-mini"><div class="stat-mini-value" id="fnl-cpl">—</div><div class="stat-mini-label">Custo / Lead</div></div>
       </div>
     </div>
 
     <div class="panel fade-in">
-      <div class="panel-head"><span class="panel-title">🏆 Top Campanhas por Spend</span><span class="panel-meta">8/24 ativas</span></div>
+      <div class="panel-head"><span class="panel-title">🏆 Top Campanhas por Spend</span><span class="panel-meta" id="meta-camp">—</span></div>
       <div id="campaigns-list"></div>
     </div>
 
     <div class="panel fade-in">
-      <div class="panel-head"><span class="panel-title">📍 Top Estados · Leads</span><span class="panel-meta">12 UFs cobertas</span></div>
+      <div class="panel-head"><span class="panel-title">📍 Top Estados · Leads</span><span class="panel-meta" id="meta-uf">—</span></div>
       <div id="states-list"></div>
     </div>
   </div>
@@ -477,9 +496,9 @@ body {
       <div class="panel-head"><span class="panel-title">👥 Demografia · CTR%</span><span class="panel-meta">META · IDADE × GÊNERO</span></div>
       <div class="demo-grid" id="demo-grid"></div>
       <div class="stats-mini">
-        <div class="stat-mini"><div class="stat-mini-value" style="color: var(--cyan);">25-34 M</div><div class="stat-mini-label">Maior CTR</div></div>
-        <div class="stat-mini"><div class="stat-mini-value">3,2%</div><div class="stat-mini-label">Pico CTR</div></div>
-        <div class="stat-mini"><div class="stat-mini-value">63%</div><div class="stat-mini-label">Audiência M</div></div>
+        <div class="stat-mini"><div class="stat-mini-value" id="demo-top" style="color: var(--cyan);">—</div><div class="stat-mini-label">Maior CTR</div></div>
+        <div class="stat-mini"><div class="stat-mini-value" id="demo-peak">—</div><div class="stat-mini-label">Pico CTR</div></div>
+        <div class="stat-mini"><div class="stat-mini-value" id="demo-male">—</div><div class="stat-mini-label">Audiência M</div></div>
       </div>
     </div>
 
@@ -492,8 +511,8 @@ body {
       <div class="panel-head"><span class="panel-title">📊 Split de Investimento</span><span class="panel-meta">90D</span></div>
       <div id="platform-chart" style="height: 180px;"></div>
       <div class="forecast-numbers">
-        <div class="forecast-num"><div class="forecast-num-value">62%</div><div class="forecast-num-label">Meta Ads</div></div>
-        <div class="forecast-num"><div class="forecast-num-value">38%</div><div class="forecast-num-label">Google Ads</div></div>
+        <div class="forecast-num"><div class="forecast-num-value" id="plat-meta">—</div><div class="forecast-num-label">Meta Ads</div></div>
+        <div class="forecast-num"><div class="forecast-num-value" id="plat-google">—</div><div class="forecast-num-label">Google Ads</div></div>
       </div>
     </div>
   </div>
@@ -508,9 +527,9 @@ body {
       <div class="panel-head"><span class="panel-title">📱 Device Split</span><span class="panel-meta">90D</span></div>
       <div id="device-chart" style="height: 180px;"></div>
       <div class="stats-mini">
-        <div class="stat-mini"><div class="stat-mini-value">72%</div><div class="stat-mini-label">Mobile</div></div>
-        <div class="stat-mini"><div class="stat-mini-value">24%</div><div class="stat-mini-label">Desktop</div></div>
-        <div class="stat-mini"><div class="stat-mini-value">4%</div><div class="stat-mini-label">Tablet</div></div>
+        <div class="stat-mini"><div class="stat-mini-value" id="dev-mobile">—</div><div class="stat-mini-label">Mobile</div></div>
+        <div class="stat-mini"><div class="stat-mini-value" id="dev-desktop">—</div><div class="stat-mini-label">Desktop</div></div>
+        <div class="stat-mini"><div class="stat-mini-value" id="dev-tablet">—</div><div class="stat-mini-label">Tablet</div></div>
       </div>
     </div>
   </div>
@@ -534,343 +553,483 @@ const COMMON = {
   tooltip: { theme: 'dark', style: { fontFamily: 'JetBrains Mono, monospace', fontSize: '11px' } }
 };
 
+// === FORMATTERS PT-BR ===
+const fmtBR = (n, d=0) => Number(n||0).toLocaleString('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d });
+const fmtCurr = (n) => 'R$ ' + fmtBR(n, 2);
+const fmtCurrShort = (n) => {
+  if (n >= 1000) return 'R$ ' + fmtBR(n/1000, 1) + 'K';
+  return 'R$ ' + fmtBR(n, 0);
+};
+const fmtBigNum = (n) => {
+  if (n >= 1000000) return fmtBR(n/1000000, 1) + 'M';
+  if (n >= 1000) return fmtBR(n/1000, 1) + 'K';
+  return fmtBR(n, 0);
+};
+
+// === STATE NAME MAP (Google API → IBGE GeoJSON) ===
+const STATE_NORMALIZE = {
+  'State of Acre': 'Acre', 'State of Alagoas': 'Alagoas', 'State of Amapa': 'Amapá',
+  'State of Amazonas': 'Amazonas', 'State of Bahia': 'Bahia', 'Ceara': 'Ceará',
+  'Federal District': 'Distrito Federal', 'State of Espirito Santo': 'Espírito Santo',
+  'State of Goias': 'Goiás', 'State of Maranhao': 'Maranhão',
+  'State of Mato Grosso': 'Mato Grosso', 'State of Mato Grosso do Sul': 'Mato Grosso do Sul',
+  'State of Minas Gerais': 'Minas Gerais', 'State of Para': 'Pará',
+  'State of Paraiba': 'Paraíba', 'State of Parana': 'Paraná',
+  'State of Pernambuco': 'Pernambuco', 'State of Piaui': 'Piauí',
+  'State of Rio de Janeiro': 'Rio de Janeiro', 'State of Rio Grande do Norte': 'Rio Grande do Norte',
+  'State of Rio Grande do Sul': 'Rio Grande do Sul', 'State of Rondonia': 'Rondônia',
+  'State of Roraima': 'Roraima', 'State of Santa Catarina': 'Santa Catarina',
+  'State of Sao Paulo': 'São Paulo', 'State of Sergipe': 'Sergipe',
+  'State of Tocantins': 'Tocantins'
+};
+const normalizeState = (s) => STATE_NORMALIZE[s] || s;
+
+// === SPARK ===
 function spark(id, data, color) {
+  if (!data || !data.length) return;
   new ApexCharts(document.querySelector(id), {
     chart: { type: 'line', height: 24, sparkline: { enabled: true }, animations: { enabled: false } },
     series: [{ data }], stroke: { curve: 'smooth', width: 1.5 },
     colors: [color], tooltip: { enabled: false }
   }).render();
 }
-spark('#spark-spend', [42,38,51,47,55,49,62,58,67,73,68,82,76,84,92], CYAN);
-spark('#spark-leads', [3,4,2,5,3,4,5,6,4,7,5,8,6,7,9], POSITIVE);
-spark('#spark-cpa', [95,89,82,85,80,78,75,82,73,71,79,72,68,75,79], WARN);
-spark('#spark-ctr', [1.4,1.5,1.6,1.5,1.7,1.6,1.8,1.7,1.9,1.8,2.0,1.9,1.8,1.9,1.84], PURPLE);
-spark('#spark-impr', [38,42,47,51,55,58,62,67,71,74,78,82,87,91,95], ORANGE);
-spark('#spark-click', [12,15,18,17,21,23,27,29,32,35,38,42,45,48,51], NEGATIVE);
 
-const days = []; const spend = []; const leads = [];
-const start = new Date('2026-03-01');
-for (let i = 0; i < 96; i++) {
-  const d = new Date(start); d.setDate(d.getDate() + i);
-  days.push(d.toISOString().split('T')[0]);
-  const isActive = Math.random() > 0.35;
-  spend.push(isActive ? Math.round((80 + Math.random() * 350) * 100) / 100 : 0);
-  leads.push(isActive && Math.random() > 0.4 ? Math.floor(Math.random() * 6 + 1) : 0);
-}
+// === MAIN INIT ===
+function renderAll(D) {
+  // === Timestamp ===
+  const ts = new Date(D.updated_at);
+  const dateStr = ts.toLocaleDateString('pt-BR');
+  const timeStr = ts.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+  document.querySelectorAll('.timestamp strong').forEach(el => el.textContent = `${dateStr} · ${timeStr}`);
 
-new ApexCharts(document.querySelector('#time-chart'), {
-  ...COMMON,
-  chart: { ...COMMON.chart, type: 'line', height: 340 },
-  series: [
-    { name: 'Investimento (R$)', type: 'area', data: days.map((d,i)=>({ x: d, y: spend[i] })) },
-    { name: 'Leads', type: 'line', data: days.map((d,i)=>({ x: d, y: leads[i] })) }
-  ],
-  colors: [CYAN, POSITIVE],
-  stroke: { width: [0, 2.5], curve: 'smooth' },
-  fill: { type: ['gradient', 'solid'], gradient: { shadeIntensity: 1, opacityFrom: 0.4, opacityTo: 0.05, stops: [0, 100] } },
-  markers: { size: 0, hover: { size: 5 } },
-  dataLabels: { enabled: false },
-  xaxis: { type: 'datetime', labels: { style: { colors: TEXT_DIM, fontFamily: 'JetBrains Mono, monospace', fontSize: '10px' } }, axisBorder: { color: 'rgba(53,185,215,0.15)' }, axisTicks: { color: 'rgba(53,185,215,0.15)' } },
-  yaxis: [
-    { labels: { style: { colors: TEXT_DIM, fontFamily: 'JetBrains Mono, monospace', fontSize: '10px' }, formatter: (v) => 'R$ ' + Math.round(v) } },
-    { opposite: true, labels: { style: { colors: TEXT_DIM, fontFamily: 'JetBrains Mono, monospace', fontSize: '10px' } } }
-  ],
-  legend: { show: true, position: 'top', horizontalAlign: 'left', labels: { colors: TEXT_DIM }, fontSize: '11px', markers: { width: 8, height: 8, radius: 4 } }
-}).render();
+  // === KPIs ===
+  const k = D.kpis;
+  document.getElementById('kpi-spend').innerHTML = `<span class="unit">R$</span>${fmtBR(k.spend.value, 0)}`;
+  document.getElementById('kpi-leads').textContent = fmtBR(k.leads.value, 0);
+  document.getElementById('kpi-cpa').innerHTML = k.leads.value > 0
+    ? `<span class="unit">R$</span>${fmtBR(k.cpa.value, 0)}<span class="small">,${(k.cpa.value % 1).toFixed(2).slice(2)}</span>`
+    : `<span class="unit">R$</span>—`;
+  document.getElementById('kpi-ctr').innerHTML = `${fmtBR(k.ctr.value, 2)}<span class="small">%</span>`;
+  document.getElementById('kpi-impr').innerHTML = fmtBigNum(k.impressions.value);
+  document.getElementById('kpi-clicks').innerHTML = fmtBigNum(k.clicks.value);
 
-new ApexCharts(document.querySelector('#platform-chart'), {
-  ...COMMON,
-  chart: { ...COMMON.chart, type: 'donut', height: 180 },
-  series: [62, 38],
-  labels: ['Meta Ads', 'Google Ads'],
-  colors: [CYAN, ORANGE],
-  legend: { show: false }, dataLabels: { enabled: false }, stroke: { width: 0 },
-  plotOptions: { pie: { donut: { size: '78%', labels: {
-    show: true,
-    name: { show: true, color: TEXT_DIM, fontSize: '11px', offsetY: 8 },
-    value: { show: true, color: '#e8f4f8', fontSize: '24px', fontWeight: 800, offsetY: -8, formatter: v => v + '%' },
-    total: { show: true, label: 'TOTAL R$', color: TEXT_DIM, fontSize: '10px', formatter: () => '14.832' }
-  } } } }
-}).render();
+  // Sparklines
+  spark('#spark-spend', k.spend.spark, CYAN);
+  spark('#spark-leads', k.leads.spark, POSITIVE);
+  spark('#spark-impr', k.impressions.spark, ORANGE);
+  spark('#spark-click', k.clicks.spark, NEGATIVE);
 
-new ApexCharts(document.querySelector('#device-chart'), {
-  ...COMMON,
-  chart: { ...COMMON.chart, type: 'donut', height: 180 },
-  series: [72, 24, 4],
-  labels: ['Mobile', 'Desktop', 'Tablet'],
-  colors: [CYAN, PURPLE, ORANGE],
-  legend: { show: false }, dataLabels: { enabled: false }, stroke: { width: 0 },
-  plotOptions: { pie: { donut: { size: '78%', labels: {
-    show: true,
-    name: { show: true, color: TEXT_DIM, fontSize: '10px', offsetY: 8 },
-    value: { show: true, color: '#e8f4f8', fontSize: '24px', fontWeight: 800, formatter: v => v + '%', offsetY: -8 },
-    total: { show: true, label: 'MOBILE', color: TEXT_DIM, fontSize: '9px', formatter: () => '72%' }
-  } } } }
-}).render();
+  // === Temporal chart ===
+  const T = D.temporal;
+  const activeCount = T.spend_total.filter(v => v > 0).length;
+  const peak = Math.max(...T.spend_total);
+  const totalSpend = T.spend_total.reduce((a, b) => a + b, 0);
+  const avg = totalSpend / activeCount;
+  document.getElementById('time-peak').textContent = fmtCurrShort(peak);
+  document.getElementById('time-avg').textContent = fmtCurrShort(avg);
+  document.getElementById('time-active').textContent = `${activeCount}/${T.days.length}`;
+  document.getElementById('meta-temporal').textContent = `${T.days.length} dias · ${activeCount} ativos`;
 
-const hours = ['00','03','06','09','12','15','18','21'];
-const dows = ['DOM','SEG','TER','QUA','QUI','SEX','SÁB'];
-const heatData = dows.map(dow => ({
-  name: dow,
-  data: hours.map(h => ({ x: h + 'h', y: Math.floor(Math.random() * 50 + (h === '12' || h === '18' ? 80 : 10)) }))
-}));
+  new ApexCharts(document.querySelector('#time-chart'), {
+    ...COMMON,
+    chart: { ...COMMON.chart, type: 'line', height: 340, stacked: false },
+    series: [
+      { name: 'Google (R$)', type: 'area', data: T.days.map((d, i) => ({ x: d, y: T.spend_google[i] })) },
+      { name: 'Meta (R$)', type: 'area', data: T.days.map((d, i) => ({ x: d, y: T.spend_meta[i] })) },
+      { name: 'Leads', type: 'line', data: T.days.map((d, i) => ({ x: d, y: T.leads[i] })) }
+    ],
+    colors: [ORANGE, CYAN, POSITIVE],
+    stroke: { width: [0, 0, 2.5], curve: 'smooth' },
+    fill: { type: ['gradient', 'gradient', 'solid'], gradient: { shadeIntensity: 1, opacityFrom: 0.5, opacityTo: 0.05, stops: [0, 100] } },
+    markers: { size: 0, hover: { size: 5 } },
+    dataLabels: { enabled: false },
+    xaxis: { type: 'datetime', labels: { style: { colors: TEXT_DIM, fontFamily: 'JetBrains Mono, monospace', fontSize: '10px' } }, axisBorder: { color: 'rgba(53,185,215,0.15)' }, axisTicks: { color: 'rgba(53,185,215,0.15)' } },
+    yaxis: [
+      { labels: { style: { colors: TEXT_DIM, fontFamily: 'JetBrains Mono, monospace', fontSize: '10px' }, formatter: (v) => 'R$ ' + Math.round(v) }, seriesName: 'Google (R$)' },
+      { show: false, seriesName: 'Google (R$)' },
+      { opposite: true, labels: { style: { colors: TEXT_DIM, fontFamily: 'JetBrains Mono, monospace', fontSize: '10px' } } }
+    ],
+    legend: { show: true, position: 'top', horizontalAlign: 'left', labels: { colors: TEXT_DIM }, fontSize: '11px', markers: { width: 8, height: 8, radius: 4 } }
+  }).render();
 
-new ApexCharts(document.querySelector('#hourly-heatmap'), {
-  ...COMMON,
-  chart: { ...COMMON.chart, type: 'heatmap', height: 220 },
-  series: heatData,
-  colors: [CYAN],
-  dataLabels: { enabled: false },
-  xaxis: { labels: { style: { colors: TEXT_DIM, fontSize: '10px', fontFamily: 'JetBrains Mono, monospace' } }, axisBorder: { show: false }, axisTicks: { show: false } },
-  yaxis: { labels: { style: { colors: TEXT_DIM, fontSize: '10px', fontFamily: 'JetBrains Mono, monospace' } } },
-  plotOptions: { heatmap: {
-    radius: 3, enableShades: true, shadeIntensity: 0.8,
-    colorScale: { ranges: [
-      { from: 0, to: 20, color: '#0f3147', name: 'baixo' },
-      { from: 21, to: 50, color: '#1a8fab', name: 'médio' },
-      { from: 51, to: 100, color: '#35b9d7', name: 'alto' },
-      { from: 101, to: 200, color: '#8fd6e6', name: 'pico' }
-    ] }
-  } }
-}).render();
+  // === Platform donut ===
+  const totalP = D.platform.google.spend + D.platform.meta.spend;
+  const metaPct = totalP > 0 ? (D.platform.meta.spend / totalP * 100) : 0;
+  const googlePct = totalP > 0 ? (D.platform.google.spend / totalP * 100) : 0;
+  document.getElementById('plat-meta').textContent = fmtBR(metaPct, 1) + '%';
+  document.getElementById('plat-google').textContent = fmtBR(googlePct, 1) + '%';
 
-const campaigns = [
-  { name: '15/04 - CONSCIENTIZAÇÃO', platform: 'meta', spend: 2418, ctr: '0,11%' },
-  { name: 'LEADS - 02/03/26 - FORMULÁRIO', platform: 'meta', spend: 2184, ctr: '1,51%' },
-  { name: 'Diagnóstico Tributário · Search', platform: 'google', spend: 1847, ctr: '3,21%' },
-  { name: '13/05 - ENGAJAMENTO · CASES V2', platform: 'meta', spend: 1523, ctr: '1,37%' },
-  { name: 'Recuperação Tributária · Brand', platform: 'google', spend: 1412, ctr: '4,12%' },
-  { name: 'LEADS · EXTRAÍDO CONCORRENTES', platform: 'meta', spend: 1198, ctr: '1,24%' },
-  { name: 'Reforma Tributária · Edu', platform: 'google', spend: 982, ctr: '2,76%' },
-  { name: 'TRÁFEGO · MÓDULO REFORMA', platform: 'meta', spend: 814, ctr: '1,68%' }
-];
-const maxSpend = Math.max(...campaigns.map(c => c.spend));
-document.getElementById('campaigns-list').innerHTML = campaigns.map(c => `
-  <div class="campaign-row">
-    <div class="campaign-info">
-      <div class="campaign-name-row">
-        <span class="campaign-name">${c.name}</span>
-        <span class="platform-tag ${c.platform}">${c.platform}</span>
+  new ApexCharts(document.querySelector('#platform-chart'), {
+    ...COMMON,
+    chart: { ...COMMON.chart, type: 'donut', height: 180 },
+    series: [Math.round(metaPct), Math.round(googlePct)],
+    labels: ['Meta Ads', 'Google Ads'],
+    colors: [CYAN, ORANGE],
+    legend: { show: false }, dataLabels: { enabled: false }, stroke: { width: 0 },
+    plotOptions: { pie: { donut: { size: '78%', labels: {
+      show: true,
+      name: { show: true, color: TEXT_DIM, fontSize: '11px', offsetY: 8 },
+      value: { show: true, color: '#e8f4f8', fontSize: '24px', fontWeight: 800, offsetY: -8, formatter: v => v + '%' },
+      total: { show: true, label: 'TOTAL R$', color: TEXT_DIM, fontSize: '10px', formatter: () => fmtBR(totalP, 0) }
+    } } } }
+  }).render();
+
+  // === Device donut ===
+  const dev = D.device || [];
+  const devTotal = dev.reduce((s, d) => s + d.spend, 0);
+  const devMap = {};
+  dev.forEach(d => devMap[d.device] = d.spend);
+  const mobilePct = devTotal > 0 ? ((devMap['MOBILE']||0) / devTotal * 100) : 0;
+  const desktopPct = devTotal > 0 ? ((devMap['DESKTOP']||0) / devTotal * 100) : 0;
+  const tabletPct = devTotal > 0 ? ((devMap['TABLET']||0) / devTotal * 100) : 0;
+  const ctvPct = devTotal > 0 ? ((devMap['CONNECTED_TV']||0) / devTotal * 100) : 0;
+  document.getElementById('dev-mobile').textContent = fmtBR(mobilePct, 0) + '%';
+  document.getElementById('dev-desktop').textContent = fmtBR(desktopPct, 0) + '%';
+  document.getElementById('dev-tablet').textContent = fmtBR(tabletPct + ctvPct, 0) + '%';
+
+  new ApexCharts(document.querySelector('#device-chart'), {
+    ...COMMON,
+    chart: { ...COMMON.chart, type: 'donut', height: 180 },
+    series: [Math.round(mobilePct), Math.round(desktopPct), Math.round(tabletPct + ctvPct)],
+    labels: ['Mobile', 'Desktop', 'Tablet/TV'],
+    colors: [CYAN, PURPLE, ORANGE],
+    legend: { show: false }, dataLabels: { enabled: false }, stroke: { width: 0 },
+    plotOptions: { pie: { donut: { size: '78%', labels: {
+      show: true,
+      name: { show: true, color: TEXT_DIM, fontSize: '10px', offsetY: 8 },
+      value: { show: true, color: '#e8f4f8', fontSize: '24px', fontWeight: 800, formatter: v => v + '%', offsetY: -8 },
+      total: { show: true, label: 'MOBILE', color: TEXT_DIM, fontSize: '9px', formatter: () => Math.round(mobilePct) + '%' }
+    } } } }
+  }).render();
+
+  // === Hourly heatmap ===
+  const dowOrder = ['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];
+  const dowLabels = { SUNDAY: 'DOM', MONDAY: 'SEG', TUESDAY: 'TER', WEDNESDAY: 'QUA', THURSDAY: 'QUI', FRIDAY: 'SEX', SATURDAY: 'SÁB' };
+  const hMap = {};
+  (D.horario || []).forEach(h => {
+    if (!hMap[h.day]) hMap[h.day] = {};
+    hMap[h.day][h.hour] = h.clicks;
+  });
+  const heatSeries = dowOrder.map(dow => ({
+    name: dowLabels[dow],
+    data: Array.from({ length: 24 }, (_, h) => ({
+      x: String(h).padStart(2, '0') + 'h',
+      y: (hMap[dow] && hMap[dow][h]) || 0
+    }))
+  }));
+  const allClicks = heatSeries.flatMap(s => s.data.map(d => d.y)).filter(v => v > 0);
+  const maxClick = allClicks.length ? Math.max(...allClicks) : 100;
+
+  new ApexCharts(document.querySelector('#hourly-heatmap'), {
+    ...COMMON,
+    chart: { ...COMMON.chart, type: 'heatmap', height: 220 },
+    series: heatSeries,
+    colors: [CYAN],
+    dataLabels: { enabled: false },
+    xaxis: { labels: { style: { colors: TEXT_DIM, fontSize: '9px', fontFamily: 'JetBrains Mono, monospace' } }, axisBorder: { show: false }, axisTicks: { show: false } },
+    yaxis: { labels: { style: { colors: TEXT_DIM, fontSize: '10px', fontFamily: 'JetBrains Mono, monospace' } } },
+    plotOptions: { heatmap: {
+      radius: 3, enableShades: true, shadeIntensity: 0.8,
+      colorScale: { ranges: [
+        { from: 0, to: maxClick * 0.15, color: '#0f3147', name: 'baixo' },
+        { from: maxClick * 0.15 + 1, to: maxClick * 0.4, color: '#1a8fab', name: 'médio' },
+        { from: maxClick * 0.4 + 1, to: maxClick * 0.7, color: '#35b9d7', name: 'alto' },
+        { from: maxClick * 0.7 + 1, to: maxClick * 2, color: '#8fd6e6', name: 'pico' }
+      ] }
+    } }
+  }).render();
+
+  // === Campaigns list ===
+  const camps = D.campaigns || [];
+  const maxCampSpend = camps.length ? Math.max(...camps.map(c => c.spend)) : 1;
+  document.getElementById('campaigns-list').innerHTML = camps.map(c => `
+    <div class="campaign-row">
+      <div class="campaign-info">
+        <div class="campaign-name-row">
+          <span class="campaign-name">${c.name}</span>
+          <span class="platform-tag ${c.platform}">${c.platform}</span>
+        </div>
+        <div class="campaign-bar"><div class="campaign-bar-fill ${c.platform}" style="width: ${(c.spend / maxCampSpend) * 100}%"></div></div>
       </div>
-      <div class="campaign-bar"><div class="campaign-bar-fill ${c.platform}" style="width: ${(c.spend/maxSpend)*100}%"></div></div>
+      <div class="campaign-spend">R$ ${fmtBR(c.spend, 0)}<small>CTR ${fmtBR(c.ctr, 2)}%</small></div>
     </div>
-    <div class="campaign-spend">R$ ${c.spend.toLocaleString('pt-BR')}<small>CTR ${c.ctr}</small></div>
-  </div>
-`).join('');
+  `).join('');
+  document.getElementById('meta-camp').textContent = `${camps.length} no top`;
 
-const states = [
-  { name: 'São Paulo', leads: 47 }, { name: 'Rio de Janeiro', leads: 28 },
-  { name: 'Paraná', leads: 22 }, { name: 'Minas Gerais', leads: 19 },
-  { name: 'Rio Grande do Sul', leads: 14 }, { name: 'Santa Catarina', leads: 12 },
-  { name: 'Distrito Federal', leads: 11 }, { name: 'Pernambuco', leads: 7 },
-  { name: 'Goiás', leads: 5 }, { name: 'Ceará', leads: 4 }
-];
-const maxLeads = Math.max(...states.map(s => s.leads));
-document.getElementById('states-list').innerHTML = states.map((s, i) => `
-  <div class="state-row">
-    <span class="state-rank">${String(i+1).padStart(2,'0')}</span>
-    <div>
-      <span class="state-name">${s.name}</span>
-      <div class="state-bar"><div class="state-bar-fill" style="width: ${(s.leads/maxLeads)*100}%"></div></div>
+  // === States list (top por spend) ===
+  const geo = (D.geo || []).filter(g => g.state !== 'Desconhecido');
+  const maxGeoSpend = geo.length ? Math.max(...geo.map(g => g.spend)) : 1;
+  document.getElementById('states-list').innerHTML = geo.slice(0, 10).map((s, i) => `
+    <div class="state-row">
+      <span class="state-rank">${String(i+1).padStart(2,'0')}</span>
+      <div>
+        <span class="state-name">${normalizeState(s.state)}</span>
+        <div class="state-bar"><div class="state-bar-fill" style="width: ${(s.spend / maxGeoSpend) * 100}%"></div></div>
+      </div>
+      <span class="state-value">R$ ${fmtBR(s.spend, 0)}</span>
     </div>
-    <span class="state-value">${s.leads} leads</span>
-  </div>
-`).join('');
+  `).join('');
+  document.getElementById('meta-uf').textContent = `${geo.length} UFs`;
 
-const demoData = [
-  { age: '18-24', f: 0.8, m: 2.9, u: 0.9 },
-  { age: '25-34', f: 1.7, m: 3.2, u: 1.1 },
-  { age: '35-44', f: 2.0, m: 2.5, u: 1.3 },
-  { age: '45-54', f: 1.5, m: 2.0, u: 1.1 },
-  { age: '55-64', f: 1.0, m: 1.3, u: 0.7 },
-  { age: '65+', f: 0.7, m: 0.9, u: 0.5 }
-];
-const maxCtr = 3.2;
-const demoHTML = ['<span></span>', '<span class="col-h">F</span>', '<span class="col-h">M</span>', '<span class="col-h">U</span>'];
-demoData.forEach(d => {
-  demoHTML.push(`<span class="row-h">${d.age}</span>`);
-  ['f','m','u'].forEach(g => {
-    const v = d[g];
-    const op = Math.max(0.15, v / maxCtr);
-    demoHTML.push(`<div class="demo-cell" style="background: rgba(53, 185, 215, ${op}); color: ${op > 0.5 ? '#0a2638' : '#e8f4f8'}">${v}%</div>`);
+  // === Demografia grid (Meta data: idade × gênero, métrica = CTR%) ===
+  const metaDemo = (D.demografia || []).filter(d => d.gender !== 'ALL');
+  const ages = [...new Set(metaDemo.map(d => d.age))];
+  const genderOrder = ['female', 'male', 'unknown'];
+  const demoMap = {};
+  metaDemo.forEach(d => {
+    if (!demoMap[d.age]) demoMap[d.age] = {};
+    demoMap[d.age][d.gender] = d.impr > 0 ? (d.clicks / d.impr * 100) : 0;
   });
-});
-document.getElementById('demo-grid').innerHTML = demoHTML.join('');
+  let maxCtr = 0;
+  let topCell = '';
+  ages.forEach(age => {
+    genderOrder.forEach(g => {
+      const v = (demoMap[age] && demoMap[age][g]) || 0;
+      if (v > maxCtr) { maxCtr = v; topCell = `${age} ${g === 'female' ? 'F' : g === 'male' ? 'M' : 'U'}`; }
+    });
+  });
+  const demoHTML = ['<span></span>', '<span class="col-h">F</span>', '<span class="col-h">M</span>', '<span class="col-h">U</span>'];
+  ages.forEach(age => {
+    demoHTML.push(`<span class="row-h">${age}</span>`);
+    genderOrder.forEach(g => {
+      const v = (demoMap[age] && demoMap[age][g]) || 0;
+      const op = Math.max(0.1, v / (maxCtr || 1));
+      demoHTML.push(`<div class="demo-cell" style="background: rgba(53, 185, 215, ${op}); color: ${op > 0.5 ? '#0a2638' : '#e8f4f8'}">${fmtBR(v, 1)}%</div>`);
+    });
+  });
+  document.getElementById('demo-grid').innerHTML = demoHTML.join('');
+  document.getElementById('demo-top').textContent = topCell || '—';
+  document.getElementById('demo-peak').textContent = fmtBR(maxCtr, 2) + '%';
+  const totalImpr = metaDemo.reduce((s, d) => s + d.impr, 0);
+  const maleImpr = metaDemo.filter(d => d.gender === 'male').reduce((s, d) => s + d.impr, 0);
+  document.getElementById('demo-male').textContent = totalImpr > 0 ? fmtBR(maleImpr / totalImpr * 100, 0) + '%' : '—';
 
-const terms = [
-  { t: 'recuperação tributária empresa', v: 8421 },
-  { t: 'reforma tributária 2026', v: 6218 },
-  { t: 'consultoria tributária curitiba', v: 4937 },
-  { t: 'diagnostico tributario online', v: 4512 },
-  { t: 'planejamento tributário lucro real', v: 3871 },
-  { t: 'recuperar pis cofins', v: 3124 },
-  { t: 'cbs ibs como funciona', v: 2789 },
-  { t: 'credito tributario judicial', v: 2341 },
-  { t: 'holding patrimonial empresa', v: 1987 },
-  { t: 'larafy consultoria', v: 1652 }
-];
-const maxV = Math.max(...terms.map(t => t.v));
-document.getElementById('terms-list').innerHTML = terms.map(t => `
-  <div class="term-row">
-    <span class="term-text">${t.t}</span>
-    <span class="term-bar" style="--w: ${(t.v/maxV)*100}%"></span>
-  </div>
-`).join('');
+  // === Top termos ===
+  const terms = D.top_termos || [];
+  const maxV = terms.length ? Math.max(...terms.map(t => t.impressions)) : 1;
+  document.getElementById('terms-list').innerHTML = terms.map(t => `
+    <div class="term-row">
+      <span class="term-text">${t.termo}</span>
+      <span class="term-bar" style="--w: ${(t.impressions / maxV) * 100}%"></span>
+    </div>
+  `).join('');
 
-const stateData = {
-  'São Paulo': { spend: 4832, impressions: 248391, leads: 47, cpa: 102.81 },
-  'Rio de Janeiro': { spend: 2418, impressions: 138247, leads: 28, cpa: 86.36 },
-  'Paraná': { spend: 1832, impressions: 104821, leads: 22, cpa: 83.27 },
-  'Minas Gerais': { spend: 1612, impressions: 98214, leads: 19, cpa: 84.84 },
-  'Rio Grande do Sul': { spend: 1284, impressions: 78421, leads: 14, cpa: 91.71 },
-  'Santa Catarina': { spend: 982, impressions: 62418, leads: 12, cpa: 81.83 },
-  'Distrito Federal': { spend: 814, impressions: 48217, leads: 11, cpa: 74.00 },
-  'Pernambuco': { spend: 421, impressions: 28491, leads: 7, cpa: 60.14 },
-  'Goiás': { spend: 318, impressions: 21847, leads: 5, cpa: 63.60 },
-  'Ceará': { spend: 287, impressions: 19248, leads: 4, cpa: 71.75 },
-  'Bahia': { spend: 264, impressions: 18421, leads: 6, cpa: 44.00 },
-  'Espírito Santo': { spend: 218, impressions: 15847, leads: 3, cpa: 72.67 }
-};
-const nameMap = {
-  'São Paulo':'São Paulo','SP':'São Paulo','Rio de Janeiro':'Rio de Janeiro','RJ':'Rio de Janeiro',
-  'Paraná':'Paraná','PR':'Paraná','Minas Gerais':'Minas Gerais','MG':'Minas Gerais',
-  'Rio Grande do Sul':'Rio Grande do Sul','RS':'Rio Grande do Sul','Santa Catarina':'Santa Catarina','SC':'Santa Catarina',
-  'Distrito Federal':'Distrito Federal','DF':'Distrito Federal','Pernambuco':'Pernambuco','PE':'Pernambuco',
-  'Goiás':'Goiás','GO':'Goiás','Ceará':'Ceará','CE':'Ceará','Bahia':'Bahia','BA':'Bahia',
-  'Espírito Santo':'Espírito Santo','ES':'Espírito Santo'
-};
+  // === Funnel ===
+  const f = D.funnel || { impressions: 0, clicks: 0, leads: 0 };
+  const ctr2 = f.impressions > 0 ? (f.clicks / f.impressions * 100) : 0;
+  const cr = f.clicks > 0 ? (f.leads / f.clicks * 100) : 0;
+  const cpa2 = f.leads > 0 ? (k.spend.value / f.leads) : 0;
+  document.getElementById('funnel-impr').textContent = fmtBR(f.impressions, 0);
+  document.getElementById('funnel-clicks').textContent = fmtBR(f.clicks, 0);
+  document.getElementById('funnel-leads-stage').textContent = fmtBR(f.leads, 0);
+  document.getElementById('funnel-ctr').innerHTML = `CTR <strong>${fmtBR(ctr2, 2)}%</strong>`;
+  document.getElementById('funnel-cr').innerHTML = `CR <strong>${fmtBR(cr, 2)}%</strong>`;
+  document.getElementById('funnel-cpl').textContent = 'R$ ' + fmtBR(cpa2, 0);
+  document.getElementById('funnel-cpa-label').textContent = 'R$ ' + fmtBR(cpa2, 0);
+  document.getElementById('fnl-impl').textContent = f.leads > 0 ? fmtBigNum(f.impressions / f.leads) : '—';
+  document.getElementById('fnl-clpl').textContent = f.leads > 0 ? fmtBR(f.clicks / f.leads, 0) : '—';
+  document.getElementById('fnl-cpl').textContent = f.leads > 0 ? 'R$ ' + fmtBR(cpa2, 0) : '—';
 
-const map = L.map('brazil-map', {
-  attributionControl: false, zoomControl: false, dragging: false,
-  scrollWheelZoom: false, doubleClickZoom: false, touchZoom: false,
-  boxZoom: false, keyboard: false
-}).setView([-14.5, -52], 4);
+  // === Brazil map ===
+  const stateData = {};
+  geo.forEach(g => {
+    stateData[normalizeState(g.state)] = {
+      spend: g.spend, impressions: g.impressions, clicks: g.clicks, leads: g.leads || 0,
+      cpa: g.leads > 0 ? (g.spend / g.leads) : 0
+    };
+  });
 
-let currentMetric = 'spend';
-let geoLayer = null;
+  const map = window.__map = L.map('brazil-map', {
+    attributionControl: false, zoomControl: false, dragging: false,
+    scrollWheelZoom: false, doubleClickZoom: false, touchZoom: false,
+    boxZoom: false, keyboard: false
+  }).setView([-14.5, -52], 4);
 
-function getColor(value, max) {
-  if (!value || value === 0) return '#0f3147';
-  const r = value / max;
-  if (r > 0.7) return CYAN;
-  if (r > 0.4) return CYAN_DEEP;
-  if (r > 0.2) return '#1a6478';
-  if (r > 0.05) return '#155366';
-  return '#114658';
-}
+  let currentMetric = 'spend';
+  let geoLayer = null;
 
-function fmtMetric(metric, value) {
-  if (value === undefined || value === null) return '—';
-  switch(metric) {
-    case 'spend': return 'R$ ' + value.toLocaleString('pt-BR');
-    case 'impressions': return value.toLocaleString('pt-BR');
-    case 'leads': return value;
-    case 'cpa': return 'R$ ' + value.toFixed(2);
+  function getColor(value, max) {
+    if (!value || value === 0) return '#0f3147';
+    const r = value / max;
+    if (r > 0.7) return CYAN;
+    if (r > 0.4) return CYAN_DEEP;
+    if (r > 0.2) return '#1a6478';
+    if (r > 0.05) return '#155366';
+    return '#114658';
   }
+
+  function fmtMetric(metric, value) {
+    if (value === undefined || value === null) return '—';
+    switch (metric) {
+      case 'spend': return 'R$ ' + fmtBR(value, 0);
+      case 'impressions': return fmtBR(value, 0);
+      case 'clicks': return fmtBR(value, 0);
+      case 'leads': return fmtBR(value, 0);
+      case 'cpa': return value > 0 ? 'R$ ' + fmtBR(value, 2) : '—';
+    }
+  }
+
+  function metricLabel(metric) {
+    return { spend: 'Investimento', impressions: 'Impressões', clicks: 'Cliques', leads: 'Leads', cpa: 'CPA' }[metric];
+  }
+
+  let brazilGeo;
+  function renderMap(metric) {
+    currentMetric = metric;
+    const values = Object.values(stateData).map(d => d[metric]).filter(v => v > 0);
+    if (!values.length) return;
+    const max = Math.max(...values);
+    const min = Math.min(...values);
+    document.getElementById('legend-min').textContent = fmtMetric(metric, min);
+    document.getElementById('legend-max').textContent = fmtMetric(metric, max);
+    if (geoLayer) map.removeLayer(geoLayer);
+    if (!brazilGeo) return;
+    geoLayer = L.geoJSON(brazilGeo, {
+      style: (feature) => {
+        const sn = feature.properties.name || feature.properties.NAME_1 || feature.properties.sigla;
+        const data = stateData[sn];
+        const value = data ? data[metric] : 0;
+        return { fillColor: getColor(value, max), weight: 0.6, opacity: 1, color: '#061a26', fillOpacity: 0.95 };
+      },
+      onEachFeature: (feature, layer) => {
+        const sn = feature.properties.name || feature.properties.NAME_1 || feature.properties.sigla;
+        const data = stateData[sn];
+        const tip = data
+          ? `<strong>${(sn || '').toUpperCase()}</strong><br>${metricLabel(metric)}: ${fmtMetric(metric, data[metric])}`
+          : `<strong>${(sn || '').toUpperCase()}</strong><br>Sem dados`;
+        layer.bindTooltip(tip, { sticky: true });
+        layer.on({
+          mouseover: (e) => e.target.setStyle({ weight: 2, color: CYAN_SOFT, fillOpacity: 1 }),
+          mouseout: (e) => geoLayer.resetStyle(e.target)
+        });
+      }
+    }).addTo(map);
+  }
+
+  document.querySelectorAll('.metric-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.metric-pill').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderMap(btn.dataset.metric);
+    });
+  });
+
+  fetch('https://raw.githubusercontent.com/codeforgermany/click_that_hood/main/public/data/brazil-states.geojson')
+    .then(r => r.json())
+    .then(data => { brazilGeo = data; renderMap('spend'); })
+    .catch(e => {
+      console.error('GeoJSON load failed', e);
+      document.getElementById('brazil-map').innerHTML =
+        '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#8ba6b3;font-family:JetBrains Mono,monospace;font-size:11px;">Mapa indisponível</div>';
+    });
 }
 
-function metricLabel(metric) {
-  return {spend:'Investimento', impressions:'Impressões', leads:'Leads', cpa:'CPA'}[metric];
+let __D = null;
+
+async function loadAndRender() {
+  try {
+    const r = await fetch('./data/dashboard.json?t=' + Date.now());
+    __D = await r.json();
+  } catch (e) {
+    document.querySelector('main').innerHTML = '<div style="padding:40px;color:#f87171;text-align:center;">Falha ao carregar dashboard.json</div>';
+    console.error(e); return;
+  }
+  applyFilter('all');
 }
 
-function renderMap(metric) {
-  currentMetric = metric;
-  const values = Object.values(stateData).map(d => d[metric]).filter(v => v > 0);
-  const max = Math.max(...values);
-  const min = Math.min(...values);
-  document.getElementById('legend-min').textContent = fmtMetric(metric, min);
-  document.getElementById('legend-max').textContent = fmtMetric(metric, max);
-  if (geoLayer) map.removeLayer(geoLayer);
-  if (!brazilGeo) return;
-  geoLayer = L.geoJSON(brazilGeo, {
-    style: (feature) => {
-      const sn = feature.properties.name || feature.properties.NAME_1 || feature.properties.sigla;
-      const normalized = nameMap[sn] || sn;
-      const data = stateData[normalized];
-      const value = data ? data[metric] : 0;
-      return { fillColor: getColor(value, max), weight: 0.6, opacity: 1, color: '#061a26', fillOpacity: 0.95 };
+function applyFilter(range, customFrom, customTo) {
+  if (!__D) return;
+  const allDays = __D.temporal.days;
+  let fromIdx = 0, toIdx = allDays.length - 1;
+
+  if (range === '7' || range === '30' || range === '90') {
+    const n = parseInt(range, 10);
+    fromIdx = Math.max(0, allDays.length - n);
+  } else if (range === 'ytd') {
+    const year = new Date(allDays[allDays.length - 1]).getFullYear();
+    fromIdx = allDays.findIndex(d => d.startsWith(year + '-'));
+    if (fromIdx < 0) fromIdx = 0;
+  } else if (range === 'custom' && customFrom && customTo) {
+    fromIdx = allDays.findIndex(d => d >= customFrom);
+    toIdx = allDays.findIndex(d => d > customTo);
+    if (toIdx < 0) toIdx = allDays.length - 1;
+    else toIdx -= 1;
+    if (fromIdx < 0) fromIdx = 0;
+    if (toIdx < fromIdx) toIdx = fromIdx;
+  }
+
+  const T = __D.temporal;
+  const sliced = {
+    days: T.days.slice(fromIdx, toIdx + 1),
+    spend_google: T.spend_google.slice(fromIdx, toIdx + 1),
+    spend_meta: T.spend_meta.slice(fromIdx, toIdx + 1),
+    spend_total: T.spend_total.slice(fromIdx, toIdx + 1),
+    impressions: T.impressions.slice(fromIdx, toIdx + 1),
+    clicks: T.clicks.slice(fromIdx, toIdx + 1),
+    leads: T.leads.slice(fromIdx, toIdx + 1)
+  };
+  const sumS = sliced.spend_total.reduce((a, b) => a + b, 0);
+  const sumI = sliced.impressions.reduce((a, b) => a + b, 0);
+  const sumC = sliced.clicks.reduce((a, b) => a + b, 0);
+  const sumL = sliced.leads.reduce((a, b) => a + b, 0);
+  const spark15 = (arr) => arr.slice(-15);
+
+  const F = {
+    ...__D,
+    temporal: sliced,
+    kpis: {
+      spend:       { value: +sumS.toFixed(2),                spark: spark15(sliced.spend_total) },
+      leads:       { value: sumL,                            spark: spark15(sliced.leads) },
+      cpa:         { value: sumL > 0 ? +(sumS / sumL).toFixed(2) : 0 },
+      ctr:         { value: sumI > 0 ? +(sumC / sumI * 100).toFixed(2) : 0 },
+      impressions: { value: sumI,                            spark: spark15(sliced.impressions) },
+      clicks:      { value: sumC,                            spark: spark15(sliced.clicks) }
     },
-    onEachFeature: (feature, layer) => {
-      const sn = feature.properties.name || feature.properties.NAME_1 || feature.properties.sigla;
-      const normalized = nameMap[sn] || sn;
-      const data = stateData[normalized];
-      const tip = data
-        ? `<strong>${normalized.toUpperCase()}</strong><br>${metricLabel(metric)}: ${fmtMetric(metric, data[metric])}`
-        : `<strong>${(sn||'').toUpperCase()}</strong><br>Sem dados`;
-      layer.bindTooltip(tip, { sticky: true });
-      layer.on({
-        mouseover: (e) => e.target.setStyle({ weight: 2, color: CYAN_SOFT, fillOpacity: 1 }),
-        mouseout: (e) => geoLayer.resetStyle(e.target)
-      });
-    }
-  }).addTo(map);
+    funnel: { impressions: sumI, clicks: sumC, leads: sumL }
+  };
+  render(F);
 }
 
-document.querySelectorAll('.metric-pill').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.metric-pill').forEach(b => b.classList.remove('active'));
+function render(D) {
+  // Clear before re-init (ApexCharts replaces but Leaflet/etc. need clearing)
+  ['time-chart','platform-chart','device-chart','hourly-heatmap'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = '';
+  });
+  ['spark-spend','spark-leads','spark-cpa','spark-ctr','spark-impr','spark-click'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = '';
+  });
+  // Map: destroy if exists
+  if (window.__map) { try { window.__map.remove(); } catch(e){} window.__map = null; }
+  const mapEl = document.getElementById('brazil-map');
+  if (mapEl) { mapEl.innerHTML = ''; mapEl._leaflet_id = null; }
+  renderAll(D);
+}
+
+// === Wire up date filter ===
+document.querySelectorAll('#period-selector .period-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    document.querySelectorAll('#period-selector .period-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    renderMap(btn.dataset.metric);
-  });
-});
-
-let brazilGeo;
-fetch('https://raw.githubusercontent.com/codeforgermany/click_that_hood/main/public/data/brazil-states.geojson')
-  .then(r => r.json())
-  .then(data => { brazilGeo = data; renderMap('spend'); })
-  .catch(e => {
-    console.error('GeoJSON load failed', e);
-    document.getElementById('brazil-map').innerHTML =
-      '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#8ba6b3;font-family:JetBrains Mono,monospace;font-size:11px;">Mapa indisponível</div>';
-  });
-
-setInterval(() => {
-  document.querySelectorAll('.timestamp strong').forEach(el => {
-    const now = new Date();
-    const time = now.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
-    const date = now.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' });
-    el.textContent = `${date} · ${time}`;
-  });
-}, 60000);
-
-// === PLATFORM FILTER ===
-document.querySelectorAll('.platform-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.platform-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    applyPlatformFilter(btn.dataset.platform);
-  });
-});
-
-function applyPlatformFilter(platform) {
-  // Filtra a lista de campanhas visivelmente
-  document.querySelectorAll('#campaigns-list .campaign-row').forEach(row => {
-    const tag = row.querySelector('.platform-tag');
-    if (platform === 'all') {
-      row.style.display = '';
-    } else if (tag && tag.classList.contains(platform)) {
-      row.style.display = '';
+    const range = btn.dataset.range;
+    if (range === 'custom') {
+      document.getElementById('custom-date').style.display = 'flex';
     } else {
-      row.style.display = 'none';
+      document.getElementById('custom-date').style.display = 'none';
+      applyFilter(range);
     }
   });
+});
 
-  // Filtra termos de busca (Google only) e demografia (Meta only)
-  const termsPanel = document.getElementById('terms-list').closest('.panel');
-  const demoPanel = document.getElementById('demo-grid').closest('.panel');
+document.getElementById('apply-custom').addEventListener('click', () => {
+  const from = document.getElementById('date-from').value;
+  const to = document.getElementById('date-to').value;
+  if (from && to) applyFilter('custom', from, to);
+});
 
-  termsPanel.style.opacity = (platform === 'meta') ? '0.3' : '1';
-  termsPanel.style.pointerEvents = (platform === 'meta') ? 'none' : 'auto';
-
-  demoPanel.style.opacity = (platform === 'google') ? '0.3' : '1';
-  demoPanel.style.pointerEvents = (platform === 'google') ? 'none' : 'auto';
-
-  // Highlight visual no donut de plataforma
-  const platformPanel = document.querySelector('.forecast-card');
-  platformPanel.style.borderColor = platform === 'meta' ? 'var(--cyan)' :
-                                     platform === 'google' ? 'var(--accent-orange)' :
-                                     'var(--line)';
-}
+// Boot
+loadAndRender();
 </script>
 </body>
 </html>
