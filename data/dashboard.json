@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-05T18:07:38.963Z",
+  "updated_at": "2026-06-05T18:07:41.168Z",
   "filter": "LaraTax",
   "kpis": {
     "spend": {
@@ -1328,7 +1328,16 @@
       "leads": 17
     }
   },
-  "geo": [],
+  "geo": [
+    {
+      "state": "Desconhecido",
+      "spend": 14986.15,
+      "impressions": 226797,
+      "clicks": 4552,
+      "leads": 0,
+      "cpa": 0
+    }
+  ],
   "demografia": [],
   "top_termos": [],
   "horario": [],
