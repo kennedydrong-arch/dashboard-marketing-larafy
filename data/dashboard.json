@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-05T19:37:37.583Z",
+  "updated_at": "2026-06-05T19:37:41.867Z",
   "filter": "LaraTax",
   "kpis": {
     "spend": {
@@ -1328,7 +1328,168 @@
       "leads": 17
     }
   },
-  "geo": [],
+  "geo": [
+    {
+      "state": "State of Parana",
+      "spend": 8582.42,
+      "impressions": 37019,
+      "clicks": 587,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "State of Sao Paulo",
+      "spend": 2532.51,
+      "impressions": 85987,
+      "clicks": 1778,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "State of Minas Gerais",
+      "spend": 788.98,
+      "impressions": 17606,
+      "clicks": 473,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "State of Rio de Janeiro",
+      "spend": 756.67,
+      "impressions": 31280,
+      "clicks": 721,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "State of Santa Catarina",
+      "spend": 754.99,
+      "impressions": 7916,
+      "clicks": 121,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "State of Bahia",
+      "spend": 292.52,
+      "impressions": 2193,
+      "clicks": 67,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "State of Rio Grande do Sul",
+      "spend": 279.01,
+      "impressions": 10291,
+      "clicks": 178,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "Federal District",
+      "spend": 268.93,
+      "impressions": 14648,
+      "clicks": 197,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "Ceara",
+      "spend": 224.47,
+      "impressions": 1588,
+      "clicks": 35,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "State of Goias",
+      "spend": 157.12,
+      "impressions": 11531,
+      "clicks": 246,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "State of Piaui",
+      "spend": 79.95,
+      "impressions": 547,
+      "clicks": 16,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "State of Mato Grosso",
+      "spend": 76.98,
+      "impressions": 624,
+      "clicks": 24,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "State of Para",
+      "spend": 65.77,
+      "impressions": 1268,
+      "clicks": 34,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "State of Pernambuco",
+      "spend": 32.99,
+      "impressions": 1774,
+      "clicks": 40,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "State of Espirito Santo",
+      "spend": 30.73,
+      "impressions": 688,
+      "clicks": 20,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "State of Mato Grosso do Sul",
+      "spend": 28.44,
+      "impressions": 626,
+      "clicks": 33,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "State of Maranhao",
+      "spend": 23.61,
+      "impressions": 867,
+      "clicks": 32,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "State of Acre",
+      "spend": 21.31,
+      "impressions": 89,
+      "clicks": 5,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "State of Paraiba",
+      "spend": 16.41,
+      "impressions": 800,
+      "clicks": 11,
+      "leads": 0,
+      "cpa": 0
+    },
+    {
+      "state": "State of Amazonas",
+      "spend": 10.04,
+      "impressions": 923,
+      "clicks": 15,
+      "leads": 0,
+      "cpa": 0
+    }
+  ],
   "demografia": [],
   "top_termos": [
     {
