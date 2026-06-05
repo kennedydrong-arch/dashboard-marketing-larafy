@@ -1,1 +1,235 @@
-{}
+{
+  "updated_at": "2026-06-05T18:07:21.911Z",
+  "filter": "LaraTax",
+  "kpis": {
+    "spend": {
+      "value": 2383.5,
+      "spark": [
+        318.39,
+        338.12,
+        328.79,
+        376.7,
+        354.14,
+        438.86,
+        228.5
+      ]
+    },
+    "leads": {
+      "value": 17,
+      "spark": [
+        1,
+        2,
+        0,
+        5,
+        4,
+        4,
+        1
+      ]
+    },
+    "cpa": {
+      "value": 140.21
+    },
+    "ctr": {
+      "value": 0.74
+    },
+    "impressions": {
+      "value": 338149,
+      "spark": [
+        48478,
+        77582,
+        39861,
+        68594,
+        68688,
+        28525,
+        6421
+      ]
+    },
+    "clicks": {
+      "value": 2494,
+      "spark": [
+        230,
+        356,
+        357,
+        542,
+        457,
+        443,
+        109
+      ]
+    }
+  },
+  "temporal": {
+    "days": [
+      "2026-01-01",
+      "2026-01-02",
+      "2026-01-03",
+      "2026-01-04",
+      "2026-01-05",
+      "2026-01-06",
+      "2026-01-07"
+    ],
+    "spend_google": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "spend_meta": [
+      318.39,
+      338.12,
+      328.79,
+      376.7,
+      354.14,
+      438.86,
+      228.5
+    ],
+    "spend_total": [
+      318.39,
+      338.12,
+      328.79,
+      376.7,
+      354.14,
+      438.86,
+      228.5
+    ],
+    "impressions": [
+      48478,
+      77582,
+      39861,
+      68594,
+      68688,
+      28525,
+      6421
+    ],
+    "clicks": [
+      230,
+      356,
+      357,
+      542,
+      457,
+      443,
+      109
+    ],
+    "leads": [
+      1,
+      2,
+      0,
+      5,
+      4,
+      4,
+      1
+    ]
+  },
+  "campaigns": [
+    {
+      "name": "LEADS - 18/12/25 - FORMULÁRIO",
+      "platform": "meta",
+      "status": "ACTIVE",
+      "canal": "OUTCOME_LEADS",
+      "spend": 1085.29,
+      "impressions": 4180,
+      "clicks": 180,
+      "leads": 11,
+      "ctr": 4.31,
+      "cpa": 98.66
+    },
+    {
+      "name": "VENDAS - 18/12/25 - WHATSAPP",
+      "platform": "meta",
+      "status": "ACTIVE",
+      "canal": "OUTCOME_SALES",
+      "spend": 847.41,
+      "impressions": 281361,
+      "clicks": 1595,
+      "leads": 4,
+      "ctr": 0.57,
+      "cpa": 211.85
+    },
+    {
+      "name": "ENGAJAMENTO - 05/01/26 - WHATSAPP — TESTE(HENRIQUE)",
+      "platform": "meta",
+      "status": "ACTIVE",
+      "canal": "OUTCOME_ENGAGEMENT",
+      "spend": 172.75,
+      "impressions": 3619,
+      "clicks": 63,
+      "leads": 0,
+      "ctr": 1.74,
+      "cpa": 0
+    },
+    {
+      "name": "LEADS - 07/01/26 - FORMULÁRIO — TESTE + TAXCEL",
+      "platform": "meta",
+      "status": "ACTIVE",
+      "canal": "OUTCOME_LEADS",
+      "spend": 116.84,
+      "impressions": 1078,
+      "clicks": 28,
+      "leads": 1,
+      "ctr": 2.6,
+      "cpa": 116.84
+    },
+    {
+      "name": "VENDAS - 05/01/26 - WHATSAPP — TESTE",
+      "platform": "meta",
+      "status": "ACTIVE",
+      "canal": "OUTCOME_SALES",
+      "spend": 96.07,
+      "impressions": 47014,
+      "clicks": 615,
+      "leads": 0,
+      "ctr": 1.31,
+      "cpa": 0
+    },
+    {
+      "name": "[LEADS CAMPANHA TESTE REGIÕES] - 07/01",
+      "platform": "meta",
+      "status": "ACTIVE",
+      "canal": "OUTCOME_LEADS",
+      "spend": 32.9,
+      "impressions": 577,
+      "clicks": 10,
+      "leads": 1,
+      "ctr": 1.73,
+      "cpa": 32.9
+    },
+    {
+      "name": "[LEADS][FORMULÁRIO]-06/01",
+      "platform": "meta",
+      "status": "ACTIVE",
+      "canal": "OUTCOME_LEADS",
+      "spend": 32.24,
+      "impressions": 320,
+      "clicks": 3,
+      "leads": 0,
+      "ctr": 0.94,
+      "cpa": 0
+    }
+  ],
+  "device": [],
+  "platform": {
+    "google": {
+      "spend": 0,
+      "impressions": 0,
+      "clicks": 0,
+      "leads": 0
+    },
+    "meta": {
+      "spend": 2383.5,
+      "impressions": 338149,
+      "clicks": 2494,
+      "leads": 17
+    }
+  },
+  "geo": [],
+  "demografia": [],
+  "top_termos": [],
+  "horario": [],
+  "funnel": {
+    "impressions": 338149,
+    "clicks": 2494,
+    "leads": 17
+  }
+}
