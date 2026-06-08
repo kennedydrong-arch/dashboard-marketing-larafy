@@ -129,6 +129,11 @@
       <button class="period-btn active" data-r="all">TUDO</button>
       <button class="period-btn" data-r="custom">📅</button>
     </div>
+    <div class="period-selector" id="platform-selector" style="margin-left:6px">
+      <button class="period-btn active" data-p="all">TODAS</button>
+      <button class="period-btn" data-p="meta">META</button>
+      <button class="period-btn" data-p="google">GOOGLE</button>
+    </div>
     <div class="custom-range" id="custom-range">
       <input type="date" id="from-date">
       <span style="color:var(--text-muted)">→</span>
@@ -295,6 +300,7 @@ const CHART_BASE = {
 
 let __D = null;
 let __SLICE = null;
+let __PLATFORM = 'all'; // 'all' | 'meta' | 'google'
 
 async function load() {
   try {
@@ -333,6 +339,16 @@ async function load() {
   });
   document.getElementById('apply-custom').addEventListener('click', () => {
     apply('custom', document.getElementById('from-date').value, document.getElementById('to-date').value);
+  });
+
+  // Platform filter buttons
+  document.querySelectorAll('#platform-selector .period-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#platform-selector .period-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      __PLATFORM = btn.dataset.p;
+      render();
+    });
   });
 
   apply('all');
@@ -378,33 +394,84 @@ function render() {
 function renderKPIs() {
   const k = __D.kpis || {};
   const slice = __SLICE || {};
+  const crm = __D.crm || {};
+  const plat = __D.platform || {};
+  const bySrcLeads = (crm.leads && crm.leads.by_source) || {};
+  const bySrcVendas = (crm.vendas && crm.vendas.by_source) || {};
 
-  const sumS = (slice.spend_total || []).reduce((a,b) => a + b, 0);
-  const sumI = (slice.impressions || []).reduce((a,b) => a + b, 0);
-  const sumC = (slice.clicks || []).reduce((a,b) => a + b, 0);
-  const sumL = (slice.leads || []).reduce((a,b) => a + b, 0);
-  const ctr = sumI > 0 ? (sumC / sumI * 100) : 0;
+  const sumArr = (a) => (a || []).reduce((x, y) => x + y, 0);
+
+  // === Time-aware (ads) KPIs por filtro ===
+  let spend = 0, impr = 0, clicks = 0, leadsAds = 0, sparkSeries = [], sparkClicks = [];
+  if (__PLATFORM === 'all') {
+    spend = sumArr(slice.spend_total);
+    impr = sumArr(slice.impressions);
+    clicks = sumArr(slice.clicks);
+    leadsAds = sumArr(slice.leads);
+    sparkSeries = slice.spend_total || [];
+    sparkClicks = slice.clicks || [];
+  } else if (__PLATFORM === 'meta') {
+    spend = sumArr(slice.spend_meta);
+    // impr/clicks/leads per-platform por dia não estão no JSON; usa totais da plataforma
+    impr = (plat.meta && plat.meta.impressions) || 0;
+    clicks = (plat.meta && plat.meta.clicks) || 0;
+    leadsAds = (plat.meta && plat.meta.leads) || 0;
+    sparkSeries = slice.spend_meta || [];
+    sparkClicks = slice.spend_meta || [];
+  } else if (__PLATFORM === 'google') {
+    spend = sumArr(slice.spend_google);
+    impr = (plat.google && plat.google.impressions) || 0;
+    clicks = (plat.google && plat.google.clicks) || 0;
+    leadsAds = (plat.google && plat.google.leads) || 0;
+    sparkSeries = slice.spend_google || [];
+    sparkClicks = slice.spend_google || [];
+  }
+  const ctr = impr > 0 ? (clicks / impr * 100) : 0;
   const days = (slice.days || []).length;
 
-  document.getElementById('kpi-spend').innerHTML = '<span class="unit">R$</span>' + fmtBR(sumS, 0);
-  document.getElementById('sub-spend').textContent = days + ' DIAS · ' + fmtBR(sumL,0) + ' LEADS ADS';
-  spark('spark-spend', slice.spend_total, CYAN);
+  document.getElementById('kpi-spend').innerHTML = '<span class="unit">R$</span>' + fmtBR(spend, 0);
+  document.getElementById('sub-spend').textContent = days + ' DIAS · ' + fmtBR(leadsAds,0) + ' LEADS ADS';
+  spark('spark-spend', sparkSeries, __PLATFORM === 'google' ? ORANGE : CYAN);
 
   document.getElementById('kpi-ctr').innerHTML = fmtBR(ctr, 2) + '<span class="small">%</span>';
-  document.getElementById('sub-ctr').textContent = fmtBig(sumI) + ' IMPR · ' + fmtBig(sumC) + ' CLICKS';
-  spark('spark-ctr', slice.clicks, ORANGE);
+  document.getElementById('sub-ctr').textContent = fmtBig(impr) + ' IMPR · ' + fmtBig(clicks) + ' CLICKS';
+  spark('spark-ctr', sparkClicks, ORANGE);
 
-  // CRM KPIs sempre vêm de __D.kpis direto (all-time)
-  const leadsCRM = k.leads_crm ? k.leads_crm.value : 0;
-  const leadsCRMpaid = k.leads_crm_paid ? k.leads_crm_paid.value : 0;
-  const vendas = k.vendas ? k.vendas.value : 0;
-  const vendasAtivas = k.vendas_ativas ? k.vendas_ativas.value : 0;
-  const mrr = k.mrr ? k.mrr.value : 0;
-  const arr = k.arr ? k.arr.value : 0;
-  const cac = k.cac_real ? k.cac_real.value : 0;
+  // === CRM KPIs (só meta + google, ignora outbound/referral/etc) ===
+  const metaLeads = (bySrcLeads.meta && bySrcLeads.meta.total) || 0;
+  const googleLeads = (bySrcLeads.google && bySrcLeads.google.total) || 0;
+  const metaVendas = (bySrcVendas.meta && bySrcVendas.meta.count) || 0;
+  const googleVendas = (bySrcVendas.google && bySrcVendas.google.count) || 0;
+  const metaVendasAtivas = (bySrcVendas.meta && bySrcVendas.meta.ativos) || 0;
+  const googleVendasAtivas = (bySrcVendas.google && bySrcVendas.google.ativos) || 0;
+  const metaMRR = (bySrcVendas.meta && bySrcVendas.meta.mrr) || 0;
+  const googleMRR = (bySrcVendas.google && bySrcVendas.google.mrr) || 0;
+  const metaSpendTotal = (plat.meta && plat.meta.spend) || 0;
+  const googleSpendTotal = (plat.google && plat.google.spend) || 0;
+
+  let leadsCRM, vendas, vendasAtivas, mrr, cac;
+  if (__PLATFORM === 'meta') {
+    leadsCRM = metaLeads;
+    vendas = metaVendas;
+    vendasAtivas = metaVendasAtivas;
+    mrr = metaMRR;
+    cac = metaVendas > 0 ? metaSpendTotal / metaVendas : 0;
+  } else if (__PLATFORM === 'google') {
+    leadsCRM = googleLeads;
+    vendas = googleVendas;
+    vendasAtivas = googleVendasAtivas;
+    mrr = googleMRR;
+    cac = googleVendas > 0 ? googleSpendTotal / googleVendas : 0;
+  } else {
+    leadsCRM = metaLeads + googleLeads;
+    vendas = metaVendas + googleVendas;
+    vendasAtivas = metaVendasAtivas + googleVendasAtivas;
+    mrr = metaMRR + googleMRR;
+    cac = vendas > 0 ? (metaSpendTotal + googleSpendTotal) / vendas : 0;
+  }
 
   document.getElementById('kpi-leads-crm').textContent = fmtBR(leadsCRM, 0);
-  document.getElementById('sub-leads-crm').textContent = fmtBR(leadsCRMpaid, 0) + ' PAGOS · HISTÓRICO';
+  document.getElementById('sub-leads-crm').textContent = (__PLATFORM === 'all' ? 'META + GOOGLE' : __PLATFORM.toUpperCase()) + ' · HISTÓRICO';
 
   document.getElementById('kpi-cac').innerHTML = cac > 0 ? '<span class="unit">R$</span>' + fmtBR(cac, 0) : '<span class="unit">R$</span>—';
 
@@ -412,7 +479,7 @@ function renderKPIs() {
   document.getElementById('sub-vendas').textContent = fmtBR(vendasAtivas, 0) + ' ATIVAS · HISTÓRICO';
 
   document.getElementById('kpi-mrr').innerHTML = mrr > 0 ? '<span class="unit">R$</span>' + fmtBig(mrr) : '<span class="unit">R$</span>—';
-  document.getElementById('sub-mrr').textContent = arr > 0 ? 'ARR R$ ' + fmtBig(arr) : '—';
+  document.getElementById('sub-mrr').textContent = (__PLATFORM === 'all' ? 'META + GOOGLE' : __PLATFORM.toUpperCase()) + ' · MENSAL';
 }
 
 function spark(elId, arr, color) {
@@ -436,23 +503,40 @@ function renderTimeChart() {
   const slice = __SLICE;
   if (!slice || !slice.days || !slice.days.length) return;
 
-  document.getElementById('time-meta').textContent = slice.days.length + ' DIAS';
+  document.getElementById('time-meta').textContent = slice.days.length + ' DIAS · ' + (__PLATFORM === 'all' ? 'META + GOOGLE' : __PLATFORM.toUpperCase());
+
+  const series = [];
+  const colors = [];
+  const widths = [];
+  const opacityFrom = [];
+  const opacityTo = [];
+
+  if (__PLATFORM === 'all' || __PLATFORM === 'meta') {
+    series.push({ name: 'Meta (R$)', type: 'area', data: slice.spend_meta || [] });
+    colors.push(CYAN); widths.push(2); opacityFrom.push(0.4); opacityTo.push(0);
+  }
+  if (__PLATFORM === 'all' || __PLATFORM === 'google') {
+    series.push({ name: 'Google (R$)', type: 'area', data: slice.spend_google || [] });
+    colors.push(ORANGE); widths.push(2); opacityFrom.push(0.4); opacityTo.push(0);
+  }
+  if (__PLATFORM === 'all') {
+    series.push({ name: 'Leads Ads', type: 'line', data: slice.leads || [] });
+    colors.push(POS); widths.push(3); opacityFrom.push(0); opacityTo.push(0);
+  }
 
   new ApexCharts(el, Object.assign({}, CHART_BASE, {
     chart: Object.assign({}, CHART_BASE.chart, { type: 'area', height: 280, stacked: false }),
-    series: [
-      { name: 'Meta (R$)',   type: 'area', data: slice.spend_meta || [] },
-      { name: 'Google (R$)', type: 'area', data: slice.spend_google || [] },
-      { name: 'Leads Ads',   type: 'line', data: slice.leads || [] }
-    ],
-    colors: [CYAN, ORANGE, POS],
-    stroke: { curve: 'smooth', width: [2, 2, 3] },
-    fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: [0.4, 0.4, 0], opacityTo: [0, 0, 0], stops: [0, 100] } },
+    series: series,
+    colors: colors,
+    stroke: { curve: 'smooth', width: widths },
+    fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: opacityFrom, opacityTo: opacityTo, stops: [0, 100] } },
     xaxis: { categories: slice.days, type: 'datetime', labels: { style: { colors: DIM, fontSize: '10px' } }, axisBorder: { show: false }, axisTicks: { color: '#1a4868' } },
-    yaxis: [
+    yaxis: __PLATFORM === 'all' ? [
       { labels: { style: { colors: DIM, fontSize: '10px' }, formatter: function(v){ return 'R$ ' + fmtBig(v); } }, axisBorder: { show: false } },
       { show: false },
       { opposite: true, labels: { style: { colors: POS, fontSize: '10px' }, formatter: function(v){ return fmtBR(v, 0); } }, axisBorder: { show: false } }
+    ] : [
+      { labels: { style: { colors: DIM, fontSize: '10px' }, formatter: function(v){ return 'R$ ' + fmtBig(v); } }, axisBorder: { show: false } }
     ],
     tooltip: Object.assign({}, CHART_BASE.tooltip, { x: { format: 'dd MMM yyyy' } }),
     markers: { size: 0, hover: { size: 4 } }
@@ -548,7 +632,17 @@ function renderFunnelReal() {
       '</div>' +
     '</div>';
   };
-  document.getElementById('funnel-real').innerHTML = buildCol('meta', CYAN, 'META ADS') + buildCol('google', ORANGE, 'GOOGLE ADS');
+  const wrap = document.getElementById('funnel-real');
+  if (__PLATFORM === 'meta') {
+    wrap.style.gridTemplateColumns = '1fr';
+    wrap.innerHTML = buildCol('meta', CYAN, 'META ADS');
+  } else if (__PLATFORM === 'google') {
+    wrap.style.gridTemplateColumns = '1fr';
+    wrap.innerHTML = buildCol('google', ORANGE, 'GOOGLE ADS');
+  } else {
+    wrap.style.gridTemplateColumns = '1fr 1fr';
+    wrap.innerHTML = buildCol('meta', CYAN, 'META ADS') + buildCol('google', ORANGE, 'GOOGLE ADS');
+  }
 }
 
 function renderVendas() {
@@ -627,7 +721,9 @@ function renderVendas() {
 }
 
 function renderAds() {
-  const camps = (__D.campaigns || []).slice(0, 8);
+  let camps = __D.campaigns || [];
+  if (__PLATFORM !== 'all') camps = camps.filter(c => c.platform === __PLATFORM);
+  camps = camps.slice(0, 8);
   const maxCS = camps.length ? Math.max(...camps.map(c => c.spend)) : 1;
   document.getElementById('campaigns-list').innerHTML = camps.map((c, i) =>
     '<div class="list-row">' +
