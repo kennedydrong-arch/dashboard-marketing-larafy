@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T18:52:06.849Z",
+  "updated_at": "2026-06-08T18:52:10.312Z",
   "filter": "LaraTax",
   "kpis": {
     "spend": {
@@ -1375,7 +1375,68 @@
   },
   "geo": [],
   "demografia": [],
-  "top_termos": [],
+  "top_termos": [
+    {
+      "termo": "sci",
+      "spend": 1268.28,
+      "impressions": 3224,
+      "clicks": 18
+    },
+    {
+      "termo": "soluções para fluxo de caixa negativo",
+      "spend": 130.32,
+      "impressions": 704,
+      "clicks": 125
+    },
+    {
+      "termo": "laratax",
+      "spend": 317.39,
+      "impressions": 650,
+      "clicks": 264
+    },
+    {
+      "termo": "contabilidade",
+      "spend": 227.5,
+      "impressions": 636,
+      "clicks": 19
+    },
+    {
+      "termo": "taxcel",
+      "spend": 124.97,
+      "impressions": 541,
+      "clicks": 15
+    },
+    {
+      "termo": "restituição de pis e cofins",
+      "spend": 84.28,
+      "impressions": 532,
+      "clicks": 155
+    },
+    {
+      "termo": "direito trabalhista e tributário",
+      "spend": 246.89,
+      "impressions": 485,
+      "clicks": 176
+    },
+    {
+      "termo": "sieg",
+      "spend": 24.27,
+      "impressions": 457,
+      "clicks": 1
+    },
+    {
+      "termo": "st",
+      "spend": 0,
+      "impressions": 456,
+      "clicks": 0
+    },
+    {
+      "termo": "nota fiscal",
+      "spend": 0,
+      "impressions": 444,
+      "clicks": 0
+    }
+  ],
   "horario": [],
   "funnel": {
     "impressions": 622282,
