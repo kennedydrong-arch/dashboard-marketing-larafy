@@ -1120,7 +1120,16 @@ function applyFilter(range, customFrom, customTo) {
       cpa:         { value: sumL > 0 ? +(sumS / sumL).toFixed(2) : 0 },
       ctr:         { value: sumI > 0 ? +(sumC / sumI * 100).toFixed(2) : 0 },
       impressions: { value: sumI,                            spark: spark15(sliced.impressions) },
-      clicks:      { value: sumC,                            spark: spark15(sliced.clicks) }
+      clicks:      { value: sumC,                            spark: spark15(sliced.clicks) },
+      // CRM KPIs são all-time (sem série temporal ainda), preserva do original
+      leads_crm:                __D.kpis.leads_crm,
+      leads_crm_paid:           __D.kpis.leads_crm_paid,
+      vendas:                   __D.kpis.vendas,
+      vendas_ativas:            __D.kpis.vendas_ativas,
+      mrr:                      __D.kpis.mrr,
+      arr:                      __D.kpis.arr,
+      cac_real:                 __D.kpis.cac_real,
+      receita_anual_historico:  __D.kpis.receita_anual_historico
     },
     funnel: { impressions: sumI, clicks: sumC, leads: sumL }
   };
