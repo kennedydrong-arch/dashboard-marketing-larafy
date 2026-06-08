@@ -526,11 +526,14 @@ function renderTimeChart() {
   }
 
   new ApexCharts(el, Object.assign({}, CHART_BASE, {
-    chart: Object.assign({}, CHART_BASE.chart, { type: 'area', height: 280, stacked: false }),
+    chart: Object.assign({}, CHART_BASE.chart, { type: 'area', height: 280, stacked: false, zoom: { enabled: false } }),
     series: series,
     colors: colors,
-    stroke: { curve: 'smooth', width: widths },
+    stroke: { curve: 'smooth', width: widths, lineCap: 'round' },
     fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: opacityFrom, opacityTo: opacityTo, stops: [0, 100] } },
+    dataLabels: { enabled: false },
+    markers: { size: 0, strokeWidth: 0, hover: { size: 5, sizeOffset: 2 } },
+    legend: { position: 'top', horizontalAlign: 'left', labels: { colors: DIM }, markers: { width: 10, height: 10, radius: 5 }, itemMargin: { horizontal: 14 } },
     xaxis: { categories: slice.days, type: 'datetime', labels: { style: { colors: DIM, fontSize: '10px' } }, axisBorder: { show: false }, axisTicks: { color: '#1a4868' } },
     yaxis: __PLATFORM === 'all' ? [
       { labels: { style: { colors: DIM, fontSize: '10px' }, formatter: function(v){ return 'R$ ' + fmtBig(v); } }, axisBorder: { show: false } },
@@ -539,8 +542,8 @@ function renderTimeChart() {
     ] : [
       { labels: { style: { colors: DIM, fontSize: '10px' }, formatter: function(v){ return 'R$ ' + fmtBig(v); } }, axisBorder: { show: false } }
     ],
-    tooltip: Object.assign({}, CHART_BASE.tooltip, { x: { format: 'dd MMM yyyy' } }),
-    markers: { size: 0, hover: { size: 4 } }
+    tooltip: Object.assign({}, CHART_BASE.tooltip, { x: { format: 'dd MMM yyyy' }, marker: { show: true } }),
+    grid: { borderColor: '#1a4868', strokeDashArray: 3, padding: { left: 10, right: 10, top: 0, bottom: 0 } }
   })).render();
 }
 
