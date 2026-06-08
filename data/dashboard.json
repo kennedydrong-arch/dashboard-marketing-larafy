@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T19:52:22.643Z",
+  "updated_at": "2026-06-08T19:52:26.652Z",
   "filter": "LaraTax",
   "kpis": {
     "spend": {
@@ -1646,6 +1646,126 @@
       "spend": 479.23,
       "impr": 10364,
       "clicks": 211,
+      "leads": 0
+    },
+    {
+      "age": "25-34",
+      "gender": "female",
+      "spend": 109.94,
+      "impr": 33917,
+      "clicks": 462,
+      "leads": 0
+    },
+    {
+      "age": "25-34",
+      "gender": "male",
+      "spend": 179.61,
+      "impr": 54119,
+      "clicks": 666,
+      "leads": 0
+    },
+    {
+      "age": "25-34",
+      "gender": "unknown",
+      "spend": 1.83,
+      "impr": 325,
+      "clicks": 3,
+      "leads": 0
+    },
+    {
+      "age": "35-44",
+      "gender": "female",
+      "spend": 117.54,
+      "impr": 31053,
+      "clicks": 402,
+      "leads": 4
+    },
+    {
+      "age": "35-44",
+      "gender": "male",
+      "spend": 171.86,
+      "impr": 41049,
+      "clicks": 408,
+      "leads": 1
+    },
+    {
+      "age": "35-44",
+      "gender": "unknown",
+      "spend": 1.02,
+      "impr": 254,
+      "clicks": 7,
+      "leads": 0
+    },
+    {
+      "age": "45-54",
+      "gender": "female",
+      "spend": 220.71,
+      "impr": 51832,
+      "clicks": 837,
+      "leads": 0
+    },
+    {
+      "age": "45-54",
+      "gender": "male",
+      "spend": 199.19,
+      "impr": 46128,
+      "clicks": 697,
+      "leads": 1
+    },
+    {
+      "age": "45-54",
+      "gender": "unknown",
+      "spend": 1.51,
+      "impr": 235,
+      "clicks": 3,
+      "leads": 0
+    },
+    {
+      "age": "55-64",
+      "gender": "female",
+      "spend": 48,
+      "impr": 10566,
+      "clicks": 192,
+      "leads": 0
+    },
+    {
+      "age": "55-64",
+      "gender": "male",
+      "spend": 38.16,
+      "impr": 8314,
+      "clicks": 112,
+      "leads": 0
+    },
+    {
+      "age": "55-64",
+      "gender": "unknown",
+      "spend": 0.13,
+      "impr": 27,
+      "clicks": 1,
+      "leads": 0
+    },
+    {
+      "age": "65+",
+      "gender": "female",
+      "spend": 31.02,
+      "impr": 2122,
+      "clicks": 40,
+      "leads": 0
+    },
+    {
+      "age": "65+",
+      "gender": "male",
+      "spend": 17.75,
+      "impr": 1618,
+      "clicks": 17,
+      "leads": 0
+    },
+    {
+      "age": "65+",
+      "gender": "unknown",
+      "spend": 0.08,
+      "impr": 13,
+      "clicks": 0,
       "leads": 0
     }
   ],
