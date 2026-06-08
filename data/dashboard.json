@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T19:52:42.778Z",
+  "updated_at": "2026-06-08T19:52:47.332Z",
   "filter": "LaraTax",
   "kpis": {
     "spend": {
@@ -89,10 +89,10 @@
       ]
     },
     "leads_crm": {
-      "value": 0
+      "value": 1637
     },
     "leads_crm_paid": {
-      "value": 0
+      "value": 1317
     },
     "vendas": {
       "value": 0
@@ -3016,36 +3016,147 @@
   },
   "crm": {
     "leads": {
-      "total": 0,
-      "paid": 0,
-      "outbound": 0,
+      "total": 1637,
+      "paid": 1317,
+      "outbound": 174,
       "by_source": {
         "meta": {
-          "total": 0,
-          "won": 0,
-          "lost": 0,
-          "progress": 0
+          "total": 1050,
+          "won": 915,
+          "lost": 29,
+          "progress": 106
         },
         "google": {
-          "total": 0,
-          "won": 0,
-          "lost": 0,
-          "progress": 0
+          "total": 267,
+          "won": 217,
+          "lost": 28,
+          "progress": 22
         },
         "outbound": {
-          "total": 0,
-          "won": 0,
-          "lost": 0,
-          "progress": 0
+          "total": 174,
+          "won": 54,
+          "lost": 119,
+          "progress": 1
         },
         "other": {
-          "total": 0,
-          "won": 0,
-          "lost": 0,
-          "progress": 0
+          "total": 146,
+          "won": 125,
+          "lost": 4,
+          "progress": 17
         }
       },
-      "by_state": []
+      "by_state": [
+        {
+          "state": "SP",
+          "total": 81,
+          "won": 30
+        },
+        {
+          "state": "PR",
+          "total": 45,
+          "won": 34
+        },
+        {
+          "state": "RJ",
+          "total": 20,
+          "won": 7
+        },
+        {
+          "state": "MG",
+          "total": 19,
+          "won": 12
+        },
+        {
+          "state": "RS",
+          "total": 19,
+          "won": 10
+        },
+        {
+          "state": "SC",
+          "total": 13,
+          "won": 6
+        },
+        {
+          "state": "CE",
+          "total": 10,
+          "won": 7
+        },
+        {
+          "state": "BA",
+          "total": 10,
+          "won": 7
+        },
+        {
+          "state": "DF",
+          "total": 8,
+          "won": 6
+        },
+        {
+          "state": "RN",
+          "total": 7,
+          "won": 2
+        },
+        {
+          "state": "PE",
+          "total": 6,
+          "won": 5
+        },
+        {
+          "state": "GO",
+          "total": 4,
+          "won": 2
+        },
+        {
+          "state": "ES",
+          "total": 4,
+          "won": 2
+        },
+        {
+          "state": "MT",
+          "total": 4,
+          "won": 1
+        },
+        {
+          "state": "TO",
+          "total": 3,
+          "won": 1
+        },
+        {
+          "state": "AL",
+          "total": 2,
+          "won": 1
+        },
+        {
+          "state": "MS",
+          "total": 2,
+          "won": 2
+        },
+        {
+          "state": "AM",
+          "total": 2,
+          "won": 2
+        },
+        {
+          "state": "PB",
+          "total": 2,
+          "won": 2
+        },
+        {
+          "state": "MA",
+          "total": 1,
+          "won": 1
+        },
+        {
+          "state": "RO",
+          "total": 1,
+          "won": 1
+        },
+        {
+          "state": "PA",
+          "total": 1,
+          "won": 1
+        }
+      ]
     },
     "vendas": {
       "total": 0,
@@ -3127,12 +3238,12 @@
         "spend": 3546.09,
         "impressions": 391623,
         "clicks": 3321,
-        "leads": 0,
+        "leads": 1050,
         "vendas": 0,
         "receita_anual": 0,
         "cac_real": 0,
-        "cpa_lead": 0,
-        "conv_click_lead_pct": 0,
+        "cpa_lead": 3.38,
+        "conv_click_lead_pct": 31.62,
         "conv_lead_venda_pct": 0,
         "roas": 0
       },
@@ -3140,12 +3251,12 @@
         "spend": 15089.71,
         "impressions": 230659,
         "clicks": 4700,
-        "leads": 0,
+        "leads": 267,
         "vendas": 0,
         "receita_anual": 0,
         "cac_real": 0,
-        "cpa_lead": 0,
-        "conv_click_lead_pct": 0,
+        "cpa_lead": 56.52,
+        "conv_click_lead_pct": 5.68,
         "conv_lead_venda_pct": 0,
         "roas": 0
       }
