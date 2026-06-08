@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T18:25:32.054Z",
+  "updated_at": "2026-06-08T18:25:35.544Z",
   "filter": "LaraTax",
   "kpis": {
     "spend": {
@@ -31,19 +31,19 @@
       "label": "Leads CRM"
     },
     "vendas": {
-      "value": 0,
+      "value": 208,
       "label": "Vendas"
     },
     "mrr": {
-      "value": 0,
+      "value": 488582,
       "label": "MRR (ativos)"
     },
     "arr": {
-      "value": 0,
+      "value": 5862984,
       "label": "ARR (ativos)"
     },
     "cac_real": {
-      "value": 0,
+      "value": 186.36,
       "label": "CAC Real"
     },
     "ctr": {
@@ -3135,70 +3135,1667 @@
           "won": 1
         }
       ],
-      "by_day": {}
+      "by_day": {
+        "2024-11-01": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 1,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 64800
+        },
+        "2024-11-08": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 1,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 64800
+        },
+        "2024-11-05": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 1,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 48000
+        },
+        "2024-12-01": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 64800
+        },
+        "2024-12-11": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 1,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 21600
+        },
+        "2025-01-13": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 1,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 64800
+        },
+        "2025-02-28": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 1,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 24000
+        },
+        "2025-02-27": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 3600
+        },
+        "2025-03-01": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 1,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 57600
+        },
+        "2025-03-07": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 21600
+        },
+        "2025-03-17": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 64800
+        },
+        "2025-03-24": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 1,
+          "network": 0,
+          "events": 0,
+          "community": 1,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 86400
+        },
+        "2025-03-28": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 1,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 21600
+        },
+        "2025-04-29": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 1,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 97200
+        },
+        "2025-04-30": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 1,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 21600
+        },
+        "2025-05-02": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 1,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 21600
+        },
+        "2025-04-23": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 1,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 32400
+        },
+        "2025-05-05": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-05-06": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 21600
+        },
+        "2025-05-09": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 2,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 51840
+        },
+        "2025-05-13": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 1,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 78000
+        },
+        "2025-05-15": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 1,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 64800
+        },
+        "2025-05-29": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 0
+        },
+        "2025-06-02": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-06-03": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 1,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 0
+        },
+        "2025-06-04": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 21600
+        },
+        "2025-06-09": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 6,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 155520
+        },
+        "2025-06-12": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 1,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-06-10": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-06-06": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-06-23": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 1,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-06-24": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-07-02": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-07-04": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 15552
+        },
+        "2025-07-07": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 54000
+        },
+        "2025-07-15": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 51840
+        },
+        "2025-07-18": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 21600
+        },
+        "2025-07-22": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-07-23": {
+          "meta": 3,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 71280
+        },
+        "2025-07-25": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-07-29": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 21600
+        },
+        "2025-07-31": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 2,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 43200
+        },
+        "2025-08-04": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-08-05": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 41472
+        },
+        "2025-08-08": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 113040
+        },
+        "2025-08-11": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 51840
+        },
+        "2025-08-13": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 1,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 27360
+        },
+        "2025-08-15": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 1,
+          "referral": 1,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 77760
+        },
+        "2025-08-20": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-08-21": {
+          "meta": 2,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 51840
+        },
+        "2025-08-25": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-08-27": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 51840
+        },
+        "2025-08-28": {
+          "meta": 2,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 51840
+        },
+        "2025-08-29": {
+          "meta": 3,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 120960
+        },
+        "2025-09-02": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-09-04": {
+          "meta": 1,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-09-05": {
+          "meta": 0,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-09-09": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-09-15": {
+          "meta": 0,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-09-17": {
+          "meta": 1,
+          "google": 2,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 138240
+        },
+        "2025-09-18": {
+          "meta": 1,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 66960
+        },
+        "2025-09-19": {
+          "meta": 1,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 1,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 63840
+        },
+        "2025-09-22": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-09-23": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 1,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-09-25": {
+          "meta": 2,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 77760
+        },
+        "2025-09-29": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-09-30": {
+          "meta": 4,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 1,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 242640
+        },
+        "2025-10-01": {
+          "meta": 1,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 123120
+        },
+        "2025-10-07": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-10-09": {
+          "meta": 0,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-10-15": {
+          "meta": 1,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 63840
+        },
+        "2025-10-16": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-10-22": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 1,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 46800
+        },
+        "2025-10-28": {
+          "meta": 0,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 51840
+        },
+        "2025-10-30": {
+          "meta": 0,
+          "google": 2,
+          "outbound": 0,
+          "referral": 1,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 77760
+        },
+        "2025-10-31": {
+          "meta": 1,
+          "google": 2,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 133920
+        },
+        "2025-11-04": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-11-06": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 1,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-11-10": {
+          "meta": 2,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 63840
+        },
+        "2025-11-12": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 43200
+        },
+        "2025-11-13": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 1,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-11-19": {
+          "meta": 2,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 51840
+        },
+        "2025-11-25": {
+          "meta": 1,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 123444
+        },
+        "2025-11-27": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-12-05": {
+          "meta": 0,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 112320
+        },
+        "2025-12-08": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-12-12": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-12-16": {
+          "meta": 0,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 36000
+        },
+        "2025-12-18": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-12-19": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 13680
+        },
+        "2025-12-23": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 0
+        },
+        "2025-12-30": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2025-12-31": {
+          "meta": 0,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2026-01-13": {
+          "meta": 0,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2026-01-27": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 2,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 66960
+        },
+        "2026-01-29": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 1,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 97524
+        },
+        "2026-02-02": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2026-02-10": {
+          "meta": 0,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2026-02-13": {
+          "meta": 0,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 67332
+        },
+        "2026-02-17": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 19440
+        },
+        "2026-02-18": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 97524
+        },
+        "2026-02-19": {
+          "meta": 0,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2026-02-20": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2026-02-24": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2026-02-25": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 1,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 0
+        },
+        "2026-02-26": {
+          "meta": 0,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2026-02-27": {
+          "meta": 0,
+          "google": 2,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 51840
+        },
+        "2026-02-28": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 0
+        },
+        "2026-03-02": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 1,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 12000
+        },
+        "2026-03-04": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 1,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 75840
+        },
+        "2026-03-05": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 1,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2026-03-06": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2026-03-12": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 1,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 0
+        },
+        "2026-03-16": {
+          "meta": 0,
+          "google": 2,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 0
+        },
+        "2026-03-19": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2026-03-25": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 44064
+        },
+        "2026-03-27": {
+          "meta": 2,
+          "google": 0,
+          "outbound": 0,
+          "referral": 1,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 71280
+        },
+        "2026-03-31": {
+          "meta": 1,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 51840
+        },
+        "2026-04-14": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 1,
+          "network": 0,
+          "events": 2,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 51840
+        },
+        "2026-04-15": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 115392
+        },
+        "2026-04-21": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 51840
+        },
+        "2026-04-13": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 68400
+        },
+        "2026-04-27": {
+          "meta": 2,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 1,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 160584
+        },
+        "2026-04-25": {
+          "meta": 0,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2026-04-29": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 2,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 51840
+        },
+        "2026-04-30": {
+          "meta": 0,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2026-05-04": {
+          "meta": 2,
+          "google": 0,
+          "outbound": 0,
+          "referral": 4,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 428640
+        },
+        "2026-05-11": {
+          "meta": 0,
+          "google": 2,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 51840
+        },
+        "2026-05-08": {
+          "meta": 2,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 2,
+          "other": 0,
+          "revenue": 591840
+        },
+        "2026-05-06": {
+          "meta": 0,
+          "google": 2,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 51840
+        },
+        "2026-05-15": {
+          "meta": 0,
+          "google": 0,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 1,
+          "other": 0,
+          "revenue": 25920
+        },
+        "2026-05-26": {
+          "meta": 0,
+          "google": 1,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 194400
+        },
+        "2026-05-29": {
+          "meta": 0,
+          "google": 2,
+          "outbound": 0,
+          "referral": 0,
+          "network": 0,
+          "events": 0,
+          "community": 0,
+          "partnership": 0,
+          "other": 0,
+          "revenue": 77760
+        }
+      }
     },
     "vendas": {
-      "total": 0,
-      "ativas": 0,
-      "mrr": 0,
-      "arr": 0,
-      "receita_anual_historico": 0,
+      "total": 208,
+      "ativas": 158,
+      "mrr": 488582,
+      "arr": 5862984,
+      "receita_anual_historico": 7316808,
       "by_source": {
         "meta": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 63,
+          "ativos": 44,
+          "valor_anual_total": 2512188,
+          "mrr": 158889,
+          "arr_ativo": 1906668
         },
         "google": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 37,
+          "ativos": 34,
+          "valor_anual_total": 1183332,
+          "mrr": 92131,
+          "arr_ativo": 1105572
         },
         "outbound": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 25,
+          "ativos": 16,
+          "valor_anual_total": 610992,
+          "mrr": 34080,
+          "arr_ativo": 408960
         },
         "referral": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 22,
+          "ativos": 20,
+          "valor_anual_total": 1105524,
+          "mrr": 81327,
+          "arr_ativo": 975924
         },
         "network": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 13,
+          "ativos": 10,
+          "valor_anual_total": 453840,
+          "mrr": 29540,
+          "arr_ativo": 354480
         },
         "events": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 38,
+          "ativos": 26,
+          "valor_anual_total": 1244532,
+          "mrr": 79375,
+          "arr_ativo": 952500
         },
         "community": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 7,
+          "ativos": 5,
+          "valor_anual_total": 128640,
+          "mrr": 6760,
+          "arr_ativo": 81120
         },
         "partnership": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 3,
+          "ativos": 3,
+          "valor_anual_total": 77760,
+          "mrr": 6480,
+          "arr_ativo": 77760
         },
         "other": {
           "count": 0,
@@ -3208,9 +4805,282 @@
           "arr_ativo": 0
         }
       },
-      "by_state": [],
-      "by_closer": [],
-      "by_plano": []
+      "by_state": [
+        {
+          "state": "SP",
+          "count": 58,
+          "ativos": 42,
+          "revenue_anual": 1828248,
+          "mrr": 114794
+        },
+        {
+          "state": "PR",
+          "count": 34,
+          "ativos": 28,
+          "revenue_anual": 1157412,
+          "mrr": 82471
+        },
+        {
+          "state": "SC",
+          "count": 11,
+          "ativos": 11,
+          "revenue_anual": 749664,
+          "mrr": 62472
+        },
+        {
+          "state": "RS",
+          "count": 11,
+          "ativos": 6,
+          "revenue_anual": 501876,
+          "mrr": 31887
+        },
+        {
+          "state": "PE",
+          "count": 13,
+          "ativos": 10,
+          "revenue_anual": 456480,
+          "mrr": 27240
+        },
+        {
+          "state": "MG",
+          "count": 9,
+          "ativos": 8,
+          "revenue_anual": 345072,
+          "mrr": 26596
+        },
+        {
+          "state": "RJ",
+          "count": 9,
+          "ativos": 6,
+          "revenue_anual": 326772,
+          "mrr": 20751
+        },
+        {
+          "state": "ES",
+          "count": 3,
+          "ativos": 2,
+          "revenue_anual": 306720,
+          "mrr": 23400
+        },
+        {
+          "state": "MT",
+          "count": 9,
+          "ativos": 6,
+          "revenue_anual": 244080,
+          "mrr": 14220
+        },
+        {
+          "state": "DF",
+          "count": 7,
+          "ativos": 5,
+          "revenue_anual": 218532,
+          "mrr": 13891
+        },
+        {
+          "state": "CE",
+          "count": 8,
+          "ativos": 7,
+          "revenue_anual": 172800,
+          "mrr": 12240
+        },
+        {
+          "state": "RN",
+          "count": 5,
+          "ativos": 3,
+          "revenue_anual": 155520,
+          "mrr": 8640
+        },
+        {
+          "state": "GO",
+          "count": 7,
+          "ativos": 5,
+          "revenue_anual": 155520,
+          "mrr": 8640
+        },
+        {
+          "state": "BA",
+          "count": 4,
+          "ativos": 3,
+          "revenue_anual": 135792,
+          "mrr": 10020
+        },
+        {
+          "state": "AM",
+          "count": 5,
+          "ativos": 4,
+          "revenue_anual": 125280,
+          "mrr": 8640
+        },
+        {
+          "state": "BH",
+          "count": 3,
+          "ativos": 2,
+          "revenue_anual": 91440,
+          "mrr": 1620
+        },
+        {
+          "state": "PA",
+          "count": 2,
+          "ativos": 1,
+          "revenue_anual": 66960,
+          "mrr": 0
+        },
+        {
+          "state": "MA",
+          "count": 1,
+          "ativos": 1,
+          "revenue_anual": 54000,
+          "mrr": 4500
+        },
+        {
+          "state": "RR",
+          "count": 2,
+          "ativos": 2,
+          "revenue_anual": 51840,
+          "mrr": 4320
+        },
+        {
+          "state": "TO",
+          "count": 2,
+          "ativos": 2,
+          "revenue_anual": 51840,
+          "mrr": 4320
+        },
+        {
+          "state": "SE",
+          "count": 1,
+          "ativos": 1,
+          "revenue_anual": 43200,
+          "mrr": 3600
+        },
+        {
+          "state": "PB",
+          "count": 2,
+          "ativos": 1,
+          "revenue_anual": 25920,
+          "mrr": 0
+        },
+        {
+          "state": "RO",
+          "count": 1,
+          "ativos": 1,
+          "revenue_anual": 25920,
+          "mrr": 2160
+        },
+        {
+          "state": "AL",
+          "count": 1,
+          "ativos": 1,
+          "revenue_anual": 25920,
+          "mrr": 2160
+        }
+      ],
+      "by_closer": [
+        {
+          "closer": "Barbara Barbosa",
+          "count": 38,
+          "ativos": 38,
+          "revenue_anual": 1988352,
+          "mrr": 165696
+        },
+        {
+          "closer": "Leticia Staroski",
+          "count": 60,
+          "ativos": 39,
+          "revenue_anual": 1848936,
+          "mrr": 109066
+        },
+        {
+          "closer": "Larissa Leitolles",
+          "count": 40,
+          "ativos": 31,
+          "revenue_anual": 1104612,
+          "mrr": 69551
+        },
+        {
+          "closer": "Nathan Endrigo",
+          "count": 22,
+          "ativos": 11,
+          "revenue_anual": 756720,
+          "mrr": 29520
+        },
+        {
+          "closer": "Alysson",
+          "count": 17,
+          "ativos": 13,
+          "revenue_anual": 619200,
+          "mrr": 39720
+        },
+        {
+          "closer": "Bianca Silva",
+          "count": 11,
+          "ativos": 9,
+          "revenue_anual": 374004,
+          "mrr": 26847
+        },
+        {
+          "closer": "Nelson",
+          "count": 9,
+          "ativos": 9,
+          "revenue_anual": 316104,
+          "mrr": 26342
+        },
+        {
+          "closer": "Waldir",
+          "count": 6,
+          "ativos": 4,
+          "revenue_anual": 156000,
+          "mrr": 9400
+        },
+        {
+          "closer": "Andrey",
+          "count": 1,
+          "ativos": 1,
+          "revenue_anual": 78000,
+          "mrr": 6500
+        },
+        {
+          "closer": "Alysson Teixeira",
+          "count": 2,
+          "ativos": 2,
+          "revenue_anual": 60480,
+          "mrr": 5040
+        },
+        {
+          "closer": "Matheus Vieira",
+          "count": 2,
+          "ativos": 1,
+          "revenue_anual": 14400,
+          "mrr": 900
+        }
+      ],
+      "by_plano": [
+        {
+          "plano": "MODULAR",
+          "count": 186,
+          "revenue_anual": 6231528
+        },
+        {
+          "plano": "ADVANCED",
+          "count": 8,
+          "revenue_anual": 548880
+        },
+        {
+          "plano": "STANDARD",
+          "count": 8,
+          "revenue_anual": 458400
+        },
+        {
+          "plano": "PROFESSIONAL",
+          "count": 5,
+          "revenue_anual": 54000
+        },
+        {
+          "plano": "IMPLANTAÇÃO",
+          "count": 1,
+          "revenue_anual": 24000
+        }
+      ]
     },
     "funnel_real": {
       "meta": {
@@ -3218,26 +5088,26 @@
         "impressions": 391623,
         "clicks": 3321,
         "leads": 1050,
-        "vendas": 0,
-        "receita_anual": 0,
-        "cac_real": 0,
+        "vendas": 63,
+        "receita_anual": 2512188,
+        "cac_real": 56.29,
         "cpa_lead": 3.38,
         "conv_click_lead_pct": 31.62,
-        "conv_lead_venda_pct": 0,
-        "roas": 0
+        "conv_lead_venda_pct": 6,
+        "roas": 708.44
       },
       "google": {
         "spend": 15089.71,
         "impressions": 230659,
         "clicks": 4700,
         "leads": 267,
-        "vendas": 0,
-        "receita_anual": 0,
-        "cac_real": 0,
+        "vendas": 37,
+        "receita_anual": 1183332,
+        "cac_real": 407.83,
         "cpa_lead": 56.52,
         "conv_click_lead_pct": 5.68,
-        "conv_lead_venda_pct": 0,
-        "roas": 0
+        "conv_lead_venda_pct": 13.86,
+        "roas": 78.42
       }
     }
   }
