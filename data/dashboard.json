@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T19:28:09.561Z",
+  "updated_at": "2026-06-08T19:28:12.598Z",
   "filter": "LaraTax",
   "kpis": {
     "spend": {
@@ -1591,7 +1591,64 @@
       "cpa": 0
     }
   ],
-  "demografia": [],
+  "demografia": [
+    {
+      "age": "AGE_RANGE_25_34",
+      "gender": "ALL",
+      "spend": 2949.63,
+      "impr": 44835,
+      "clicks": 428,
+      "leads": 0
+    },
+    {
+      "age": "AGE_RANGE_UNDETERMINED",
+      "gender": "ALL",
+      "spend": 4878.7,
+      "impr": 44692,
+      "clicks": 2044,
+      "leads": 0
+    },
+    {
+      "age": "AGE_RANGE_35_44",
+      "gender": "ALL",
+      "spend": 2142.85,
+      "impr": 33300,
+      "clicks": 366,
+      "leads": 0
+    },
+    {
+      "age": "AGE_RANGE_45_54",
+      "gender": "ALL",
+      "spend": 1325.45,
+      "impr": 25636,
+      "clicks": 253,
+      "leads": 0
+    },
+    {
+      "age": "AGE_RANGE_55_64",
+      "gender": "ALL",
+      "spend": 1062.29,
+      "impr": 22936,
+      "clicks": 225,
+      "leads": 0
+    },
+    {
+      "age": "AGE_RANGE_18_24",
+      "gender": "ALL",
+      "spend": 1742.36,
+      "impr": 15641,
+      "clicks": 216,
+      "leads": 0
+    },
+    {
+      "age": "AGE_RANGE_65_UP",
+      "gender": "ALL",
+      "spend": 479.23,
+      "impr": 10364,
+      "clicks": 211,
+      "leads": 0
+    }
+  ],
   "top_termos": [
     {
       "termo": "sci",
