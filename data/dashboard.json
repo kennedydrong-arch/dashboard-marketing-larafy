@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-08T19:57:50.486Z",
+  "updated_at": "2026-06-08T19:57:55.478Z",
   "filter": "LaraTax",
   "kpis": {
     "spend": {
@@ -95,22 +95,22 @@
       "value": 1317
     },
     "vendas": {
-      "value": 0
+      "value": 208
     },
     "vendas_ativas": {
-      "value": 0
+      "value": 158
     },
     "mrr": {
-      "value": 0
+      "value": 488582
     },
     "arr": {
-      "value": 0
+      "value": 5862984
     },
     "cac_real": {
-      "value": 0
+      "value": 186.36
     },
     "receita_anual_historico": {
-      "value": 0
+      "value": 7316808
     }
   },
   "temporal": {
@@ -3159,67 +3159,67 @@
       ]
     },
     "vendas": {
-      "total": 0,
-      "ativas": 0,
-      "mrr": 0,
-      "arr": 0,
-      "receita_anual_historico": 0,
+      "total": 208,
+      "ativas": 158,
+      "mrr": 488582,
+      "arr": 5862984,
+      "receita_anual_historico": 7316808,
       "by_source": {
         "meta": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 63,
+          "ativos": 44,
+          "valor_anual_total": 2512188,
+          "mrr": 158889,
+          "arr_ativo": 1906668
         },
         "google": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 37,
+          "ativos": 34,
+          "valor_anual_total": 1183332,
+          "mrr": 92131,
+          "arr_ativo": 1105572
         },
         "outbound": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 25,
+          "ativos": 16,
+          "valor_anual_total": 610992,
+          "mrr": 34080,
+          "arr_ativo": 408960
         },
         "referral": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 22,
+          "ativos": 20,
+          "valor_anual_total": 1105524,
+          "mrr": 81327,
+          "arr_ativo": 975924
         },
         "network": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 13,
+          "ativos": 10,
+          "valor_anual_total": 453840,
+          "mrr": 29540,
+          "arr_ativo": 354480
         },
         "events": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 38,
+          "ativos": 26,
+          "valor_anual_total": 1244532,
+          "mrr": 79375,
+          "arr_ativo": 952500
         },
         "community": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 7,
+          "ativos": 5,
+          "valor_anual_total": 128640,
+          "mrr": 6760,
+          "arr_ativo": 81120
         },
         "partnership": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 3,
+          "ativos": 3,
+          "valor_anual_total": 77760,
+          "mrr": 6480,
+          "arr_ativo": 77760
         },
         "other": {
           "count": 0,
@@ -3229,9 +3229,282 @@
           "arr_ativo": 0
         }
       },
-      "by_state": [],
-      "by_closer": [],
-      "by_plano": []
+      "by_state": [
+        {
+          "state": "SP",
+          "count": 58,
+          "ativos": 42,
+          "revenue_anual": 1828248,
+          "mrr": 114794
+        },
+        {
+          "state": "PR",
+          "count": 34,
+          "ativos": 28,
+          "revenue_anual": 1157412,
+          "mrr": 82471
+        },
+        {
+          "state": "SC",
+          "count": 11,
+          "ativos": 11,
+          "revenue_anual": 749664,
+          "mrr": 62472
+        },
+        {
+          "state": "RS",
+          "count": 11,
+          "ativos": 6,
+          "revenue_anual": 501876,
+          "mrr": 31887
+        },
+        {
+          "state": "PE",
+          "count": 13,
+          "ativos": 10,
+          "revenue_anual": 456480,
+          "mrr": 27240
+        },
+        {
+          "state": "MG",
+          "count": 9,
+          "ativos": 8,
+          "revenue_anual": 345072,
+          "mrr": 26596
+        },
+        {
+          "state": "RJ",
+          "count": 9,
+          "ativos": 6,
+          "revenue_anual": 326772,
+          "mrr": 20751
+        },
+        {
+          "state": "ES",
+          "count": 3,
+          "ativos": 2,
+          "revenue_anual": 306720,
+          "mrr": 23400
+        },
+        {
+          "state": "MT",
+          "count": 9,
+          "ativos": 6,
+          "revenue_anual": 244080,
+          "mrr": 14220
+        },
+        {
+          "state": "DF",
+          "count": 7,
+          "ativos": 5,
+          "revenue_anual": 218532,
+          "mrr": 13891
+        },
+        {
+          "state": "CE",
+          "count": 8,
+          "ativos": 7,
+          "revenue_anual": 172800,
+          "mrr": 12240
+        },
+        {
+          "state": "RN",
+          "count": 5,
+          "ativos": 3,
+          "revenue_anual": 155520,
+          "mrr": 8640
+        },
+        {
+          "state": "GO",
+          "count": 7,
+          "ativos": 5,
+          "revenue_anual": 155520,
+          "mrr": 8640
+        },
+        {
+          "state": "BA",
+          "count": 4,
+          "ativos": 3,
+          "revenue_anual": 135792,
+          "mrr": 10020
+        },
+        {
+          "state": "AM",
+          "count": 5,
+          "ativos": 4,
+          "revenue_anual": 125280,
+          "mrr": 8640
+        },
+        {
+          "state": "BH",
+          "count": 3,
+          "ativos": 2,
+          "revenue_anual": 91440,
+          "mrr": 1620
+        },
+        {
+          "state": "PA",
+          "count": 2,
+          "ativos": 1,
+          "revenue_anual": 66960,
+          "mrr": 0
+        },
+        {
+          "state": "MA",
+          "count": 1,
+          "ativos": 1,
+          "revenue_anual": 54000,
+          "mrr": 4500
+        },
+        {
+          "state": "RR",
+          "count": 2,
+          "ativos": 2,
+          "revenue_anual": 51840,
+          "mrr": 4320
+        },
+        {
+          "state": "TO",
+          "count": 2,
+          "ativos": 2,
+          "revenue_anual": 51840,
+          "mrr": 4320
+        },
+        {
+          "state": "SE",
+          "count": 1,
+          "ativos": 1,
+          "revenue_anual": 43200,
+          "mrr": 3600
+        },
+        {
+          "state": "PB",
+          "count": 2,
+          "ativos": 1,
+          "revenue_anual": 25920,
+          "mrr": 0
+        },
+        {
+          "state": "RO",
+          "count": 1,
+          "ativos": 1,
+          "revenue_anual": 25920,
+          "mrr": 2160
+        },
+        {
+          "state": "AL",
+          "count": 1,
+          "ativos": 1,
+          "revenue_anual": 25920,
+          "mrr": 2160
+        }
+      ],
+      "by_closer": [
+        {
+          "closer": "Barbara Barbosa",
+          "count": 38,
+          "ativos": 38,
+          "revenue_anual": 1988352,
+          "mrr": 165696
+        },
+        {
+          "closer": "Leticia Staroski",
+          "count": 60,
+          "ativos": 39,
+          "revenue_anual": 1848936,
+          "mrr": 109066
+        },
+        {
+          "closer": "Larissa Leitolles",
+          "count": 40,
+          "ativos": 31,
+          "revenue_anual": 1104612,
+          "mrr": 69551
+        },
+        {
+          "closer": "Nathan Endrigo",
+          "count": 22,
+          "ativos": 11,
+          "revenue_anual": 756720,
+          "mrr": 29520
+        },
+        {
+          "closer": "Alysson",
+          "count": 17,
+          "ativos": 13,
+          "revenue_anual": 619200,
+          "mrr": 39720
+        },
+        {
+          "closer": "Bianca Silva",
+          "count": 11,
+          "ativos": 9,
+          "revenue_anual": 374004,
+          "mrr": 26847
+        },
+        {
+          "closer": "Nelson",
+          "count": 9,
+          "ativos": 9,
+          "revenue_anual": 316104,
+          "mrr": 26342
+        },
+        {
+          "closer": "Waldir",
+          "count": 6,
+          "ativos": 4,
+          "revenue_anual": 156000,
+          "mrr": 9400
+        },
+        {
+          "closer": "Andrey",
+          "count": 1,
+          "ativos": 1,
+          "revenue_anual": 78000,
+          "mrr": 6500
+        },
+        {
+          "closer": "Alysson Teixeira",
+          "count": 2,
+          "ativos": 2,
+          "revenue_anual": 60480,
+          "mrr": 5040
+        },
+        {
+          "closer": "Matheus Vieira",
+          "count": 2,
+          "ativos": 1,
+          "revenue_anual": 14400,
+          "mrr": 900
+        }
+      ],
+      "by_plano": [
+        {
+          "plano": "MODULAR",
+          "count": 186,
+          "revenue_anual": 6231528
+        },
+        {
+          "plano": "ADVANCED",
+          "count": 8,
+          "revenue_anual": 548880
+        },
+        {
+          "plano": "STANDARD",
+          "count": 8,
+          "revenue_anual": 458400
+        },
+        {
+          "plano": "PROFESSIONAL",
+          "count": 5,
+          "revenue_anual": 54000
+        },
+        {
+          "plano": "IMPLANTAÇÃO",
+          "count": 1,
+          "revenue_anual": 24000
+        }
+      ]
     },
     "funnel_real": {
       "meta": {
@@ -3239,26 +3512,26 @@
         "impressions": 391623,
         "clicks": 3321,
         "leads": 1050,
-        "vendas": 0,
-        "receita_anual": 0,
-        "cac_real": 0,
+        "vendas": 63,
+        "receita_anual": 2512188,
+        "cac_real": 56.29,
         "cpa_lead": 3.38,
         "conv_click_lead_pct": 31.62,
-        "conv_lead_venda_pct": 0,
-        "roas": 0
+        "conv_lead_venda_pct": 6,
+        "roas": 708.44
       },
       "google": {
         "spend": 15089.71,
         "impressions": 230659,
         "clicks": 4700,
         "leads": 267,
-        "vendas": 0,
-        "receita_anual": 0,
-        "cac_real": 0,
+        "vendas": 37,
+        "receita_anual": 1183332,
+        "cac_real": 407.83,
         "cpa_lead": 56.52,
         "conv_click_lead_pct": 5.68,
-        "conv_lead_venda_pct": 0,
-        "roas": 0
+        "conv_lead_venda_pct": 13.86,
+        "roas": 78.42
       }
     }
   }
