@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-09T16:23:21.063Z",
+  "updated_at": "2026-06-09T16:23:24.690Z",
   "filter": "LaraTax",
   "kpis": {
     "spend": {
@@ -1838,7 +1838,1184 @@
       "clicks": 0
     }
   ],
-  "horario": [],
+  "horario": [
+    {
+      "day": "SUNDAY",
+      "hour": 0,
+      "impr": 733,
+      "clicks": 14,
+      "spend": 48.5
+    },
+    {
+      "day": "MONDAY",
+      "hour": 0,
+      "impr": 946,
+      "clicks": 10,
+      "spend": 7.96
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 0,
+      "impr": 286,
+      "clicks": 4,
+      "spend": 2.74
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 0,
+      "impr": 1060,
+      "clicks": 33,
+      "spend": 17.69
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 0,
+      "impr": 577,
+      "clicks": 13,
+      "spend": 47.48
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 0,
+      "impr": 2577,
+      "clicks": 42,
+      "spend": 185.57
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 0,
+      "impr": 1931,
+      "clicks": 45,
+      "spend": 87.48
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 1,
+      "impr": 705,
+      "clicks": 12,
+      "spend": 8.86
+    },
+    {
+      "day": "MONDAY",
+      "hour": 1,
+      "impr": 1179,
+      "clicks": 10,
+      "spend": 91.07
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 1,
+      "impr": 316,
+      "clicks": 6,
+      "spend": 67.83
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 1,
+      "impr": 806,
+      "clicks": 21,
+      "spend": 12.65
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 1,
+      "impr": 355,
+      "clicks": 2,
+      "spend": 21.97
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 1,
+      "impr": 699,
+      "clicks": 34,
+      "spend": 37.97
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 1,
+      "impr": 1570,
+      "clicks": 24,
+      "spend": 19.32
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 2,
+      "impr": 739,
+      "clicks": 6,
+      "spend": 56.45
+    },
+    {
+      "day": "MONDAY",
+      "hour": 2,
+      "impr": 903,
+      "clicks": 11,
+      "spend": 7.65
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 2,
+      "impr": 469,
+      "clicks": 6,
+      "spend": 8.11
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 2,
+      "impr": 513,
+      "clicks": 11,
+      "spend": 7.24
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 2,
+      "impr": 516,
+      "clicks": 6,
+      "spend": 3.97
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 2,
+      "impr": 379,
+      "clicks": 11,
+      "spend": 35.32
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 2,
+      "impr": 2323,
+      "clicks": 24,
+      "spend": 24.65
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 3,
+      "impr": 730,
+      "clicks": 4,
+      "spend": 20.85
+    },
+    {
+      "day": "MONDAY",
+      "hour": 3,
+      "impr": 1076,
+      "clicks": 4,
+      "spend": 7.82
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 3,
+      "impr": 703,
+      "clicks": 4,
+      "spend": 4.8
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 3,
+      "impr": 468,
+      "clicks": 5,
+      "spend": 4.09
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 3,
+      "impr": 540,
+      "clicks": 7,
+      "spend": 4.62
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 3,
+      "impr": 682,
+      "clicks": 14,
+      "spend": 21.15
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 3,
+      "impr": 1158,
+      "clicks": 13,
+      "spend": 11.85
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 4,
+      "impr": 620,
+      "clicks": 0,
+      "spend": 2.61
+    },
+    {
+      "day": "MONDAY",
+      "hour": 4,
+      "impr": 884,
+      "clicks": 5,
+      "spend": 10.51
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 4,
+      "impr": 496,
+      "clicks": 5,
+      "spend": 6.61
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 4,
+      "impr": 521,
+      "clicks": 3,
+      "spend": 6.87
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 4,
+      "impr": 500,
+      "clicks": 6,
+      "spend": 3.57
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 4,
+      "impr": 826,
+      "clicks": 12,
+      "spend": 21.95
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 4,
+      "impr": 789,
+      "clicks": 10,
+      "spend": 96.64
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 5,
+      "impr": 559,
+      "clicks": 4,
+      "spend": 11.34
+    },
+    {
+      "day": "MONDAY",
+      "hour": 5,
+      "impr": 603,
+      "clicks": 2,
+      "spend": 6.35
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 5,
+      "impr": 349,
+      "clicks": 9,
+      "spend": 16.33
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 5,
+      "impr": 439,
+      "clicks": 9,
+      "spend": 56.39
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 5,
+      "impr": 600,
+      "clicks": 6,
+      "spend": 35.45
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 5,
+      "impr": 455,
+      "clicks": 15,
+      "spend": 44.14
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 5,
+      "impr": 730,
+      "clicks": 11,
+      "spend": 83.17
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 6,
+      "impr": 501,
+      "clicks": 5,
+      "spend": 48.95
+    },
+    {
+      "day": "MONDAY",
+      "hour": 6,
+      "impr": 783,
+      "clicks": 10,
+      "spend": 13.85
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 6,
+      "impr": 513,
+      "clicks": 5,
+      "spend": 6.12
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 6,
+      "impr": 400,
+      "clicks": 7,
+      "spend": 36.93
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 6,
+      "impr": 683,
+      "clicks": 21,
+      "spend": 12.15
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 6,
+      "impr": 944,
+      "clicks": 26,
+      "spend": 77.88
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 6,
+      "impr": 994,
+      "clicks": 36,
+      "spend": 55.9
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 7,
+      "impr": 518,
+      "clicks": 7,
+      "spend": 236.14
+    },
+    {
+      "day": "MONDAY",
+      "hour": 7,
+      "impr": 989,
+      "clicks": 8,
+      "spend": 16.15
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 7,
+      "impr": 591,
+      "clicks": 17,
+      "spend": 33.46
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 7,
+      "impr": 776,
+      "clicks": 16,
+      "spend": 56.29
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 7,
+      "impr": 682,
+      "clicks": 15,
+      "spend": 162.63
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 7,
+      "impr": 500,
+      "clicks": 27,
+      "spend": 47.33
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 7,
+      "impr": 1799,
+      "clicks": 42,
+      "spend": 100.38
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 8,
+      "impr": 697,
+      "clicks": 16,
+      "spend": 58.25
+    },
+    {
+      "day": "MONDAY",
+      "hour": 8,
+      "impr": 1214,
+      "clicks": 17,
+      "spend": 273.28
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 8,
+      "impr": 834,
+      "clicks": 27,
+      "spend": 354.97
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 8,
+      "impr": 1254,
+      "clicks": 23,
+      "spend": 130.15
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 8,
+      "impr": 824,
+      "clicks": 23,
+      "spend": 264
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 8,
+      "impr": 800,
+      "clicks": 41,
+      "spend": 113.54
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 8,
+      "impr": 2361,
+      "clicks": 49,
+      "spend": 76.75
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 9,
+      "impr": 950,
+      "clicks": 18,
+      "spend": 25.94
+    },
+    {
+      "day": "MONDAY",
+      "hour": 9,
+      "impr": 1624,
+      "clicks": 13,
+      "spend": 162.49
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 9,
+      "impr": 1097,
+      "clicks": 31,
+      "spend": 40.85
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 9,
+      "impr": 1560,
+      "clicks": 41,
+      "spend": 350.5
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 9,
+      "impr": 1145,
+      "clicks": 28,
+      "spend": 138.49
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 9,
+      "impr": 1019,
+      "clicks": 48,
+      "spend": 260.72
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 9,
+      "impr": 2455,
+      "clicks": 64,
+      "spend": 70.78
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 10,
+      "impr": 1299,
+      "clicks": 13,
+      "spend": 39.99
+    },
+    {
+      "day": "MONDAY",
+      "hour": 10,
+      "impr": 1639,
+      "clicks": 22,
+      "spend": 127.14
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 10,
+      "impr": 1040,
+      "clicks": 41,
+      "spend": 69.81
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 10,
+      "impr": 1544,
+      "clicks": 44,
+      "spend": 142.96
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 10,
+      "impr": 1362,
+      "clicks": 45,
+      "spend": 454.88
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 10,
+      "impr": 1367,
+      "clicks": 42,
+      "spend": 44.55
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 10,
+      "impr": 2590,
+      "clicks": 57,
+      "spend": 119.92
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 11,
+      "impr": 1756,
+      "clicks": 15,
+      "spend": 61.07
+    },
+    {
+      "day": "MONDAY",
+      "hour": 11,
+      "impr": 1458,
+      "clicks": 25,
+      "spend": 202.28
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 11,
+      "impr": 1335,
+      "clicks": 53,
+      "spend": 439.41
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 11,
+      "impr": 942,
+      "clicks": 22,
+      "spend": 53.05
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 11,
+      "impr": 1289,
+      "clicks": 34,
+      "spend": 277.51
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 11,
+      "impr": 1266,
+      "clicks": 24,
+      "spend": 89.32
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 11,
+      "impr": 2782,
+      "clicks": 41,
+      "spend": 210.02
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 12,
+      "impr": 1785,
+      "clicks": 36,
+      "spend": 113.7
+    },
+    {
+      "day": "MONDAY",
+      "hour": 12,
+      "impr": 1332,
+      "clicks": 11,
+      "spend": 75.27
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 12,
+      "impr": 1127,
+      "clicks": 51,
+      "spend": 103.32
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 12,
+      "impr": 944,
+      "clicks": 13,
+      "spend": 203.64
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 12,
+      "impr": 1352,
+      "clicks": 22,
+      "spend": 73.86
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 12,
+      "impr": 1012,
+      "clicks": 33,
+      "spend": 223.53
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 12,
+      "impr": 2532,
+      "clicks": 54,
+      "spend": 66.62
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 13,
+      "impr": 1939,
+      "clicks": 38,
+      "spend": 83.1
+    },
+    {
+      "day": "MONDAY",
+      "hour": 13,
+      "impr": 1530,
+      "clicks": 12,
+      "spend": 87.16
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 13,
+      "impr": 1177,
+      "clicks": 40,
+      "spend": 94.58
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 13,
+      "impr": 947,
+      "clicks": 31,
+      "spend": 132.28
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 13,
+      "impr": 1632,
+      "clicks": 32,
+      "spend": 302.38
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 13,
+      "impr": 823,
+      "clicks": 24,
+      "spend": 29.69
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 13,
+      "impr": 2492,
+      "clicks": 61,
+      "spend": 138.84
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 14,
+      "impr": 1817,
+      "clicks": 42,
+      "spend": 213.47
+    },
+    {
+      "day": "MONDAY",
+      "hour": 14,
+      "impr": 1889,
+      "clicks": 26,
+      "spend": 198.52
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 14,
+      "impr": 959,
+      "clicks": 21,
+      "spend": 48.91
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 14,
+      "impr": 1059,
+      "clicks": 15,
+      "spend": 292.45
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 14,
+      "impr": 1686,
+      "clicks": 47,
+      "spend": 183.84
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 14,
+      "impr": 1037,
+      "clicks": 27,
+      "spend": 43.51
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 14,
+      "impr": 2407,
+      "clicks": 59,
+      "spend": 224.68
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 15,
+      "impr": 1534,
+      "clicks": 30,
+      "spend": 26.75
+    },
+    {
+      "day": "MONDAY",
+      "hour": 15,
+      "impr": 1722,
+      "clicks": 28,
+      "spend": 363.83
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 15,
+      "impr": 987,
+      "clicks": 29,
+      "spend": 244.85
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 15,
+      "impr": 1006,
+      "clicks": 21,
+      "spend": 48.84
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 15,
+      "impr": 1693,
+      "clicks": 64,
+      "spend": 87.35
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 15,
+      "impr": 1359,
+      "clicks": 20,
+      "spend": 130.39
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 15,
+      "impr": 2557,
+      "clicks": 46,
+      "spend": 115.81
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 16,
+      "impr": 1517,
+      "clicks": 19,
+      "spend": 117.75
+    },
+    {
+      "day": "MONDAY",
+      "hour": 16,
+      "impr": 1778,
+      "clicks": 24,
+      "spend": 159.05
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 16,
+      "impr": 1111,
+      "clicks": 24,
+      "spend": 376.81
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 16,
+      "impr": 1123,
+      "clicks": 25,
+      "spend": 121.23
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 16,
+      "impr": 1308,
+      "clicks": 38,
+      "spend": 102.94
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 16,
+      "impr": 1738,
+      "clicks": 27,
+      "spend": 105.26
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 16,
+      "impr": 2363,
+      "clicks": 54,
+      "spend": 77.85
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 17,
+      "impr": 2044,
+      "clicks": 23,
+      "spend": 53.85
+    },
+    {
+      "day": "MONDAY",
+      "hour": 17,
+      "impr": 3908,
+      "clicks": 46,
+      "spend": 47.84
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 17,
+      "impr": 2522,
+      "clicks": 75,
+      "spend": 76.09
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 17,
+      "impr": 2299,
+      "clicks": 65,
+      "spend": 121.22
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 17,
+      "impr": 1625,
+      "clicks": 52,
+      "spend": 72.75
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 17,
+      "impr": 4722,
+      "clicks": 77,
+      "spend": 166.88
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 17,
+      "impr": 2499,
+      "clicks": 63,
+      "spend": 107.88
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 18,
+      "impr": 2657,
+      "clicks": 45,
+      "spend": 23.95
+    },
+    {
+      "day": "MONDAY",
+      "hour": 18,
+      "impr": 1899,
+      "clicks": 35,
+      "spend": 89.05
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 18,
+      "impr": 1829,
+      "clicks": 41,
+      "spend": 65.33
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 18,
+      "impr": 1899,
+      "clicks": 61,
+      "spend": 71.97
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 18,
+      "impr": 1659,
+      "clicks": 48,
+      "spend": 58.41
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 18,
+      "impr": 2659,
+      "clicks": 42,
+      "spend": 99.47
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 18,
+      "impr": 2405,
+      "clicks": 44,
+      "spend": 81.21
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 19,
+      "impr": 2717,
+      "clicks": 47,
+      "spend": 76.48
+    },
+    {
+      "day": "MONDAY",
+      "hour": 19,
+      "impr": 1791,
+      "clicks": 43,
+      "spend": 405.47
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 19,
+      "impr": 1721,
+      "clicks": 33,
+      "spend": 46.24
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 19,
+      "impr": 1644,
+      "clicks": 32,
+      "spend": 9.47
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 19,
+      "impr": 2957,
+      "clicks": 66,
+      "spend": 41.7
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 19,
+      "impr": 1995,
+      "clicks": 40,
+      "spend": 135.85
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 19,
+      "impr": 2152,
+      "clicks": 55,
+      "spend": 44.15
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 20,
+      "impr": 2306,
+      "clicks": 43,
+      "spend": 24.35
+    },
+    {
+      "day": "MONDAY",
+      "hour": 20,
+      "impr": 2072,
+      "clicks": 33,
+      "spend": 245.67
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 20,
+      "impr": 2137,
+      "clicks": 50,
+      "spend": 46.22
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 20,
+      "impr": 1586,
+      "clicks": 27,
+      "spend": 159.73
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 20,
+      "impr": 1667,
+      "clicks": 26,
+      "spend": 58.2
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 20,
+      "impr": 2120,
+      "clicks": 44,
+      "spend": 91.37
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 20,
+      "impr": 2530,
+      "clicks": 42,
+      "spend": 28.62
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 21,
+      "impr": 1996,
+      "clicks": 39,
+      "spend": 159.69
+    },
+    {
+      "day": "MONDAY",
+      "hour": 21,
+      "impr": 1651,
+      "clicks": 42,
+      "spend": 29.55
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 21,
+      "impr": 1307,
+      "clicks": 27,
+      "spend": 17.53
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 21,
+      "impr": 1889,
+      "clicks": 37,
+      "spend": 46.5
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 21,
+      "impr": 1398,
+      "clicks": 32,
+      "spend": 16.26
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 21,
+      "impr": 2443,
+      "clicks": 44,
+      "spend": 37.12
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 21,
+      "impr": 2916,
+      "clicks": 51,
+      "spend": 27.95
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 22,
+      "impr": 1882,
+      "clicks": 30,
+      "spend": 56.91
+    },
+    {
+      "day": "MONDAY",
+      "hour": 22,
+      "impr": 1409,
+      "clicks": 23,
+      "spend": 47.57
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 22,
+      "impr": 763,
+      "clicks": 10,
+      "spend": 9.75
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 22,
+      "impr": 1701,
+      "clicks": 53,
+      "spend": 23.98
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 22,
+      "impr": 1370,
+      "clicks": 24,
+      "spend": 22.38
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 22,
+      "impr": 1659,
+      "clicks": 28,
+      "spend": 26.55
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 22,
+      "impr": 1796,
+      "clicks": 44,
+      "spend": 18.31
+    },
+    {
+      "day": "SUNDAY",
+      "hour": 23,
+      "impr": 1059,
+      "clicks": 24,
+      "spend": 42.62
+    },
+    {
+      "day": "MONDAY",
+      "hour": 23,
+      "impr": 536,
+      "clicks": 15,
+      "spend": 21.19
+    },
+    {
+      "day": "TUESDAY",
+      "hour": 23,
+      "impr": 596,
+      "clicks": 7,
+      "spend": 4.53
+    },
+    {
+      "day": "WEDNESDAY",
+      "hour": 23,
+      "impr": 632,
+      "clicks": 8,
+      "spend": 26.72
+    },
+    {
+      "day": "THURSDAY",
+      "hour": 23,
+      "impr": 866,
+      "clicks": 21,
+      "spend": 17.25
+    },
+    {
+      "day": "FRIDAY",
+      "hour": 23,
+      "impr": 1127,
+      "clicks": 22,
+      "spend": 24.51
+    },
+    {
+      "day": "SATURDAY",
+      "hour": 23,
+      "impr": 900,
+      "clicks": 26,
+      "spend": 26.27
+    }
+  ],
   "funnel": {
     "impressions": 3727441,
     "clicks": 47576,
