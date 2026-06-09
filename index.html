@@ -301,6 +301,7 @@ const CHART_BASE = {
 
 let __D = null;
 let __SLICE = null;
+let __FILTERED_CRM = null;
 let __PLATFORM = 'all'; // 'all' | 'meta' | 'google'
 
 async function load() {
@@ -383,6 +384,7 @@ function sliceTemporal(t, from, to) {
 }
 
 function render() {
+  __FILTERED_CRM = buildFilteredCRM();
   renderKPIs();
   renderTimeChart();
   renderMap();
@@ -392,10 +394,159 @@ function render() {
   renderAds();
 }
 
+function buildFilteredCRM() {
+  const c = __D.crm || {};
+  const leadsRaw = (c.leads && c.leads.rows) || null;
+  const vendasRaw = (c.vendas && c.vendas.rows) || null;
+  const days = (__SLICE && __SLICE.days) || [];
+
+  // Sem rows ou sem range => devolve all-time original
+  if (!leadsRaw || !vendasRaw || !days.length) {
+    return c;
+  }
+
+  const from = days[0];
+  const to   = days[days.length - 1];
+  const inRange = (d) => d >= from && d <= to;
+
+  const leads  = leadsRaw.filter(r => inRange(r.d));
+  const vendas = vendasRaw.filter(r => inRange(r.d));
+
+  // by_source LEADS
+  const leadsBySource = {};
+  leads.forEach(r => {
+    if (!leadsBySource[r.s]) leadsBySource[r.s] = { total: 0, won: 0, lost: 0, progress: 0 };
+    leadsBySource[r.s].total++;
+    if (r.w) leadsBySource[r.s].won++;
+    else     leadsBySource[r.s].progress++;
+  });
+
+  // by_state LEADS
+  const leadsByState = {};
+  leads.forEach(r => {
+    if (!r.st) return;
+    if (!leadsByState[r.st]) leadsByState[r.st] = { state: r.st, total: 0, won: 0 };
+    leadsByState[r.st].total++;
+    if (r.w) leadsByState[r.st].won++;
+  });
+
+  // by_source VENDAS
+  const vendasBySource = {};
+  vendas.forEach(r => {
+    if (!vendasBySource[r.s]) vendasBySource[r.s] = { count: 0, ativos: 0, valor_anual_total: 0, mrr: 0, arr_ativo: 0 };
+    vendasBySource[r.s].count++;
+    vendasBySource[r.s].valor_anual_total += r.v;
+    if (r.a) {
+      vendasBySource[r.s].ativos++;
+      vendasBySource[r.s].mrr += r.m;
+      vendasBySource[r.s].arr_ativo += r.m * 12;
+    }
+  });
+
+  // by_state VENDAS
+  const vendasByState = {};
+  vendas.forEach(r => {
+    if (!r.st) return;
+    if (!vendasByState[r.st]) vendasByState[r.st] = { state: r.st, count: 0, ativos: 0, revenue_anual: 0, mrr: 0 };
+    vendasByState[r.st].count++;
+    vendasByState[r.st].revenue_anual += r.v;
+    if (r.a) {
+      vendasByState[r.st].ativos++;
+      vendasByState[r.st].mrr += r.m;
+    }
+  });
+
+  // by_closer VENDAS
+  const vendasByCloser = {};
+  vendas.forEach(r => {
+    if (!r.c) return;
+    if (!vendasByCloser[r.c]) vendasByCloser[r.c] = { closer: r.c, count: 0, ativos: 0, revenue_anual: 0, mrr: 0 };
+    vendasByCloser[r.c].count++;
+    vendasByCloser[r.c].revenue_anual += r.v;
+    if (r.a) {
+      vendasByCloser[r.c].ativos++;
+      vendasByCloser[r.c].mrr += r.m;
+    }
+  });
+
+  // by_plano VENDAS
+  const vendasByPlano = {};
+  vendas.forEach(r => {
+    if (!r.p) return;
+    if (!vendasByPlano[r.p]) vendasByPlano[r.p] = { plano: r.p, count: 0, revenue_anual: 0 };
+    vendasByPlano[r.p].count++;
+    vendasByPlano[r.p].revenue_anual += r.v;
+  });
+
+  // Totais
+  const totalLeads        = leads.length;
+  const totalLeadsPaid    = (leadsBySource.meta?.total || 0) + (leadsBySource.google?.total || 0);
+  const totalLeadsOutbnd  = leadsBySource.outbound?.total || 0;
+  const totalVendas       = vendas.length;
+  const totalAtivas       = vendas.filter(v => v.a).length;
+  const totalMRR          = vendas.filter(v => v.a).reduce((s, v) => s + v.m, 0);
+  const totalARR          = totalMRR * 12;
+  const totalReceita      = vendas.reduce((s, v) => s + v.v, 0);
+
+  // funnel_real (spend e clicks vêm do slice)
+  const sl = __SLICE || {};
+  const metaSpend   = (sl.spend_meta   || []).reduce((a, b) => a + b, 0);
+  const googleSpend = (sl.spend_google || []).reduce((a, b) => a + b, 0);
+  const plat = __D.platform || {};
+
+  const buildFun = (key) => {
+    const v = vendasBySource[key] || { count: 0, valor_anual_total: 0 };
+    const l = leadsBySource[key]  || { total: 0 };
+    const spend = key === 'meta' ? metaSpend : googleSpend;
+    const clicks = (plat[key] && plat[key].clicks) || 0;
+    const impr   = (plat[key] && plat[key].impressions) || 0;
+    return {
+      spend: +spend.toFixed(2),
+      impressions: impr,
+      clicks,
+      leads: l.total,
+      vendas: v.count,
+      receita_anual: +v.valor_anual_total.toFixed(2),
+      cac_real: v.count > 0 ? +(spend / v.count).toFixed(2) : 0,
+      cpa_lead: l.total > 0 ? +(spend / l.total).toFixed(2) : 0,
+      conv_click_lead_pct: clicks > 0 ? +(l.total / clicks * 100).toFixed(2) : 0,
+      conv_lead_venda_pct: l.total > 0 ? +(v.count / l.total * 100).toFixed(2) : 0,
+      roas: spend > 0 ? +(v.valor_anual_total / spend).toFixed(2) : 0
+    };
+  };
+
+  return {
+    leads: {
+      total: totalLeads,
+      paid: totalLeadsPaid,
+      outbound: totalLeadsOutbnd,
+      by_source: leadsBySource,
+      by_state: Object.values(leadsByState).sort((a, b) => b.total - a.total),
+      rows: leads
+    },
+    vendas: {
+      total: totalVendas,
+      ativas: totalAtivas,
+      mrr: +totalMRR.toFixed(2),
+      arr: +totalARR.toFixed(2),
+      receita_anual_historico: +totalReceita.toFixed(2),
+      by_source: vendasBySource,
+      by_state: Object.values(vendasByState).sort((a, b) => b.revenue_anual - a.revenue_anual),
+      by_closer: Object.values(vendasByCloser).sort((a, b) => b.revenue_anual - a.revenue_anual),
+      by_plano: Object.values(vendasByPlano).sort((a, b) => b.revenue_anual - a.revenue_anual),
+      rows: vendas
+    },
+    funnel_real: {
+      meta: buildFun('meta'),
+      google: buildFun('google')
+    }
+  };
+}
+
 function renderKPIs() {
   const k = __D.kpis || {};
   const slice = __SLICE || {};
-  const crm = __D.crm || {};
+  const crm = __FILTERED_CRM || __D.crm || {};
   const plat = __D.platform || {};
   const bySrcLeads = (crm.leads && crm.leads.by_source) || {};
   const bySrcVendas = (crm.vendas && crm.vendas.by_source) || {};
@@ -615,7 +766,7 @@ function renderFunnel() {
 }
 
 function renderFunnelReal() {
-  const fr = (__D.crm && __D.crm.funnel_real) || {};
+  const fr = (__FILTERED_CRM && __FILTERED_CRM.funnel_real) || (__D.crm && __D.crm.funnel_real) || {};
   const buildCol = (key, color, label) => {
     const f = fr[key] || {};
     const spend = f.spend || 0, clicks = f.clicks || 0, leads = f.leads || 0, vendas = f.vendas || 0;
@@ -650,7 +801,7 @@ function renderFunnelReal() {
 }
 
 function renderVendas() {
-  const v = (__D.crm && __D.crm.vendas) || {};
+  const v = (__FILTERED_CRM && __FILTERED_CRM.vendas) || (__D.crm && __D.crm.vendas) || {};
   const LABELS = { meta:'Meta', google:'Google', outbound:'Outbound', referral:'Indicação', network:'Contatos', events:'Eventos', community:'Clube', partnership:'Parceria', other:'Outras' };
   const COLORS = { meta:CYAN, google:ORANGE, outbound:'#f87171', referral:'#a78bfa', network:'#fbbf24', events:'#4ade80', community:'#22d3ee', partnership:'#fb7185', other:'#8ba6b3' };
 
