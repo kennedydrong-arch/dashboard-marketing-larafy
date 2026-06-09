@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-09T14:33:48.305Z",
+  "updated_at": "2026-06-09T14:33:52.909Z",
   "filter": "LaraTax",
   "kpis": {
     "spend": {
@@ -95,22 +95,22 @@
       "value": 1321
     },
     "vendas": {
-      "value": 0
+      "value": 208
     },
     "vendas_ativas": {
-      "value": 0
+      "value": 158
     },
     "mrr": {
-      "value": 0
+      "value": 488582
     },
     "arr": {
-      "value": 0
+      "value": 5862984
     },
     "cac_real": {
-      "value": 0
+      "value": 780.03
     },
     "receita_anual_historico": {
-      "value": 0
+      "value": 7316808
     }
   },
   "temporal": {
@@ -13104,67 +13104,67 @@
       ]
     },
     "vendas": {
-      "total": 0,
-      "ativas": 0,
-      "mrr": 0,
-      "arr": 0,
-      "receita_anual_historico": 0,
+      "total": 208,
+      "ativas": 158,
+      "mrr": 488582,
+      "arr": 5862984,
+      "receita_anual_historico": 7316808,
       "by_source": {
         "meta": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 63,
+          "ativos": 44,
+          "valor_anual_total": 2512188,
+          "mrr": 158889,
+          "arr_ativo": 1906668
         },
         "google": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 37,
+          "ativos": 34,
+          "valor_anual_total": 1183332,
+          "mrr": 92131,
+          "arr_ativo": 1105572
         },
         "outbound": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 25,
+          "ativos": 16,
+          "valor_anual_total": 610992,
+          "mrr": 34080,
+          "arr_ativo": 408960
         },
         "referral": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 22,
+          "ativos": 20,
+          "valor_anual_total": 1105524,
+          "mrr": 81327,
+          "arr_ativo": 975924
         },
         "network": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 13,
+          "ativos": 10,
+          "valor_anual_total": 453840,
+          "mrr": 29540,
+          "arr_ativo": 354480
         },
         "events": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 38,
+          "ativos": 26,
+          "valor_anual_total": 1244532,
+          "mrr": 79375,
+          "arr_ativo": 952500
         },
         "community": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 7,
+          "ativos": 5,
+          "valor_anual_total": 128640,
+          "mrr": 6760,
+          "arr_ativo": 81120
         },
         "partnership": {
-          "count": 0,
-          "ativos": 0,
-          "valor_anual_total": 0,
-          "mrr": 0,
-          "arr_ativo": 0
+          "count": 3,
+          "ativos": 3,
+          "valor_anual_total": 77760,
+          "mrr": 6480,
+          "arr_ativo": 77760
         },
         "other": {
           "count": 0,
@@ -13174,10 +13174,2354 @@
           "arr_ativo": 0
         }
       },
-      "by_state": [],
-      "by_closer": [],
-      "by_plano": [],
-      "rows": []
+      "by_state": [
+        {
+          "state": "SP",
+          "count": 58,
+          "ativos": 42,
+          "revenue_anual": 1828248,
+          "mrr": 114794
+        },
+        {
+          "state": "PR",
+          "count": 34,
+          "ativos": 28,
+          "revenue_anual": 1157412,
+          "mrr": 82471
+        },
+        {
+          "state": "SC",
+          "count": 11,
+          "ativos": 11,
+          "revenue_anual": 749664,
+          "mrr": 62472
+        },
+        {
+          "state": "RS",
+          "count": 11,
+          "ativos": 6,
+          "revenue_anual": 501876,
+          "mrr": 31887
+        },
+        {
+          "state": "PE",
+          "count": 13,
+          "ativos": 10,
+          "revenue_anual": 456480,
+          "mrr": 27240
+        },
+        {
+          "state": "MG",
+          "count": 9,
+          "ativos": 8,
+          "revenue_anual": 345072,
+          "mrr": 26596
+        },
+        {
+          "state": "RJ",
+          "count": 9,
+          "ativos": 6,
+          "revenue_anual": 326772,
+          "mrr": 20751
+        },
+        {
+          "state": "ES",
+          "count": 3,
+          "ativos": 2,
+          "revenue_anual": 306720,
+          "mrr": 23400
+        },
+        {
+          "state": "MT",
+          "count": 9,
+          "ativos": 6,
+          "revenue_anual": 244080,
+          "mrr": 14220
+        },
+        {
+          "state": "DF",
+          "count": 7,
+          "ativos": 5,
+          "revenue_anual": 218532,
+          "mrr": 13891
+        },
+        {
+          "state": "CE",
+          "count": 8,
+          "ativos": 7,
+          "revenue_anual": 172800,
+          "mrr": 12240
+        },
+        {
+          "state": "RN",
+          "count": 5,
+          "ativos": 3,
+          "revenue_anual": 155520,
+          "mrr": 8640
+        },
+        {
+          "state": "GO",
+          "count": 7,
+          "ativos": 5,
+          "revenue_anual": 155520,
+          "mrr": 8640
+        },
+        {
+          "state": "BA",
+          "count": 4,
+          "ativos": 3,
+          "revenue_anual": 135792,
+          "mrr": 10020
+        },
+        {
+          "state": "AM",
+          "count": 5,
+          "ativos": 4,
+          "revenue_anual": 125280,
+          "mrr": 8640
+        },
+        {
+          "state": "BH",
+          "count": 3,
+          "ativos": 2,
+          "revenue_anual": 91440,
+          "mrr": 1620
+        },
+        {
+          "state": "PA",
+          "count": 2,
+          "ativos": 1,
+          "revenue_anual": 66960,
+          "mrr": 0
+        },
+        {
+          "state": "MA",
+          "count": 1,
+          "ativos": 1,
+          "revenue_anual": 54000,
+          "mrr": 4500
+        },
+        {
+          "state": "RR",
+          "count": 2,
+          "ativos": 2,
+          "revenue_anual": 51840,
+          "mrr": 4320
+        },
+        {
+          "state": "TO",
+          "count": 2,
+          "ativos": 2,
+          "revenue_anual": 51840,
+          "mrr": 4320
+        },
+        {
+          "state": "SE",
+          "count": 1,
+          "ativos": 1,
+          "revenue_anual": 43200,
+          "mrr": 3600
+        },
+        {
+          "state": "PB",
+          "count": 2,
+          "ativos": 1,
+          "revenue_anual": 25920,
+          "mrr": 0
+        },
+        {
+          "state": "RO",
+          "count": 1,
+          "ativos": 1,
+          "revenue_anual": 25920,
+          "mrr": 2160
+        },
+        {
+          "state": "AL",
+          "count": 1,
+          "ativos": 1,
+          "revenue_anual": 25920,
+          "mrr": 2160
+        }
+      ],
+      "by_closer": [
+        {
+          "closer": "Barbara Barbosa",
+          "count": 38,
+          "ativos": 38,
+          "revenue_anual": 1988352,
+          "mrr": 165696
+        },
+        {
+          "closer": "Leticia Staroski",
+          "count": 60,
+          "ativos": 39,
+          "revenue_anual": 1848936,
+          "mrr": 109066
+        },
+        {
+          "closer": "Larissa Leitolles",
+          "count": 40,
+          "ativos": 31,
+          "revenue_anual": 1104612,
+          "mrr": 69551
+        },
+        {
+          "closer": "Nathan Endrigo",
+          "count": 22,
+          "ativos": 11,
+          "revenue_anual": 756720,
+          "mrr": 29520
+        },
+        {
+          "closer": "Alysson",
+          "count": 17,
+          "ativos": 13,
+          "revenue_anual": 619200,
+          "mrr": 39720
+        },
+        {
+          "closer": "Bianca Silva",
+          "count": 11,
+          "ativos": 9,
+          "revenue_anual": 374004,
+          "mrr": 26847
+        },
+        {
+          "closer": "Nelson",
+          "count": 9,
+          "ativos": 9,
+          "revenue_anual": 316104,
+          "mrr": 26342
+        },
+        {
+          "closer": "Waldir",
+          "count": 6,
+          "ativos": 4,
+          "revenue_anual": 156000,
+          "mrr": 9400
+        },
+        {
+          "closer": "Andrey",
+          "count": 1,
+          "ativos": 1,
+          "revenue_anual": 78000,
+          "mrr": 6500
+        },
+        {
+          "closer": "Alysson Teixeira",
+          "count": 2,
+          "ativos": 2,
+          "revenue_anual": 60480,
+          "mrr": 5040
+        },
+        {
+          "closer": "Matheus Vieira",
+          "count": 2,
+          "ativos": 1,
+          "revenue_anual": 14400,
+          "mrr": 900
+        }
+      ],
+      "by_plano": [
+        {
+          "plano": "MODULAR",
+          "count": 186,
+          "revenue_anual": 6231528
+        },
+        {
+          "plano": "ADVANCED",
+          "count": 8,
+          "revenue_anual": 548880
+        },
+        {
+          "plano": "STANDARD",
+          "count": 8,
+          "revenue_anual": 458400
+        },
+        {
+          "plano": "PROFESSIONAL",
+          "count": 5,
+          "revenue_anual": 54000
+        },
+        {
+          "plano": "IMPLANTAÇÃO",
+          "count": 1,
+          "revenue_anual": 24000
+        }
+      ],
+      "rows": [
+        {
+          "d": "2024-11-01",
+          "s": "referral",
+          "c": "Leticia Staroski",
+          "p": "STANDARD",
+          "st": "PR",
+          "v": 64800,
+          "m": 5400,
+          "a": 1
+        },
+        {
+          "d": "2024-11-08",
+          "s": "network",
+          "c": "Waldir",
+          "p": "STANDARD",
+          "st": "PR",
+          "v": 64800,
+          "m": 5400,
+          "a": 1
+        },
+        {
+          "d": "2024-11-05",
+          "s": "network",
+          "c": "Waldir",
+          "p": "STANDARD",
+          "st": "PR",
+          "v": 48000,
+          "m": 4000,
+          "a": 1
+        },
+        {
+          "d": "2024-12-01",
+          "s": "outbound",
+          "c": "Leticia Staroski",
+          "p": "STANDARD",
+          "st": "PR",
+          "v": 64800,
+          "m": 5400,
+          "a": 1
+        },
+        {
+          "d": "2024-12-11",
+          "s": "network",
+          "c": "Waldir",
+          "p": "STANDARD",
+          "st": "PR",
+          "v": 21600,
+          "m": 1800,
+          "a": 0
+        },
+        {
+          "d": "2025-01-13",
+          "s": "network",
+          "c": "Alysson",
+          "p": "STANDARD",
+          "st": "PR",
+          "v": 64800,
+          "m": 5400,
+          "a": 1
+        },
+        {
+          "d": "2025-02-28",
+          "s": "network",
+          "c": "Alysson",
+          "p": "IMPLANTAÇÃO",
+          "st": "SC",
+          "v": 24000,
+          "m": 2000,
+          "a": 1
+        },
+        {
+          "d": "2025-02-27",
+          "s": "outbound",
+          "c": "Matheus Vieira",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 3600,
+          "m": 300,
+          "a": 0
+        },
+        {
+          "d": "2025-03-01",
+          "s": "outbound",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 36000,
+          "m": 3000,
+          "a": 0
+        },
+        {
+          "d": "2025-03-07",
+          "s": "outbound",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 21600,
+          "m": 1800,
+          "a": 0
+        },
+        {
+          "d": "2025-03-01",
+          "s": "network",
+          "c": "Alysson",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 21600,
+          "m": 1800,
+          "a": 1
+        },
+        {
+          "d": "2025-03-17",
+          "s": "outbound",
+          "c": "Leticia Staroski",
+          "p": "STANDARD",
+          "st": "SP",
+          "v": 64800,
+          "m": 5400,
+          "a": 1
+        },
+        {
+          "d": "2025-03-24",
+          "s": "community",
+          "c": "Alysson",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 21600,
+          "m": 1800,
+          "a": 1
+        },
+        {
+          "d": "2025-03-24",
+          "s": "referral",
+          "c": "Leticia Staroski",
+          "p": "STANDARD",
+          "st": "PR",
+          "v": 64800,
+          "m": 5400,
+          "a": 0
+        },
+        {
+          "d": "2025-03-28",
+          "s": "community",
+          "c": "Alysson",
+          "p": "MODULAR",
+          "st": "DF",
+          "v": 21600,
+          "m": 1800,
+          "a": 1
+        },
+        {
+          "d": "2025-04-29",
+          "s": "referral",
+          "c": "Alysson",
+          "p": "ADVANCED",
+          "st": "PR",
+          "v": 97200,
+          "m": 8100,
+          "a": 1
+        },
+        {
+          "d": "2025-04-30",
+          "s": "network",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "PE",
+          "v": 10800,
+          "m": 900,
+          "a": 0
+        },
+        {
+          "d": "2025-05-02",
+          "s": "community",
+          "c": "Waldir",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 21600,
+          "m": 1800,
+          "a": 0
+        },
+        {
+          "d": "2025-04-23",
+          "s": "referral",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 32400,
+          "m": 2700,
+          "a": 1
+        },
+        {
+          "d": "2025-05-05",
+          "s": "events",
+          "c": "Alysson",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-05-06",
+          "s": "events",
+          "c": "Alysson",
+          "p": "MODULAR",
+          "st": "CE",
+          "v": 21600,
+          "m": 1800,
+          "a": 1
+        },
+        {
+          "d": "2025-05-09",
+          "s": "events",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-05-09",
+          "s": "events",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-05-13",
+          "s": "network",
+          "c": "Andrey",
+          "p": "ADVANCED",
+          "st": "RJ",
+          "v": 78000,
+          "m": 6500,
+          "a": 1
+        },
+        {
+          "d": "2025-05-15",
+          "s": "referral",
+          "c": "Alysson",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 64800,
+          "m": 5400,
+          "a": 0
+        },
+        {
+          "d": "2025-04-30",
+          "s": "outbound",
+          "c": "Matheus Vieira",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 10800,
+          "m": 900,
+          "a": 1
+        },
+        {
+          "d": "2025-05-29",
+          "s": "outbound",
+          "c": "Waldir",
+          "p": "PROFESSIONAL",
+          "st": "SP",
+          "v": 0,
+          "m": 0,
+          "a": 1
+        },
+        {
+          "d": "2025-06-02",
+          "s": "outbound",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-06-03",
+          "s": "network",
+          "c": "Alysson",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 0,
+          "m": 0,
+          "a": 1
+        },
+        {
+          "d": "2025-06-04",
+          "s": "outbound",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "PE",
+          "v": 21600,
+          "m": 1800,
+          "a": 0
+        },
+        {
+          "d": "2025-06-09",
+          "s": "events",
+          "c": "Alysson",
+          "p": "MODULAR",
+          "st": "MG",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-06-09",
+          "s": "events",
+          "c": "Alysson",
+          "p": "MODULAR",
+          "st": "RN",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-06-09",
+          "s": "events",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "MT",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-06-09",
+          "s": "events",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "RJ",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-06-09",
+          "s": "events",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "GO",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-06-09",
+          "s": "events",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "RJ",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-06-12",
+          "s": "community",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "RN",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-06-10",
+          "s": "outbound",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "ES",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-06-06",
+          "s": "outbound",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-06-23",
+          "s": "network",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-06-24",
+          "s": "events",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-07-02",
+          "s": "outbound",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "RS",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-07-04",
+          "s": "events",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "BA",
+          "v": 15552,
+          "m": 1296,
+          "a": 0
+        },
+        {
+          "d": "2025-07-07",
+          "s": "meta",
+          "c": "Leticia Staroski",
+          "p": "PROFESSIONAL",
+          "st": "MA",
+          "v": 54000,
+          "m": 4500,
+          "a": 1
+        },
+        {
+          "d": "2025-07-15",
+          "s": "meta",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-07-18",
+          "s": "events",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "MT",
+          "v": 21600,
+          "m": 1800,
+          "a": 0
+        },
+        {
+          "d": "2025-07-15",
+          "s": "outbound",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "DF",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-07-22",
+          "s": "meta",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "MG",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-07-23",
+          "s": "meta",
+          "c": "Alysson",
+          "p": "MODULAR",
+          "st": "PB",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-07-23",
+          "s": "meta",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-07-25",
+          "s": "meta",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "RS",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-07-23",
+          "s": "meta",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "BH",
+          "v": 19440,
+          "m": 1620,
+          "a": 1
+        },
+        {
+          "d": "2025-07-29",
+          "s": "meta",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "AM",
+          "v": 21600,
+          "m": 1800,
+          "a": 0
+        },
+        {
+          "d": "2025-07-31",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "PROFESSIONAL",
+          "st": "PR",
+          "v": 0,
+          "m": 0,
+          "a": 1
+        },
+        {
+          "d": "2025-07-31",
+          "s": "events",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "CE",
+          "v": 21600,
+          "m": 1800,
+          "a": 1
+        },
+        {
+          "d": "2025-07-31",
+          "s": "events",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 21600,
+          "m": 1800,
+          "a": 0
+        },
+        {
+          "d": "2025-08-04",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-08-05",
+          "s": "events",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-08-05",
+          "s": "outbound",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "RS",
+          "v": 15552,
+          "m": 1296,
+          "a": 0
+        },
+        {
+          "d": "2025-08-08",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 19440,
+          "m": 1620,
+          "a": 1
+        },
+        {
+          "d": "2025-08-11",
+          "s": "events",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "DF",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-08-11",
+          "s": "meta",
+          "c": "Bianca Silva",
+          "p": "MODULAR",
+          "st": "MT",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-08-08",
+          "s": "outbound",
+          "c": "Alysson",
+          "p": "MODULAR",
+          "st": "PE",
+          "v": 93600,
+          "m": 7800,
+          "a": 1
+        },
+        {
+          "d": "2025-08-13",
+          "s": "network",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 27360,
+          "m": 2280,
+          "a": 1
+        },
+        {
+          "d": "2025-08-15",
+          "s": "outbound",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-08-15",
+          "s": "referral",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "GO",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-08-15",
+          "s": "meta",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "RJ",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-08-20",
+          "s": "meta",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-08-21",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "RJ",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-08-21",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-08-25",
+          "s": "meta",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "GO",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-08-27",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-08-27",
+          "s": "outbound",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-08-28",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-08-28",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "RR",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-08-29",
+          "s": "meta",
+          "c": "Bianca Silva",
+          "p": "MODULAR",
+          "st": "TO",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-08-29",
+          "s": "events",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 43200,
+          "m": 3600,
+          "a": 1
+        },
+        {
+          "d": "2025-08-29",
+          "s": "meta",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-08-29",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-09-02",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-09-04",
+          "s": "google",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-09-04",
+          "s": "meta",
+          "c": "Leticia Staroski",
+          "p": "PROFESSIONAL",
+          "st": "SP",
+          "v": 0,
+          "m": 0,
+          "a": 1
+        },
+        {
+          "d": "2025-09-05",
+          "s": "google",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "DF",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-09-09",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-09-15",
+          "s": "google",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "PE",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-09-17",
+          "s": "google",
+          "c": "Bianca Silva",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-09-17",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "ADVANCED",
+          "st": "SP",
+          "v": 86400,
+          "m": 7200,
+          "a": 1
+        },
+        {
+          "d": "2025-09-17",
+          "s": "google",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "MT",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-09-18",
+          "s": "google",
+          "c": "Larissa Leitolles",
+          "p": "PROFESSIONAL",
+          "st": "GO",
+          "v": 0,
+          "m": 0,
+          "a": 1
+        },
+        {
+          "d": "2025-09-19",
+          "s": "meta",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-09-18",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "ADVANCED",
+          "st": "SP",
+          "v": 66960,
+          "m": 5580,
+          "a": 1
+        },
+        {
+          "d": "2025-09-19",
+          "s": "google",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-09-22",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "CE",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-09-19",
+          "s": "community",
+          "c": "Alysson",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 12000,
+          "m": 1000,
+          "a": 1
+        },
+        {
+          "d": "2025-09-23",
+          "s": "referral",
+          "c": "Alysson",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-09-25",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "RS",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-09-25",
+          "s": "outbound",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-09-25",
+          "s": "meta",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-09-29",
+          "s": "meta",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-09-30",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-09-30",
+          "s": "network",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "PA",
+          "v": 66960,
+          "m": 5580,
+          "a": 0
+        },
+        {
+          "d": "2025-09-30",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "RS",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-09-30",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-09-30",
+          "s": "events",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "PE",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-09-30",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "BH",
+          "v": 72000,
+          "m": 6000,
+          "a": 0
+        },
+        {
+          "d": "2025-10-01",
+          "s": "google",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "GO",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-10-01",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "PE",
+          "v": 97200,
+          "m": 8100,
+          "a": 0
+        },
+        {
+          "d": "2025-10-07",
+          "s": "meta",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-10-09",
+          "s": "google",
+          "c": "Bianca Silva",
+          "p": "MODULAR",
+          "st": "DF",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-10-15",
+          "s": "meta",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 37920,
+          "m": 3160,
+          "a": 1
+        },
+        {
+          "d": "2025-10-15",
+          "s": "google",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "DF",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-10-16",
+          "s": "meta",
+          "c": "Nathan Endrigo",
+          "p": "MODULAR",
+          "st": "MG",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-10-22",
+          "s": "referral",
+          "c": "Alysson",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 46800,
+          "m": 3900,
+          "a": 1
+        },
+        {
+          "d": "2025-10-22",
+          "s": "outbound",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 0,
+          "m": 0,
+          "a": 1
+        },
+        {
+          "d": "2025-10-28",
+          "s": "events",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "GO",
+          "v": 25920,
+          "m": 2160,
+          "a": 0
+        },
+        {
+          "d": "2025-10-28",
+          "s": "google",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "AM",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-10-30",
+          "s": "referral",
+          "c": "Bianca Silva",
+          "p": "MODULAR",
+          "st": "SC",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-10-30",
+          "s": "google",
+          "c": "Bianca Silva",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-10-30",
+          "s": "google",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "CE",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-10-31",
+          "s": "google",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 108000,
+          "m": 9000,
+          "a": 1
+        },
+        {
+          "d": "2025-10-31",
+          "s": "google",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "PA",
+          "v": 0,
+          "m": 0,
+          "a": 1
+        },
+        {
+          "d": "2025-10-31",
+          "s": "meta",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "RR",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-11-04",
+          "s": "events",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-11-06",
+          "s": "community",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "MG",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-11-10",
+          "s": "meta",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SC",
+          "v": 37920,
+          "m": 3160,
+          "a": 1
+        },
+        {
+          "d": "2025-11-10",
+          "s": "meta",
+          "c": "Bianca Silva",
+          "p": "MODULAR",
+          "st": "MT",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-11-12",
+          "s": "meta",
+          "c": "Bianca Silva",
+          "p": "MODULAR",
+          "st": "SE",
+          "v": 43200,
+          "m": 3600,
+          "a": 1
+        },
+        {
+          "d": "2025-11-13",
+          "s": "referral",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-11-19",
+          "s": "meta",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-11-19",
+          "s": "meta",
+          "c": "Bianca Silva",
+          "p": "MODULAR",
+          "st": "PE",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-11-25",
+          "s": "google",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "RS",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-11-27",
+          "s": "meta",
+          "c": "Bianca Silva",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-11-25",
+          "s": "meta",
+          "c": "Bianca Silva",
+          "p": "MODULAR",
+          "st": "RS",
+          "v": 97524,
+          "m": 8127,
+          "a": 1
+        },
+        {
+          "d": "2025-12-05",
+          "s": "events",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "MG",
+          "v": 86400,
+          "m": 7200,
+          "a": 1
+        },
+        {
+          "d": "2025-12-05",
+          "s": "google",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "GO",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-12-08",
+          "s": "meta",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "CE",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-12-12",
+          "s": "events",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "AM",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-12-16",
+          "s": "google",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 36000,
+          "m": 3000,
+          "a": 1
+        },
+        {
+          "d": "2025-12-18",
+          "s": "meta",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "TO",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-12-19",
+          "s": "events",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "MG",
+          "v": 13680,
+          "m": 1140,
+          "a": 1
+        },
+        {
+          "d": "2025-12-23",
+          "s": "outbound",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 0,
+          "m": 0,
+          "a": 1
+        },
+        {
+          "d": "2025-12-30",
+          "s": "events",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "PE",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2025-12-31",
+          "s": "google",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "RJ",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-01-13",
+          "s": "google",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-01-27",
+          "s": "referral",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-01-27",
+          "s": "referral",
+          "c": "Alysson Teixeira",
+          "p": "MODULAR",
+          "st": "MT",
+          "v": 41040,
+          "m": 3420,
+          "a": 1
+        },
+        {
+          "d": "2026-01-29",
+          "s": "referral",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 97524,
+          "m": 8127,
+          "a": 1
+        },
+        {
+          "d": "2026-01-29",
+          "s": "outbound",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "MG",
+          "v": 0,
+          "m": 0,
+          "a": 1
+        },
+        {
+          "d": "2026-02-02",
+          "s": "meta",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-02-10",
+          "s": "google",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-02-13",
+          "s": "google",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 67332,
+          "m": 5611,
+          "a": 1
+        },
+        {
+          "d": "2026-02-17",
+          "s": "outbound",
+          "c": "Alysson Teixeira",
+          "p": "MODULAR",
+          "st": "RS",
+          "v": 19440,
+          "m": 1620,
+          "a": 1
+        },
+        {
+          "d": "2026-02-18",
+          "s": "events",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 97524,
+          "m": 8127,
+          "a": 1
+        },
+        {
+          "d": "2026-02-19",
+          "s": "google",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "AM",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-02-20",
+          "s": "outbound",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "MT",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-02-24",
+          "s": "outbound",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "SC",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-02-25",
+          "s": "community",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "PB",
+          "v": 0,
+          "m": 0,
+          "a": 1
+        },
+        {
+          "d": "2026-02-26",
+          "s": "google",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "CE",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-02-27",
+          "s": "google",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "CE",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-02-27",
+          "s": "google",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-02-28",
+          "s": "events",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "CE",
+          "v": 0,
+          "m": 0,
+          "a": 1
+        },
+        {
+          "d": "2026-03-02",
+          "s": "referral",
+          "c": "Larissa Leitolles",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 12000,
+          "m": 1000,
+          "a": 1
+        },
+        {
+          "d": "2026-03-04",
+          "s": "meta",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 49920,
+          "m": 4160,
+          "a": 1
+        },
+        {
+          "d": "2026-03-04",
+          "s": "referral",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "MT",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-03-05",
+          "s": "referral",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "RS",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-03-06",
+          "s": "meta",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "PE",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-03-12",
+          "s": "outbound",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "SC",
+          "v": 0,
+          "m": 0,
+          "a": 1
+        },
+        {
+          "d": "2026-03-16",
+          "s": "google",
+          "c": "Leticia Staroski",
+          "p": "ADVANCED",
+          "st": "SP",
+          "v": 0,
+          "m": 0,
+          "a": 1
+        },
+        {
+          "d": "2026-03-16",
+          "s": "google",
+          "c": "Larissa Leitolles",
+          "p": "ADVANCED",
+          "st": "BH",
+          "v": 0,
+          "m": 0,
+          "a": 1
+        },
+        {
+          "d": "2026-03-19",
+          "s": "events",
+          "c": "Leticia Staroski",
+          "p": "ADVANCED",
+          "st": "RO",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-03-25",
+          "s": "events",
+          "c": "Leticia Staroski",
+          "p": "MODULAR",
+          "st": "SC",
+          "v": 44064,
+          "m": 3672,
+          "a": 1
+        },
+        {
+          "d": "2026-03-27",
+          "s": "referral",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-03-27",
+          "s": "meta",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "RS",
+          "v": 19440,
+          "m": 1620,
+          "a": 1
+        },
+        {
+          "d": "2026-03-27",
+          "s": "meta",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "PE",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-03-31",
+          "s": "events",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "AM",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-03-31",
+          "s": "meta",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "AL",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-04-14",
+          "s": "events",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-04-14",
+          "s": "referral",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "SC",
+          "v": 0,
+          "m": 0,
+          "a": 1
+        },
+        {
+          "d": "2026-04-14",
+          "s": "events",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "PE",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-04-15",
+          "s": "events",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "MG",
+          "v": 115392,
+          "m": 9616,
+          "a": 1
+        },
+        {
+          "d": "2026-04-21",
+          "s": "events",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "RN",
+          "v": 51840,
+          "m": 4320,
+          "a": 1
+        },
+        {
+          "d": "2026-04-13",
+          "s": "events",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "BA",
+          "v": 68400,
+          "m": 5700,
+          "a": 1
+        },
+        {
+          "d": "2026-04-27",
+          "s": "meta",
+          "c": "Nelson",
+          "p": "MODULAR",
+          "st": "DF",
+          "v": 67332,
+          "m": 5611,
+          "a": 1
+        },
+        {
+          "d": "2026-04-27",
+          "s": "meta",
+          "c": "Nelson",
+          "p": "MODULAR",
+          "st": "RJ",
+          "v": 67332,
+          "m": 5611,
+          "a": 1
+        },
+        {
+          "d": "2026-04-25",
+          "s": "google",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "PE",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-04-27",
+          "s": "events",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "SC",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-04-29",
+          "s": "events",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "MG",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-04-29",
+          "s": "events",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "PE",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-04-30",
+          "s": "google",
+          "c": "Nelson",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-05-04",
+          "s": "referral",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "ES",
+          "v": 0,
+          "m": 0,
+          "a": 1
+        },
+        {
+          "d": "2026-05-04",
+          "s": "referral",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 48000,
+          "m": 4000,
+          "a": 1
+        },
+        {
+          "d": "2026-05-04",
+          "s": "meta",
+          "c": "Nelson",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-05-11",
+          "s": "google",
+          "c": "Nelson",
+          "p": "MODULAR",
+          "st": "BA",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-05-08",
+          "s": "meta",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "SC",
+          "v": 0,
+          "m": 0,
+          "a": 1
+        },
+        {
+          "d": "2026-05-06",
+          "s": "google",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "RJ",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-05-08",
+          "s": "partnership",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "RN",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-05-04",
+          "s": "referral",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "ES",
+          "v": 280800,
+          "m": 23400,
+          "a": 1
+        },
+        {
+          "d": "2026-05-04",
+          "s": "referral",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 48000,
+          "m": 4000,
+          "a": 1
+        },
+        {
+          "d": "2026-05-04",
+          "s": "meta",
+          "c": "Nelson",
+          "p": "MODULAR",
+          "st": "SP",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-05-11",
+          "s": "google",
+          "c": "Nelson",
+          "p": "MODULAR",
+          "st": "BA",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-05-08",
+          "s": "meta",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "SC",
+          "v": 540000,
+          "m": 45000,
+          "a": 1
+        },
+        {
+          "d": "2026-05-06",
+          "s": "google",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "RJ",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-05-08",
+          "s": "partnership",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "RN",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-05-15",
+          "s": "partnership",
+          "c": "Nelson",
+          "p": "MODULAR",
+          "st": "MT",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        },
+        {
+          "d": "2026-05-26",
+          "s": "google",
+          "c": "Barbara Barbosa",
+          "p": "ADVANCED",
+          "st": "RS",
+          "v": 194400,
+          "m": 16200,
+          "a": 1
+        },
+        {
+          "d": "2026-05-29",
+          "s": "google",
+          "c": "Barbara Barbosa",
+          "p": "MODULAR",
+          "st": "PR",
+          "v": 51840,
+          "m": 4320,
+          "a": 1
+        },
+        {
+          "d": "2026-05-29",
+          "s": "google",
+          "c": "Nelson",
+          "p": "MODULAR",
+          "st": "SC",
+          "v": 25920,
+          "m": 2160,
+          "a": 1
+        }
+      ]
     },
     "funnel_real": {
       "meta": {
@@ -13185,26 +15529,26 @@
         "impressions": 3496607,
         "clicks": 42870,
         "leads": 1054,
-        "vendas": 0,
-        "receita_anual": 0,
-        "cac_real": 0,
+        "vendas": 63,
+        "receita_anual": 2512188,
+        "cac_real": 997.71,
         "cpa_lead": 59.64,
         "conv_click_lead_pct": 2.46,
-        "conv_lead_venda_pct": 0,
-        "roas": 0
+        "conv_lead_venda_pct": 5.98,
+        "roas": 39.97
       },
       "google": {
         "spend": 15147.81,
         "impressions": 230834,
         "clicks": 4706,
         "leads": 267,
-        "vendas": 0,
-        "receita_anual": 0,
-        "cac_real": 0,
+        "vendas": 37,
+        "receita_anual": 1183332,
+        "cac_real": 409.4,
         "cpa_lead": 56.73,
         "conv_click_lead_pct": 5.67,
-        "conv_lead_venda_pct": 0,
-        "roas": 0
+        "conv_lead_venda_pct": 13.86,
+        "roas": 78.12
       }
     }
   }
