@@ -554,7 +554,7 @@ function renderMap() {
   el.innerHTML = '';
   el._leaflet_id = null;
 
-  const map = L.map('brazil-map', { zoomControl: true, attributionControl: false }).setView([-14.5, -52], 4);
+  const map = L.map('brazil-map', { zoomControl: false, scrollWheelZoom: false, doubleClickZoom: false, boxZoom: false, touchZoom: false, attributionControl: false }).setView([-14.5, -52], 4);
   window.__map = map;
 
   const STATE_MAP = {
