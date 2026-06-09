@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-09T14:04:20.947Z",
+  "updated_at": "2026-06-09T14:04:24.257Z",
   "filter": "LaraTax",
   "kpis": {
     "spend": {
@@ -1398,6 +1398,14 @@
       "cpa": 0
     },
     {
+      "state": "Desconhecido",
+      "spend": 1138.36,
+      "impressions": 281572,
+      "clicks": 3847,
+      "leads": 6,
+      "cpa": 189.73
+    },
+    {
       "state": "State of Minas Gerais",
       "spend": 788.98,
       "impressions": 17606,
@@ -1586,14 +1594,6 @@
       "spend": 2.06,
       "impressions": 115,
       "clicks": 5,
-      "leads": 0,
-      "cpa": 0
-    },
-    {
-      "state": "State of Rondonia",
-      "spend": 1.3,
-      "impressions": 270,
-      "clicks": 4,
       "leads": 0,
       "cpa": 0
     }
