@@ -302,6 +302,7 @@ const CHART_BASE = {
 let __D = null;
 let __SLICE = null;
 let __FILTERED_CRM = null;
+let __IS_ALL = true;
 let __PLATFORM = 'all'; // 'all' | 'meta' | 'google'
 
 async function load() {
@@ -358,6 +359,7 @@ async function load() {
 
 function apply(range, fromCustom, toCustom) {
   if (!__D || !__D.temporal) return;
+  __IS_ALL = (range === 'all');
   const days = __D.temporal.days;
   let from = 0, to = days.length - 1;
   const lastDate = new Date(days[days.length - 1]);
@@ -396,6 +398,9 @@ function render() {
 
 function buildFilteredCRM() {
   const c = __D.crm || {};
+  // Quando "TUDO" selecionado, usa os dados completos do agregador (não filtra por range)
+  if (__IS_ALL) return c;
+
   const leadsRaw = (c.leads && c.leads.rows) || null;
   const vendasRaw = (c.vendas && c.vendas.rows) || null;
   const days = (__SLICE && __SLICE.days) || [];
