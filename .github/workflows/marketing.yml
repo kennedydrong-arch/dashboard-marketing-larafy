@@ -1,0 +1,34 @@
+name: Atualiza relatorio de marketing
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: mkt
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - name: Gera mkt_metrics.json
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+          META_ACCOUNT: ${{ secrets.META_ACCOUNT }}
+          MKT_DIAS: "30"
+        run: python mkt_build.py
+      - name: Commit se mudou
+        run: |
+          git config user.name "mkt-bot"
+          git config user.email "bot@users.noreply.github.com"
+          if [ -n "$(git status --porcelain mkt_metrics.json)" ]; then
+            git add mkt_metrics.json && git commit -m "dados mkt: atualiza [skip ci]" && git push
+          else
+            echo "sem mudanca"
+          fi
