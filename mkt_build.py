@@ -61,22 +61,22 @@ evolucao = [{"d": s.get("date_start"), "invest": _f(s.get("spend")), "leads": _l
             for s in sorted(serie, key=lambda x: x.get("date_start", ""))]
 
 # ── campanhas ──
-camps = insights("campaign", "campaign_name,objective,spend,impressions,clicks,ctr,cpm,reach,actions")
+camps = insights("campaign", "campaign_id,campaign_name,objective,spend,impressions,clicks,ctr,cpm,reach,actions")
 campanhas = []
 for c in camps:
     lv = _leads(c.get("actions")); sp = _f(c.get("spend"))
-    campanhas.append({"nome": c.get("campaign_name"), "objetivo": c.get("objective"),
-        "invest": sp, "impressoes": _f(c.get("impressions")), "cliques": _f(c.get("clicks")),
+    campanhas.append({"id": c.get("campaign_id"), "nome": c.get("campaign_name"), "objetivo": c.get("objective"),
+        "invest": sp, "impressoes": _f(c.get("impressions")), "alcance": _f(c.get("reach")), "cliques": _f(c.get("clicks")),
         "ctr": _f(c.get("ctr")), "cpm": _f(c.get("cpm")), "leads": lv,
         "cpl": sp / lv if lv else 0})
 campanhas.sort(key=lambda x: -x["invest"])
 
 # ── criativos (ads) ──
-ads = insights("ad", "ad_name,campaign_name,spend,impressions,clicks,ctr,cpm,actions")
+ads = insights("ad", "ad_id,ad_name,campaign_id,campaign_name,spend,impressions,clicks,ctr,cpm,actions")
 criativos = []
 for a in ads:
     lv = _leads(a.get("actions")); sp = _f(a.get("spend"))
-    criativos.append({"nome": a.get("ad_name"), "campanha": a.get("campaign_name"),
+    criativos.append({"id": a.get("ad_id"), "campId": a.get("campaign_id"), "nome": a.get("ad_name"), "campanha": a.get("campaign_name"),
         "invest": sp, "impressoes": _f(a.get("impressions")), "cliques": _f(a.get("clicks")),
         "ctr": _f(a.get("ctr")), "leads": lv, "cpl": sp / lv if lv else 0})
 criativos.sort(key=lambda x: -x["invest"])
@@ -97,7 +97,7 @@ try:
 except Exception as e:
     print("[mkt] cruzamento falhou:", str(e)[:120]); cross = {}
 
-M = {"periodo": TR, "dias": DIAS, "conta": "LaraTAX",
+M = {"periodo": TR, "dias": DIAS, "conta": "LaraTAX", "accountId": ACC,
      "overview": overview, "evolucao": evolucao, "campanhas": campanhas,
      "criativos": criativos, "cross": cross,
      "geradoEm": dt.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")}
